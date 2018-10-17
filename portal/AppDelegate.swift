@@ -16,6 +16,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // ページを格納する配列
+        var viewControllers: [UIViewController] = []
+        
+        // 1ページ目になるViewController
+        let firstSB = UIStoryboard(name: ConstStoryBoard.cardName, bundle: nil)
+        let firstVC = firstSB.instantiateViewController(withIdentifier: ConstStoryBoard.cardId) as! CardViewController
+        firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+        viewControllers.append(firstVC)
+        
+        // 2ページ目になるViewController
+        let secondSB = UIStoryboard(name:  ConstStoryBoard.searchName, bundle: nil)
+        let secondVC = secondSB.instantiateViewController(withIdentifier: ConstStoryBoard.searchId) as! SearchViewController
+        secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
+        viewControllers.append(secondVC)
+        
+        // 3ページ目になるViewController
+        let thirdSB = UIStoryboard(name: ConstStoryBoard.favoriteName, bundle: nil)
+        let thirdVC = thirdSB.instantiateViewController(withIdentifier: ConstStoryBoard.favoriteId) as! FavoriteViewController
+        thirdVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 3)
+        viewControllers.append(thirdVC)
+
+        // 4ページ目になるViewController
+        let fourthSB = UIStoryboard(name: ConstStoryBoard.notifyName, bundle: nil)
+        let fourthVC = fourthSB.instantiateViewController(withIdentifier: ConstStoryBoard.notifyListId) as! NotifyListViewController
+        fourthVC.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 4)
+        viewControllers.append(fourthVC)
+
+        // 5ページ目になるViewController
+        let fifthSB = UIStoryboard(name: ConstStoryBoard.profileName, bundle: nil)
+        let fifthVC = fifthSB.instantiateViewController(withIdentifier: ConstStoryBoard.profileId) as! ProfileViewController
+        fifthVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 5)
+        viewControllers.append(fifthVC)
+
+        // ViewControllerをセット
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(viewControllers, animated: false)
+        
+        // rootViewControllerをUITabBarControllerにする
+        window = UIWindow()
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
