@@ -11,18 +11,38 @@
 		A428BC86217584A1008BB7D3 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC85217584A1008BB7D3 /* CardViewController.swift */; };
 		A428BC882175886C008BB7D3 /* KeywordSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC872175886C008BB7D3 /* KeywordSearchViewController.swift */; };
 		A428BC8A21758881008BB7D3 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8921758881008BB7D3 /* MapSearchViewController.swift */; };
-		A428BC8C217588E0008BB7D3 /* InstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8B217588E0008BB7D3 /* InstitutionViewController.swift */; };
 		A428BC8E2175896D008BB7D3 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8D2175896D008BB7D3 /* FavoriteViewController.swift */; };
 		A428BC9021758C42008BB7D3 /* NotifyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8F21758C42008BB7D3 /* NotifyListViewController.swift */; };
 		A428BC9221758C50008BB7D3 /* NotifyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC9121758C50008BB7D3 /* NotifyDetailViewController.swift */; };
 		A428BC9421758C96008BB7D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC9321758C96008BB7D3 /* ProfileViewController.swift */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
-		A428BC982176D84B008BB7D3 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428BC972176D84B008BB7D3 /* Card.storyboard */; };
-		A428BC9A2176E363008BB7D3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428BC992176E363008BB7D3 /* Search.storyboard */; };
-		A428BC9C2176E3B7008BB7D3 /* Notify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428BC9B2176E3B7008BB7D3 /* Notify.storyboard */; };
-		A428BC9E2176E3E3008BB7D3 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428BC9D2176E3E3008BB7D3 /* Favorite.storyboard */; };
-		A428BCA02176E40B008BB7D3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428BC9F2176E40B008BB7D3 /* Profile.storyboard */; };
 		A428BCA221771023008BB7D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BCA121771023008BB7D3 /* SearchViewController.swift */; };
+		A46A87CD21783CBF0050369C /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87CC21783CBF0050369C /* RegistViewController.swift */; };
+		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
+		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
+		A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87DB2178ADA60050369C /* SearchViewController.xib */; };
+		A46A87E02178ADE90050369C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DE2178ADE90050369C /* CardViewController.swift */; };
+		A46A87E12178ADE90050369C /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87DF2178ADE90050369C /* CardViewController.xib */; };
+		A46A87E42178AE0F0050369C /* KeywordSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */; };
+		A46A87E52178AE0F0050369C /* KeywordSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */; };
+		A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87E62178AE440050369C /* MapSearchViewController.swift */; };
+		A46A87E92178AE440050369C /* MapSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87E72178AE440050369C /* MapSearchViewController.xib */; };
+		A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87EA2178AE700050369C /* FavoriteViewController.swift */; };
+		A46A87ED2178AE700050369C /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87EB2178AE700050369C /* FavoriteViewController.xib */; };
+		A46A87F02178AE8D0050369C /* InstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */; };
+		A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */; };
+		A46A87F42178AEB50050369C /* NotifyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87F22178AEB50050369C /* NotifyListViewController.swift */; };
+		A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87F32178AEB50050369C /* NotifyListViewController.xib */; };
+		A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87F62178AED20050369C /* NotifyDetailViewController.swift */; };
+		A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87F72178AED20050369C /* NotifyDetailViewController.xib */; };
+		A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87FA2178AEF30050369C /* ProfileViewController.swift */; };
+		A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87FB2178AEF30050369C /* ProfileViewController.xib */; };
+		A46A88002178AF190050369C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87FE2178AF190050369C /* LoginViewController.swift */; };
+		A46A88012178AF190050369C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87FF2178AF190050369C /* LoginViewController.xib */; };
+		A46A88042178AF370050369C /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A88022178AF370050369C /* RegistViewController.swift */; };
+		A46A88052178AF370050369C /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A88032178AF370050369C /* RegistViewController.xib */; };
+		A46A88082178AF550050369C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A88062178AF550050369C /* AuthViewController.swift */; };
+		A46A88092178AF550050369C /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A88072178AF550050369C /* AuthViewController.xib */; };
 		A491D32E21757180005610DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491D32D21757180005610DC /* AppDelegate.swift */; };
 		A491D33021757180005610DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491D32F21757180005610DC /* ViewController.swift */; };
 		A491D33321757180005610DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491D33121757180005610DC /* Main.storyboard */; };
@@ -36,18 +56,38 @@
 		A428BC85217584A1008BB7D3 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A428BC872175886C008BB7D3 /* KeywordSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchViewController.swift; sourceTree = "<group>"; };
 		A428BC8921758881008BB7D3 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
-		A428BC8B217588E0008BB7D3 /* InstitutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionViewController.swift; sourceTree = "<group>"; };
 		A428BC8D2175896D008BB7D3 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		A428BC8F21758C42008BB7D3 /* NotifyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyListViewController.swift; sourceTree = "<group>"; };
 		A428BC9121758C50008BB7D3 /* NotifyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyDetailViewController.swift; sourceTree = "<group>"; };
 		A428BC9321758C96008BB7D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		A428BC972176D84B008BB7D3 /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
-		A428BC992176E363008BB7D3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		A428BC9B2176E3B7008BB7D3 /* Notify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notify.storyboard; sourceTree = "<group>"; };
-		A428BC9D2176E3E3008BB7D3 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
-		A428BC9F2176E40B008BB7D3 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		A428BCA121771023008BB7D3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A46A87CC21783CBF0050369C /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
+		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A46A87DB2178ADA60050369C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		A46A87DE2178ADE90050369C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		A46A87DF2178ADE90050369C /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchViewController.swift; sourceTree = "<group>"; };
+		A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordSearchViewController.xib; sourceTree = "<group>"; };
+		A46A87E62178AE440050369C /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
+		A46A87E72178AE440050369C /* MapSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapSearchViewController.xib; sourceTree = "<group>"; };
+		A46A87EA2178AE700050369C /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		A46A87EB2178AE700050369C /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionViewController.swift; sourceTree = "<group>"; };
+		A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstitutionViewController.xib; sourceTree = "<group>"; };
+		A46A87F22178AEB50050369C /* NotifyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyListViewController.swift; sourceTree = "<group>"; };
+		A46A87F32178AEB50050369C /* NotifyListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifyListViewController.xib; sourceTree = "<group>"; };
+		A46A87F62178AED20050369C /* NotifyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyDetailViewController.swift; sourceTree = "<group>"; };
+		A46A87F72178AED20050369C /* NotifyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifyDetailViewController.xib; sourceTree = "<group>"; };
+		A46A87FA2178AEF30050369C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A46A87FB2178AEF30050369C /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		A46A87FE2178AF190050369C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A46A87FF2178AF190050369C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A46A88022178AF370050369C /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
+		A46A88032178AF370050369C /* RegistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
+		A46A88062178AF550050369C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A46A88072178AF550050369C /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		A491D32A21757180005610DC /* portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A491D32D21757180005610DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A491D32F21757180005610DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +119,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A46A87D42178A4040050369C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */,
+				A46A87E72178AE440050369C /* MapSearchViewController.xib */,
+				A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */,
+				A46A88072178AF550050369C /* AuthViewController.xib */,
+				A46A88032178AF370050369C /* RegistViewController.xib */,
+				A46A87FB2178AEF30050369C /* ProfileViewController.xib */,
+				A46A87FF2178AF190050369C /* LoginViewController.xib */,
+				A46A87F32178AEB50050369C /* NotifyListViewController.xib */,
+				A46A87F72178AED20050369C /* NotifyDetailViewController.xib */,
+				A46A87EB2178AE700050369C /* FavoriteViewController.xib */,
+				A46A87DF2178ADE90050369C /* CardViewController.xib */,
+				A491D33121757180005610DC /* Main.storyboard */,
+				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
+				A491D33621757182005610DC /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A46A87D52178A42A0050369C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
+				A491D32F21757180005610DC /* ViewController.swift */,
+				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
+				A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */,
+				A46A87DE2178ADE90050369C /* CardViewController.swift */,
+				A46A87E62178AE440050369C /* MapSearchViewController.swift */,
+				A46A87EA2178AE700050369C /* FavoriteViewController.swift */,
+				A46A87F22178AEB50050369C /* NotifyListViewController.swift */,
+				A46A87F62178AED20050369C /* NotifyDetailViewController.swift */,
+				A46A87FA2178AEF30050369C /* ProfileViewController.swift */,
+				A46A88062178AF550050369C /* AuthViewController.swift */,
+				A46A87FE2178AF190050369C /* LoginViewController.swift */,
+				A46A88022178AF370050369C /* RegistViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A46A87D62178A44D0050369C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A46A87D82178AD710050369C /* CardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A46A87D72178A4790050369C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A491D33421757182005610DC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A46A880A2178AF890050369C /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				A428BC952176CCCE008BB7D3 /* Const.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		A491D32121757180005610DC = {
 			isa = PBXGroup;
 			children = (
@@ -100,27 +205,22 @@
 		A491D32C21757180005610DC /* portal */ = {
 			isa = PBXGroup;
 			children = (
+				A46A880A2178AF890050369C /* Configs */,
+				A46A87D72178A4790050369C /* Resources */,
+				A46A87D62178A44D0050369C /* Models */,
+				A46A87D52178A42A0050369C /* Controllers */,
+				A46A87D42178A4040050369C /* Views */,
 				A491D32D21757180005610DC /* AppDelegate.swift */,
-				A491D32F21757180005610DC /* ViewController.swift */,
-				A491D33121757180005610DC /* Main.storyboard */,
-				A428BC9F2176E40B008BB7D3 /* Profile.storyboard */,
-				A428BC9D2176E3E3008BB7D3 /* Favorite.storyboard */,
-				A428BC9B2176E3B7008BB7D3 /* Notify.storyboard */,
-				A428BC972176D84B008BB7D3 /* Card.storyboard */,
-				A428BC992176E363008BB7D3 /* Search.storyboard */,
 				A428BCA121771023008BB7D3 /* SearchViewController.swift */,
 				A428BC85217584A1008BB7D3 /* CardViewController.swift */,
 				A428BC872175886C008BB7D3 /* KeywordSearchViewController.swift */,
 				A428BC8921758881008BB7D3 /* MapSearchViewController.swift */,
-				A428BC8B217588E0008BB7D3 /* InstitutionViewController.swift */,
 				A428BC8D2175896D008BB7D3 /* FavoriteViewController.swift */,
 				A428BC8F21758C42008BB7D3 /* NotifyListViewController.swift */,
 				A428BC9121758C50008BB7D3 /* NotifyDetailViewController.swift */,
 				A428BC9321758C96008BB7D3 /* ProfileViewController.swift */,
-				A491D33421757182005610DC /* Assets.xcassets */,
-				A491D33621757182005610DC /* LaunchScreen.storyboard */,
 				A491D33921757182005610DC /* Info.plist */,
-				A428BC952176CCCE008BB7D3 /* Const.swift */,
+				A46A87CC21783CBF0050369C /* RegistViewController.swift */,
 			);
 			path = portal;
 			sourceTree = "<group>";
@@ -193,14 +293,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A428BC982176D84B008BB7D3 /* Card.storyboard in Resources */,
 				A491D33821757182005610DC /* LaunchScreen.storyboard in Resources */,
-				A428BCA02176E40B008BB7D3 /* Profile.storyboard in Resources */,
-				A428BC9E2176E3E3008BB7D3 /* Favorite.storyboard in Resources */,
 				A491D33521757182005610DC /* Assets.xcassets in Resources */,
-				A428BC9C2176E3B7008BB7D3 /* Notify.storyboard in Resources */,
+				A46A87ED2178AE700050369C /* FavoriteViewController.xib in Resources */,
+				A46A87E92178AE440050369C /* MapSearchViewController.xib in Resources */,
+				A46A88052178AF370050369C /* RegistViewController.xib in Resources */,
+				A46A87E52178AE0F0050369C /* KeywordSearchViewController.xib in Resources */,
+				A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */,
+				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
+				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
+				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
+				A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */,
+				A46A88012178AF190050369C /* LoginViewController.xib in Resources */,
+				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
 				A491D33321757180005610DC /* Main.storyboard in Resources */,
-				A428BC9A2176E363008BB7D3 /* Search.storyboard in Resources */,
+				A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,10 +339,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-portal/Pods-portal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,15 +374,28 @@
 				A491D33021757180005610DC /* ViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
 				A428BC9421758C96008BB7D3 /* ProfileViewController.swift in Sources */,
+				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
+				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
 				A428BC882175886C008BB7D3 /* KeywordSearchViewController.swift in Sources */,
+				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
+				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
 				A428BC8E2175896D008BB7D3 /* FavoriteViewController.swift in Sources */,
+				A46A88042178AF370050369C /* RegistViewController.swift in Sources */,
+				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
 				A428BC9221758C50008BB7D3 /* NotifyDetailViewController.swift in Sources */,
 				A428BCA221771023008BB7D3 /* SearchViewController.swift in Sources */,
+				A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */,
+				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,
+				A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */,
 				A428BC8A21758881008BB7D3 /* MapSearchViewController.swift in Sources */,
 				A428BC9021758C42008BB7D3 /* NotifyListViewController.swift in Sources */,
 				A428BC86217584A1008BB7D3 /* CardViewController.swift in Sources */,
-				A428BC8C217588E0008BB7D3 /* InstitutionViewController.swift in Sources */,
+				A46A87E02178ADE90050369C /* CardViewController.swift in Sources */,
+				A46A87F42178AEB50050369C /* NotifyListViewController.swift in Sources */,
+				A46A87CD21783CBF0050369C /* RegistViewController.swift in Sources */,
+				A46A87E42178AE0F0050369C /* KeywordSearchViewController.swift in Sources */,
 				A428BC962176CCCE008BB7D3 /* Const.swift in Sources */,
+				A46A87F02178AE8D0050369C /* InstitutionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,21 +1,21 @@
 //
-//  InstitutionViewController.swift
+//  SearchViewController.swift
 //  portal
 //
-//  Created by 藤田和磨 on 2018/10/16.
+//  Created by 藤田和磨 on 2018/10/18.
 //  Copyright © 2018 藤田和磨. All rights reserved.
 //
 
 import UIKit
 
-class InstitutionViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

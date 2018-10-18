@@ -44,11 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         viewControllers.append(fourthVC)
 
         // 5ページ目になるViewController
-        let fifthSB = UIStoryboard(name: ConstStoryBoard.profileName, bundle: nil)
-        let fifthVC = fifthSB.instantiateViewController(withIdentifier: ConstStoryBoard.profileId) as! ProfileViewController
-        fifthVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 5)
-        viewControllers.append(fifthVC)
+        // let fifthSB = UIStoryboard(name: ConstStoryBoard.profileName, bundle: nil)
+        // let fifthVC = fifthSB.instantiateViewController(withIdentifier: ConstStoryBoard.profileId) as! ProfileViewController
+        // fifthVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 5)
+        // viewControllers.append(fifthVC)
 
+        
+        // 6ページ目になるViewController(のちほど削除)
+        let sixSB = UIStoryboard(name: "Login", bundle: nil)
+        let sixVC = sixSB.instantiateViewController(withIdentifier: "Regist") as! RegistViewController
+        sixVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 5)
+        viewControllers.append(sixVC)
+        
         // ViewControllerをセット
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers(viewControllers, animated: false)

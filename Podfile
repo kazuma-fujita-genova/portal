@@ -12,4 +12,6 @@ target 'portal' do
   # pod 'HMSegmentedControl'
   # pod 'PageMenu'
   pod 'PagingMenuController','2.2.0'
+  pod 'MaterialComponents'
+  pod 'Alamofire','4.7.3'
 end
