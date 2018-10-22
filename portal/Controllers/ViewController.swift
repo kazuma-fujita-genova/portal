@@ -27,38 +27,40 @@ class ViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: "assignment"), tag: ConstTag.card)
         let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: "search"), tag: ConstTag.search)
-        // let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: "favorite_border"), tag: ConstTag.favorite)
-        // tabBarItem3.selectedImage = UIImage(named: "favorite")
-        // let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: "notifications_none"), tag: ConstTag.notify)
-        // let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: "perm_identity"), tag: ConstTag.profile)
+        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: "favorite_border"), tag: ConstTag.favorite)
+        tabBarItem3.selectedImage = UIImage(named: "favorite")
+        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: "notifications_none"), tag: ConstTag.notify)
+        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: "perm_identity"), tag: ConstTag.profile)
 
         
         // ページを格納する配列
-        //var viewControllers: [UIViewController] = []
         // Register Nib
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         cardViewController.tabBarItem = tabBarItem1
-        let nv1 = UINavigationController(rootViewController: cardViewController)
-        // viewControllers.append(cardViewController)
-        // self.viewControllers?.append(cardViewController)
+        self.viewControllers?.append(cardViewController)
         
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
         searchViewController.tabBarItem = tabBarItem2
-        // viewControllers.append(searchViewController)
-        // self.viewControllers?.append(searchViewController)
-        let nv2 = UINavigationController(rootViewController: searchViewController)
+        self.viewControllers?.append(searchViewController)
         
-        let myTabs = NSArray(objects:nv1,nv2)
+        let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        favoriteViewController.tabBarItem = tabBarItem3
+        self.viewControllers?.append(favoriteViewController)
         
+        let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
+        // notifyListViewController.tabBarItem = tabBarItem4
+        self.viewControllers?.append(notifyListViewController)
         
-        // self.viewControllers = [cardViewController, searchViewController]
-        self.setViewControllers(myTabs as? [UIViewController], animated: false)
+        let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        // profileViewController.tabBarItem = tabBarItem5
+        self.viewControllers?.append(profileViewController)
         
-        //bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, tabBarItem5 ]
-        bottomNavBar.items = [ tabBarItem1, tabBarItem2 ]
-        //bottomNavBar.selectedItem = tabBarItem3
+        self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileViewController]
         
-        // bottomNavBar.delegate = self
+        bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, tabBarItem5 ]
+        bottomNavBar.selectedItem = tabBarItem3
+        
+        bottomNavBar.delegate = self
         
         view.addSubview(bottomNavBar)
         
@@ -98,14 +100,20 @@ class ViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         switch item.tag {
         case ConstTag.card:
             print("card")
+            //self.selectedViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+            selectedViewController = self.viewControllers?[0]
         case ConstTag.search:
             print("search")
+            selectedViewController = self.viewControllers?[1]
         case ConstTag.favorite:
             print("favorite")
+            selectedViewController = self.viewControllers?[2]
         case ConstTag.notify:
             print("notify")
+            selectedViewController = self.viewControllers?[3]
         case ConstTag.profile:
             print("profile")
+            selectedViewController = self.viewControllers?[4]
         default:
             print("other")
         }
