@@ -7,19 +7,69 @@
 //
 
 import UIKit
+// import MaterialComponents.MaterialBottomNavigation_ColorThemer
+// import MaterialComponents.MaterialTypographyScheme
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // var colorScheme = MDCSemanticColorScheme()
+    // var typographyScheme = MDCTypographyScheme()
+    
+    // let bottomNavBar = MDCBottomNavigationBar()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // ページを格納する配列
-        var viewControllers: [UIViewController] = []
+  
+        /*
+         // ページを格納する配列
+         var viewControllers: [UIViewController] = []
         
-        // 1ページ目になるViewController
+        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: "assignment"), tag: ConstTag.card)
+        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: "search"), tag: ConstTag.search)
+        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: "favorite_border"), tag: ConstTag.favorite)
+        tabBarItem3.selectedImage = UIImage(named: "favorite")
+        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: "notifications_none"), tag: ConstTag.notify)
+        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: "perm_identity"), tag: ConstTag.profile)
+        
+        let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        cardViewController.tabBarItem = tabBarItem1
+        viewControllers.append(cardViewController)
+
+        let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        searchViewController.tabBarItem = tabBarItem2
+        viewControllers.append(searchViewController)
+
+        let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        favoriteViewController.tabBarItem = tabBarItem3
+        viewControllers.append(favoriteViewController)
+
+        let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
+        notifyListViewController.tabBarItem = tabBarItem4
+        viewControllers.append(notifyListViewController)
+
+        let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        profileViewController.tabBarItem = tabBarItem5
+        viewControllers.append(profileViewController)
+         
+        // ViewControllerをセット
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(viewControllers, animated: false)
+        
+        // rootViewControllerをUITabBarControllerにする
+        window = UIWindow()
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+        */
+        /*
+         // ページを格納する配列
+         var viewControllers: [UIViewController] = []
+
+         // 1ページ目になるViewController
         let firstSB = UIStoryboard(name: ConstStoryBoard.cardName, bundle: nil)
         let firstVC = firstSB.instantiateViewController(withIdentifier: ConstStoryBoard.cardId) as! CardViewController
         firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
@@ -55,8 +105,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sixVC = sixSB.instantiateViewController(withIdentifier: "Regist") as! RegistViewController
         sixVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 5)
         viewControllers.append(sixVC)
+        */
         
         // ViewControllerをセット
+        /*
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers(viewControllers, animated: false)
         
@@ -64,6 +116,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
+        */
+        
+        /*
+        colorScheme.backgroundColor = .white
+        // view.backgroundColor = colorScheme.backgroundColor
+        
+        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: "assignment"), tag: ConstTag.card)
+        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: "search"), tag: ConstTag.search)
+        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: "favorite_border"), tag: ConstTag.favorite)
+        tabBarItem3.selectedImage = UIImage(named: "favorite")
+        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: "notifications_none"), tag: ConstTag.notify)
+        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: "perm_identity"), tag: ConstTag.profile)
+        
+        
+        // ページを格納する配列
+        var viewControllers: [UIViewController] = []
+        // Register Nib
+        let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        cardViewController.tabBarItem = tabBarItem1
+        let nv1 = UINavigationController(rootViewController: cardViewController)
+        viewControllers.append(cardViewController)
+        // self.viewControllers?.append(cardViewController)
+        
+        let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        searchViewController.tabBarItem = tabBarItem2
+        viewControllers.append(searchViewController)
+        // self.viewControllers?.append(searchViewController)
+        let nv2 = UINavigationController(rootViewController: searchViewController)
+        
+        //let myTabs = NSArray(objects:nv1,nv2)
+        
+        
+        // self.viewControllers = [cardViewController, searchViewController]
+        //self.setViewControllers(myTabs as? [UIViewController], animated: false)
+        
+        //bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, tabBarItem5 ]
+        bottomNavBar.items = [ tabBarItem1, tabBarItem2 ]
+        //bottomNavBar.selectedItem = tabBarItem3
+        
+        // bottomNavBar.delegate = self
+        
+        //view.addSubview(bottomNavBar)
+        cardViewController.view.addSubview(bottomNavBar)
+
+        // ViewControllerをセット
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(viewControllers, animated: false)
+        
+        // rootViewControllerをUITabBarControllerにする
+        window = UIWindow()
+        window?.rootViewController = tabBarController
+        window?.rootViewController?.view.addSubview(bottomNavBar)
+        window?.makeKeyAndVisible()
+        
+        
+        MDCBottomNavigationBarColorThemer.applySemanticColorScheme(colorScheme, toBottomNavigation: bottomNavBar)
+        */
         
         return true
     }

@@ -492,12 +492,10 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
-  - PagingMenuController (2.2.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (= 4.7.3)
   - MaterialComponents
-  - PagingMenuController (= 2.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -508,7 +506,6 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - MotionTransitioning
-    - PagingMenuController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -518,8 +515,7 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
-  PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
 
-PODFILE CHECKSUM: b396ab52b9a6a791d83fc791a34c3be1245c6764
+PODFILE CHECKSUM: 995a636455fd7ee77b894a23923675f8fca0cdc9
 
 COCOAPODS: 1.5.3

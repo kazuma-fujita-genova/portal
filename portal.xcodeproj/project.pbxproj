@@ -8,16 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BAEB7FD299C256453887375 /* Pods_portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708E6240566961555B6CF5EF /* Pods_portal.framework */; };
-		A428BC86217584A1008BB7D3 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC85217584A1008BB7D3 /* CardViewController.swift */; };
-		A428BC882175886C008BB7D3 /* KeywordSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC872175886C008BB7D3 /* KeywordSearchViewController.swift */; };
-		A428BC8A21758881008BB7D3 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8921758881008BB7D3 /* MapSearchViewController.swift */; };
-		A428BC8E2175896D008BB7D3 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8D2175896D008BB7D3 /* FavoriteViewController.swift */; };
-		A428BC9021758C42008BB7D3 /* NotifyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC8F21758C42008BB7D3 /* NotifyListViewController.swift */; };
-		A428BC9221758C50008BB7D3 /* NotifyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC9121758C50008BB7D3 /* NotifyDetailViewController.swift */; };
-		A428BC9421758C96008BB7D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC9321758C96008BB7D3 /* ProfileViewController.swift */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
-		A428BCA221771023008BB7D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BCA121771023008BB7D3 /* SearchViewController.swift */; };
-		A46A87CD21783CBF0050369C /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87CC21783CBF0050369C /* RegistViewController.swift */; };
 		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
 		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
 		A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87DB2178ADA60050369C /* SearchViewController.xib */; };
@@ -53,16 +44,7 @@
 /* Begin PBXFileReference section */
 		5969DC3E98EB22053EDF5255 /* Pods-portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-portal/Pods-portal.debug.xcconfig"; sourceTree = "<group>"; };
 		708E6240566961555B6CF5EF /* Pods_portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A428BC85217584A1008BB7D3 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		A428BC872175886C008BB7D3 /* KeywordSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchViewController.swift; sourceTree = "<group>"; };
-		A428BC8921758881008BB7D3 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
-		A428BC8D2175896D008BB7D3 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		A428BC8F21758C42008BB7D3 /* NotifyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyListViewController.swift; sourceTree = "<group>"; };
-		A428BC9121758C50008BB7D3 /* NotifyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyDetailViewController.swift; sourceTree = "<group>"; };
-		A428BC9321758C96008BB7D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		A428BCA121771023008BB7D3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		A46A87CC21783CBF0050369C /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A46A87DB2178ADA60050369C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -211,16 +193,7 @@
 				A46A87D52178A42A0050369C /* Controllers */,
 				A46A87D42178A4040050369C /* Views */,
 				A491D32D21757180005610DC /* AppDelegate.swift */,
-				A428BCA121771023008BB7D3 /* SearchViewController.swift */,
-				A428BC85217584A1008BB7D3 /* CardViewController.swift */,
-				A428BC872175886C008BB7D3 /* KeywordSearchViewController.swift */,
-				A428BC8921758881008BB7D3 /* MapSearchViewController.swift */,
-				A428BC8D2175896D008BB7D3 /* FavoriteViewController.swift */,
-				A428BC8F21758C42008BB7D3 /* NotifyListViewController.swift */,
-				A428BC9121758C50008BB7D3 /* NotifyDetailViewController.swift */,
-				A428BC9321758C96008BB7D3 /* ProfileViewController.swift */,
 				A491D33921757182005610DC /* Info.plist */,
-				A46A87CC21783CBF0050369C /* RegistViewController.swift */,
 			);
 			path = portal;
 			sourceTree = "<group>";
@@ -346,7 +319,6 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
-				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -357,7 +329,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,26 +344,17 @@
 			files = (
 				A491D33021757180005610DC /* ViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
-				A428BC9421758C96008BB7D3 /* ProfileViewController.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
-				A428BC882175886C008BB7D3 /* KeywordSearchViewController.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
-				A428BC8E2175896D008BB7D3 /* FavoriteViewController.swift in Sources */,
 				A46A88042178AF370050369C /* RegistViewController.swift in Sources */,
 				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
-				A428BC9221758C50008BB7D3 /* NotifyDetailViewController.swift in Sources */,
-				A428BCA221771023008BB7D3 /* SearchViewController.swift in Sources */,
 				A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */,
 				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,
 				A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */,
-				A428BC8A21758881008BB7D3 /* MapSearchViewController.swift in Sources */,
-				A428BC9021758C42008BB7D3 /* NotifyListViewController.swift in Sources */,
-				A428BC86217584A1008BB7D3 /* CardViewController.swift in Sources */,
 				A46A87E02178ADE90050369C /* CardViewController.swift in Sources */,
 				A46A87F42178AEB50050369C /* NotifyListViewController.swift in Sources */,
-				A46A87CD21783CBF0050369C /* RegistViewController.swift in Sources */,
 				A46A87E42178AE0F0050369C /* KeywordSearchViewController.swift in Sources */,
 				A428BC962176CCCE008BB7D3 /* Const.swift in Sources */,
 				A46A87F02178AE8D0050369C /* InstitutionViewController.swift in Sources */,

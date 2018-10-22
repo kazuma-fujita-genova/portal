@@ -11,7 +11,9 @@ target 'portal' do
   # pod 'XLPagerTabStrip','8.0.1'
   # pod 'HMSegmentedControl'
   # pod 'PageMenu'
-  pod 'PagingMenuController','2.2.0'
+  # pod 'PagingMenuController','2.2.0'
   pod 'MaterialComponents'
+  # pod 'MaterialComponents/BottomNavigation+ColorThemer'
+  # pod 'MaterialComponents/schemes/Color'
   pod 'Alamofire','4.7.3'
 end
