@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3BAEB7FD299C256453887375 /* Pods_portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708E6240566961555B6CF5EF /* Pods_portal.framework */; };
 		A41DF96C217EAD7E006EABE9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF96B217EAD7E006EABE9 /* TabBarViewController.swift */; };
+		A41DF976217F2902006EABE9 /* ProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF975217F2902006EABE9 /* ProfileTableView.swift */; };
+		A41DF978217F291D006EABE9 /* ProfileTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF977217F291D006EABE9 /* ProfileTableView.xib */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
 		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
 		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
@@ -45,6 +47,8 @@
 		5969DC3E98EB22053EDF5255 /* Pods-portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-portal/Pods-portal.debug.xcconfig"; sourceTree = "<group>"; };
 		708E6240566961555B6CF5EF /* Pods_portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41DF96B217EAD7E006EABE9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A41DF975217F2902006EABE9 /* ProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableView.swift; sourceTree = "<group>"; };
+		A41DF977217F291D006EABE9 /* ProfileTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableView.xib; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				A491D33121757180005610DC /* Main.storyboard */,
 				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A491D33621757182005610DC /* LaunchScreen.storyboard */,
+				A41DF977217F291D006EABE9 /* ProfileTableView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				A46A88062178AF550050369C /* AuthViewController.swift */,
 				A46A87FE2178AF190050369C /* LoginViewController.swift */,
 				A46A88022178AF370050369C /* RegistViewController.swift */,
+				A41DF975217F2902006EABE9 /* ProfileTableView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */,
 				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
 				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
+				A41DF978217F291D006EABE9 /* ProfileTableView.xib in Resources */,
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
 				A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */,
 				A46A88012178AF190050369C /* LoginViewController.xib in Resources */,
@@ -354,6 +361,7 @@
 				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,
 				A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */,
 				A46A87E02178ADE90050369C /* CardViewController.swift in Sources */,
+				A41DF976217F2902006EABE9 /* ProfileTableView.swift in Sources */,
 				A46A87F42178AEB50050369C /* NotifyListViewController.swift in Sources */,
 				A46A87E42178AE0F0050369C /* KeywordSearchViewController.swift in Sources */,
 				A428BC962176CCCE008BB7D3 /* Const.swift in Sources */,
