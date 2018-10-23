@@ -31,10 +31,18 @@ struct ConstTitle {
     static let mapSearch = "地図から探す"
 }
 
-struct ConstTag {
+struct ConstIndex {
     static let card = 0
     static let search = 1
     static let favorite = 2
     static let notify = 3
     static let profile = 4
+}
+
+struct ConstImage {
+    static let card = "assignment"
+    static let search = "search"
+    static let favorite = "favorite_border"
+    static let notify = "notifications_none"
+    static let profile = "perm_identity"
 }

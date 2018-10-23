@@ -12,7 +12,6 @@ import MaterialComponents.MaterialBottomNavigation_ColorThemer
 import MaterialComponents.MaterialTypographyScheme
 
 class ViewController: UITabBarController, MDCBottomNavigationBarDelegate {
-// class ViewController: UITabBarController {
 
     var colorScheme = MDCSemanticColorScheme()
     var typographyScheme = MDCTypographyScheme()
@@ -25,16 +24,13 @@ class ViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         colorScheme.backgroundColor = .white
         view.backgroundColor = colorScheme.backgroundColor
         
-        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: "assignment"), tag: ConstTag.card)
-        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: "search"), tag: ConstTag.search)
-        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: "favorite_border"), tag: ConstTag.favorite)
+        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: ConstImage.card), tag: ConstIndex.card)
+        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: ConstImage.search), tag: ConstIndex.search)
+        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: ConstImage.favorite), tag: ConstIndex.favorite)
         tabBarItem3.selectedImage = UIImage(named: "favorite")
-        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: "notifications_none"), tag: ConstTag.notify)
-        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: "perm_identity"), tag: ConstTag.profile)
-
+        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: ConstImage.notify), tag: ConstIndex.notify)
+        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: ConstImage.profile), tag: ConstIndex.profile)
         
-        // ページを格納する配列
-        // Register Nib
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         cardViewController.tabBarItem = tabBarItem1
         self.viewControllers?.append(cardViewController)
@@ -48,29 +44,25 @@ class ViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         self.viewControllers?.append(favoriteViewController)
         
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
-        // notifyListViewController.tabBarItem = tabBarItem4
+        notifyListViewController.tabBarItem = tabBarItem4
         self.viewControllers?.append(notifyListViewController)
         
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        // profileViewController.tabBarItem = tabBarItem5
+        profileViewController.tabBarItem = tabBarItem5
         self.viewControllers?.append(profileViewController)
         
         self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileViewController]
         
-        bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, tabBarItem5 ]
-        bottomNavBar.selectedItem = tabBarItem3
         
         bottomNavBar.delegate = self
+
+        bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, tabBarItem5 ]
+        bottomNavBar.selectedItem = tabBarItem3
+        selectedViewController = self.viewControllers?[ConstIndex.favorite]
+
+        MDCBottomNavigationBarColorThemer.applySemanticColorScheme(colorScheme, toBottomNavigation: bottomNavBar)
         
         view.addSubview(bottomNavBar)
-        
-        // rootViewControllerをUITabBarControllerにする
-        window = UIWindow()
-        window?.rootViewController = self
-        window?.makeKeyAndVisible()
-
-        
-        MDCBottomNavigationBarColorThemer.applySemanticColorScheme(colorScheme, toBottomNavigation: bottomNavBar)
     }
     
     func layoutBottomNavBar() {
@@ -98,22 +90,22 @@ class ViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, didSelect item: UITabBarItem) {
         
         switch item.tag {
-        case ConstTag.card:
+        case ConstIndex.card:
             print("card")
             //self.selectedViewController = CardViewController(nibName: "CardViewController", bundle: nil)
-            selectedViewController = self.viewControllers?[0]
-        case ConstTag.search:
+            selectedViewController = self.viewControllers?[ConstIndex.card]
+        case ConstIndex.search:
             print("search")
-            selectedViewController = self.viewControllers?[1]
-        case ConstTag.favorite:
+            selectedViewController = self.viewControllers?[ConstIndex.search]
+        case ConstIndex.favorite:
             print("favorite")
-            selectedViewController = self.viewControllers?[2]
-        case ConstTag.notify:
+            selectedViewController = self.viewControllers?[ConstIndex.favorite]
+        case ConstIndex.notify:
             print("notify")
-            selectedViewController = self.viewControllers?[3]
-        case ConstTag.profile:
+            selectedViewController = self.viewControllers?[ConstIndex.notify]
+        case ConstIndex.profile:
             print("profile")
-            selectedViewController = self.viewControllers?[4]
+            selectedViewController = self.viewControllers?[ConstIndex.profile]
         default:
             print("other")
         }
