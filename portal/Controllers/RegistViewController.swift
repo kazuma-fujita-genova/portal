@@ -12,21 +12,11 @@ import MaterialComponents.MaterialTextFields
 
 class RegistViewController: UIViewController {
 
-    @IBOutlet weak var nicknameField: MDCTextField! = {
-        let nicknameField = MDCTextField()
-        // nicknameField.translatesAutoresizingMaskIntoConstraints = false
-        nicknameField.autocapitalizationType = .words
-        return nicknameField
-    }()
+    @IBOutlet weak var nicknameField: MDCTextField!
     
-    @IBOutlet weak var mobileTelField: MDCTextField! = {
-        let mobileTelField = MDCTextField()
-        // mobileTelField.translatesAutoresizingMaskIntoConstraints = false
-        return mobileTelField
-    }()
+    @IBOutlet weak var mobileTelField: MDCTextField!
     
     @IBOutlet weak var sendButton: UIButton!
-    
     
     
     @IBAction func handleSendButton(_ sender: Any) {
@@ -44,6 +34,7 @@ class RegistViewController: UIViewController {
         let nicknameFieldController = MDCTextInputControllerUnderline(textInput: nicknameField)
         nicknameField.delegate = self as? UITextFieldDelegate
         //nicknameField.placeholder = "Name"
+        nicknameField.autocapitalizationType = .words
         nicknameFieldController.placeholderText = "ニックネーム"
         nicknameFieldController.helperText = "10文字以内"
         let nicknameTextInput = nicknameFieldController.textInput as! MDCTextField
@@ -66,5 +57,4 @@ class RegistViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
