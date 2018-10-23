@@ -9,7 +9,7 @@
 import MaterialComponents.MaterialBottomNavigation_ColorThemer
 import MaterialComponents.MaterialTypographyScheme
 
-class TabBarController: UITabBarController, MDCBottomNavigationBarDelegate {
+class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     
     var colorScheme = MDCSemanticColorScheme()
     var typographyScheme = MDCTypographyScheme()
