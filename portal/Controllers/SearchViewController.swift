@@ -16,28 +16,25 @@ import MaterialComponents.MaterialTabs
 import MaterialComponents.MaterialTypographyScheme
 import MaterialComponents.MaterialFlexibleHeader_CanAlwaysExpandToMaximumHeight
 
-class SearchViewController: UIViewController {
+class SearchViewController: MDCTabBarViewController {
 
     lazy var appBarViewController: MDCAppBarViewController = self.makeAppBar()
     var colorScheme = MDCSemanticColorScheme()
     var typographyScheme = MDCTypographyScheme()
     
-    fileprivate let firstTab = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
-    fileprivate let secondTab = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
-    
-    lazy var tabBar: MDCTabBar = {
-        let tabBar = MDCTabBar()
-        tabBar.alignment = .justified
+    lazy var mDCTabBar: MDCTabBar = {
+        let mDCTabBar = MDCTabBar()
+        mDCTabBar.alignment = .justified
         
-        tabBar.items = [
-            UITabBarItem(title: ConstTitle.keywordSearch, image: nil, tag:0),
-            UITabBarItem(title: ConstTitle.mapSearch, image: nil, tag:1)
+        mDCTabBar.items = [
+            UITabBarItem(title: ConstTitle.keywordSearch, image: nil, tag:ConstIndex.keywordSearch),
+            UITabBarItem(title: ConstTitle.mapSearch, image: nil, tag:ConstIndex.mapSearch)
         ]
-        tabBar.selectedItem = tabBar.items[0]
+        mDCTabBar.selectedItem = mDCTabBar.items[0]
         
-        tabBar.delegate = self as? MDCTabBarDelegate
+        mDCTabBar.delegate = self
         
-        return tabBar
+        return mDCTabBar
     }()
     
     override func viewDidLoad() {
@@ -48,37 +45,15 @@ class SearchViewController: UIViewController {
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
         
         self.view.backgroundColor = colorScheme.backgroundColor
+        
+        let keywordSearchViewController = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
+        let mapSearchViewController = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
+        self.viewControllers = [keywordSearchViewController, mapSearchViewController]
+        selectedViewController = self.viewControllers[ConstIndex.keywordSearch]
+
         self.view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
-        
-        //switchToTab(firstTab)
     }
-/*
-    fileprivate func switchToTab(_ tab: ViewController) {
-        //appBarViewController.headerView.trackingScrollWillChange(toScroll: tab.tableView)
-        
-        if let currentTab = currentTab {
-            //currentTab.headerView = nil
-            currentTab.willMove(toParent: nil)
-            currentTab.view.removeFromSuperview()
-            currentTab.removeFromParent()
-        }
-        
-        if let tabView = tab.view {
-            tabView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            tabView.frame = view.bounds
-        }
-        
-        view.addSubview(tab.tableView)
-        view.sendSubview(toBack: tab.tableView)
-        tab.didMove(toParentViewController: self)
-        
-        tab.headerView = appBarViewController.headerView
-        
-        // appBarViewController.headerView.trackingScrollView = tab.tableView
-        currentTab = tab
-    }
- */
     
     private func makeAppBar() -> MDCAppBarViewController {
         let appBarViewController = MDCAppBarViewController()
@@ -94,10 +69,25 @@ class SearchViewController: UIViewController {
         appBarViewController.headerView.minimumHeight = 56
         appBarViewController.headerView.maximumHeight = 128
         
-        appBarViewController.headerStackView.bottomBar = tabBar
+        appBarViewController.headerStackView.bottomBar = mDCTabBar
         
         return appBarViewController
     }
+    
+    override func tabBar(_ tabBar: MDCTabBar, didSelect item: UITabBarItem) {
+        switch item.tag {
+            case ConstIndex.keywordSearch:
+                print("KeywordSearch")
+                selectedViewController = self.viewControllers[ConstIndex.keywordSearch]
+            case ConstIndex.mapSearch:
+                print("MapSearch")
+                selectedViewController = self.viewControllers[ConstIndex.mapSearch]
+                view.addSubview(appBarViewController.view)
+            default:
+                print("other")
+        }
+    }
+    
     
     /*
     // MARK: - Navigation

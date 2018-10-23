@@ -27,9 +27,12 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
-        let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        // let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        // TODO: 暫定で新規登録画面表示。新規登録実装後遷移先をかかりつけに変更
+        let favoriteViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        // let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
         self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileViewController]
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
@@ -74,23 +77,23 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, didSelect item: UITabBarItem) {
         
         switch item.tag {
-        case ConstIndex.card:
-            print("card")
-            selectedViewController = self.viewControllers?[ConstIndex.card]
-        case ConstIndex.search:
-            print("search")
-            selectedViewController = self.viewControllers?[ConstIndex.search]
-        case ConstIndex.favorite:
-            print("favorite")
-            selectedViewController = self.viewControllers?[ConstIndex.favorite]
-        case ConstIndex.notify:
-            print("notify")
-            selectedViewController = self.viewControllers?[ConstIndex.notify]
-        case ConstIndex.profile:
-            print("profile")
-            selectedViewController = self.viewControllers?[ConstIndex.profile]
-        default:
-            print("other")
+            case ConstIndex.card:
+                print("card")
+                selectedViewController = self.viewControllers?[ConstIndex.card]
+            case ConstIndex.search:
+                print("search")
+                selectedViewController = self.viewControllers?[ConstIndex.search]
+            case ConstIndex.favorite:
+                print("favorite")
+                selectedViewController = self.viewControllers?[ConstIndex.favorite]
+            case ConstIndex.notify:
+                print("notify")
+                selectedViewController = self.viewControllers?[ConstIndex.notify]
+            case ConstIndex.profile:
+                print("profile")
+                selectedViewController = self.viewControllers?[ConstIndex.profile]
+            default:
+                print("other")
         }
     }
 }

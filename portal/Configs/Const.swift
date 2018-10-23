@@ -37,6 +37,8 @@ struct ConstIndex {
     static let favorite = 2
     static let notify = 3
     static let profile = 4
+    static let keywordSearch = 0
+    static let mapSearch = 1
 }
 
 struct ConstImage {
