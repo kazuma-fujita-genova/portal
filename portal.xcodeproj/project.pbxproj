@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BAEB7FD299C256453887375 /* Pods_portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708E6240566961555B6CF5EF /* Pods_portal.framework */; };
+		A41DF96A217EAA65006EABE9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF969217EAA65006EABE9 /* TabBarController.swift */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
 		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
 		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
@@ -35,7 +36,6 @@
 		A46A88082178AF550050369C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A88062178AF550050369C /* AuthViewController.swift */; };
 		A46A88092178AF550050369C /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A88072178AF550050369C /* AuthViewController.xib */; };
 		A491D32E21757180005610DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491D32D21757180005610DC /* AppDelegate.swift */; };
-		A491D33021757180005610DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491D32F21757180005610DC /* ViewController.swift */; };
 		A491D33321757180005610DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491D33121757180005610DC /* Main.storyboard */; };
 		A491D33521757182005610DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A491D33421757182005610DC /* Assets.xcassets */; };
 		A491D33821757182005610DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491D33621757182005610DC /* LaunchScreen.storyboard */; };
@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		5969DC3E98EB22053EDF5255 /* Pods-portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-portal/Pods-portal.debug.xcconfig"; sourceTree = "<group>"; };
 		708E6240566961555B6CF5EF /* Pods_portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41DF969217EAA65006EABE9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		A46A88072178AF550050369C /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		A491D32A21757180005610DC /* portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A491D32D21757180005610DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A491D32F21757180005610DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A491D33221757180005610DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A491D33421757182005610DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A491D33721757182005610DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
-				A491D32F21757180005610DC /* ViewController.swift */,
+				A41DF969217EAA65006EABE9 /* TabBarController.swift */,
 				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
 				A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */,
 				A46A87DE2178ADE90050369C /* CardViewController.swift */,
@@ -342,12 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A491D33021757180005610DC /* ViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
+				A41DF96A217EAA65006EABE9 /* TabBarController.swift in Sources */,
 				A46A88042178AF370050369C /* RegistViewController.swift in Sources */,
 				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
 				A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */,
