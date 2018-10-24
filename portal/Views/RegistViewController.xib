@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="mobileTelField" destination="niL-4Q-Aur" id="am8-xb-dOV"/>
                 <outlet property="nicknameField" destination="vST-yE-f4V" id="jQw-0o-FAy"/>
-                <outlet property="sendButton" destination="gh6-TS-j9C" id="cdu-iG-AGV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,29 +39,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-TS-j9C">
-                    <rect key="frame" x="126" y="394" width="123" height="30"/>
-                    <state key="normal" title="確認コードを送信"/>
-                    <connections>
-                        <action selector="handleSendButton:" destination="-1" eventType="touchUpInside" id="CuE-DG-Y2j"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規登録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXQ-dR-pZi">
-                    <rect key="frame" x="152" y="84" width="70" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vST-yE-f4V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="163" id="BTY-8L-AQ0"/>
-                <constraint firstItem="gh6-TS-j9C" firstAttribute="centerX" secondItem="vST-yE-f4V" secondAttribute="centerX" id="Gpi-Wz-JBX"/>
-                <constraint firstItem="vST-yE-f4V" firstAttribute="top" secondItem="AXQ-dR-pZi" secondAttribute="bottom" constant="58" id="PeM-5v-fjU"/>
                 <constraint firstItem="vST-yE-f4V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VsS-yQ-lLB"/>
-                <constraint firstItem="vST-yE-f4V" firstAttribute="centerX" secondItem="AXQ-dR-pZi" secondAttribute="centerX" id="W36-v9-io5"/>
                 <constraint firstItem="niL-4Q-Aur" firstAttribute="centerX" secondItem="vST-yE-f4V" secondAttribute="centerX" id="YXY-4T-vCU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gh6-TS-j9C" secondAttribute="bottom" constant="243" id="obo-Jo-cGW"/>
                 <constraint firstItem="niL-4Q-Aur" firstAttribute="top" secondItem="vST-yE-f4V" secondAttribute="bottom" constant="52" id="to2-cw-dTf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

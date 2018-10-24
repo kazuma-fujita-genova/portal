@@ -1,20 +1,22 @@
 //
-//  NotifyListViewController.swift
+//  SettingViewController.swift
 //  portal
 //
-//  Created by 藤田和磨 on 2018/10/18.
+//  Created by 藤田和磨 on 2018/10/24.
 //  Copyright © 2018 藤田和磨. All rights reserved.
 //
 
 import UIKit
 
-class NotifyListViewController: UIViewController {
+class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
+
     /*
     // MARK: - Navigation
 

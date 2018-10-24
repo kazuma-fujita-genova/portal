@@ -55,16 +55,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         profileViewController.tabBarItem = tabBarItem5
         viewControllers.append(profileViewController)
-         
+ 
+ */
         // ViewControllerをセット
-        let tabBarController = UITabBarController()
-        tabBarController.setViewControllers(viewControllers, animated: false)
-        
-        // rootViewControllerをUITabBarControllerにする
+//        let tabBarController = UITabBarController()
+//        tabBarController.setViewControllers(viewControllers, animated: false)
+ 
+        let tabBarViewController = TabBarViewController()
+        // let navigationBarController = UINavigationController()
+        let navigationBarController = UINavigationController(rootViewController: tabBarViewController)
+        //let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
+        //navigationBarController.setViewControllers([tabBarViewController], animated:true)
+        // rootViewControllerをTabBarControllerにする
         window = UIWindow()
-        window?.rootViewController = tabBarController
+        window?.rootViewController = navigationBarController
         window?.makeKeyAndVisible()
-        */
+ 
         return true
     }
 

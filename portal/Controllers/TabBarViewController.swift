@@ -27,9 +27,9 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
-        // let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
         // TODO: 暫定で新規登録画面表示。新規登録実装後遷移先をかかりつけに変更
-        let favoriteViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
+        //let favoriteViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         // let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
@@ -50,6 +50,11 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         MDCBottomNavigationBarColorThemer.applySemanticColorScheme(colorScheme, toBottomNavigation: bottomNavBar)
         
         view.addSubview(bottomNavBar)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func layoutBottomNavBar() {
