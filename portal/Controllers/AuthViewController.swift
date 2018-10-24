@@ -53,8 +53,11 @@ class AuthViewController: UIViewController {
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "確認", style: .done, target: nil, action: #selector(handleAuthButton(_:forEvent:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: nil, action: #selector(handleCancelButton(_:forEvent:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "確認", style: .done, target: self, action: #selector(handleAuthButton(_:forEvent:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
+        // NavigationBar表示
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+
     }
     
     // Navigation Barの確認ボタンがタップされた時に呼ばれるメソッド

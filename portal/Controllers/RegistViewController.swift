@@ -37,8 +37,8 @@ class RegistViewController: UIViewController {
         
         // NavigationBar表示
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "作成", style: .done, target: nil, action: #selector(handleCreatelButton(_:forEvent:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: nil, action: #selector(handleCancelButton(_:forEvent:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "作成", style: .done, target: self, action: #selector(handleCreatelButton(_:forEvent:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
         
         /*
         // Behavioral flags.

@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         // App Bar
         self.title = "ログイン"
         
+        
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
         appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
@@ -53,8 +54,11 @@ class LoginViewController: UIViewController {
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "送信", style: .done, target: nil, action: #selector(handleSendlButton(_:forEvent:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: nil, action: #selector(handleCancelButton(_:forEvent:)))
+        // NavigationBar表示
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "送信", style: .done, target: self, action: #selector(handleSendlButton(_:forEvent:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
+
     }
     // NavigationBarの送信ボタンがタップされた時に呼ばれるメソッド
     @objc func handleSendlButton(_ sender: UIButton, forEvent event: UIEvent) {
