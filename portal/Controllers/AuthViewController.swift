@@ -30,9 +30,13 @@ class AuthViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupTextFields()
         
-        // App Bar
+        // NavigationBar設定
         self.title = "確認コード入力"
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "確認", style: .done, target: self, action: #selector(handleAuthButton(_:forEvent:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
+
+        // AppBar設定
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
         appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
@@ -52,22 +56,16 @@ class AuthViewController: UIViewController {
         // Step 2: Register the App Bar views.
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "確認", style: .done, target: self, action: #selector(handleAuthButton(_:forEvent:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
-        // NavigationBar表示
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-
     }
     
     // Navigation Barの確認ボタンがタップされた時に呼ばれるメソッド
     @objc func handleAuthButton(_ sender: UIButton, forEvent event: UIEvent) {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // Navigation Barのキャンセルタップされた時に呼ばれるメソッド
     @objc func handleCancelButton(_ sender: UIButton, forEvent event: UIEvent) {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func setupTextFields() {

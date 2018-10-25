@@ -13,6 +13,8 @@
 		A41DF97C218046F0006EABE9 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97A218046F0006EABE9 /* SettingViewController.xib */; };
 		A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */; };
 		A41DF98021804EB5006EABE9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */; };
+		A41DF983218193D5006EABE9 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */; };
+		A41DF984218193D5006EABE9 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
 		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
 		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
@@ -52,6 +54,8 @@
 		A41DF97A218046F0006EABE9 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				A46A87F32178AEB50050369C /* NotifyListViewController.xib */,
 				A46A87F72178AED20050369C /* NotifyDetailViewController.xib */,
 				A46A87EB2178AE700050369C /* FavoriteViewController.xib */,
+				A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */,
 				A46A87DF2178ADE90050369C /* CardViewController.xib */,
 				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A41DF97A218046F0006EABE9 /* SettingViewController.xib */,
@@ -142,6 +147,7 @@
 				A46A87DE2178ADE90050369C /* CardViewController.swift */,
 				A46A87E62178AE440050369C /* MapSearchViewController.swift */,
 				A46A87EA2178AE700050369C /* FavoriteViewController.swift */,
+				A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */,
 				A46A87F22178AEB50050369C /* NotifyListViewController.swift */,
 				A46A87F62178AED20050369C /* NotifyDetailViewController.swift */,
 				A46A87FA2178AEF30050369C /* ProfileViewController.swift */,
@@ -287,6 +293,7 @@
 				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
 				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
+				A41DF984218193D5006EABE9 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */,
 				A46A88012178AF190050369C /* LoginViewController.xib in Resources */,
 				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
@@ -355,6 +362,7 @@
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
+				A41DF983218193D5006EABE9 /* FavoriteTableViewCell.swift in Sources */,
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,

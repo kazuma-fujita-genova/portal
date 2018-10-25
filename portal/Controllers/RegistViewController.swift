@@ -18,9 +18,9 @@ class RegistViewController: UIViewController {
     var allTextFieldControllers = [MDCTextInputControllerUnderline]()
     
     // Step 1: Create and initialize an App Bar.
-    // let appBarViewController = MDCAppBarViewController()
-    // var colorScheme = MDCSemanticColorScheme()
-    // var typographyScheme = MDCTypographyScheme()
+    let appBarViewController = MDCAppBarViewController()
+    var colorScheme = MDCSemanticColorScheme()
+    var typographyScheme = MDCTypographyScheme()
     
     @IBOutlet weak var nicknameField: MDCTextField!
     
@@ -32,21 +32,20 @@ class RegistViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupTextFields()
         
-        // App Bar
+        // NavigationBar設定
         self.title = "アカウント作成"
-        
-        // NavigationBar表示
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "作成", style: .done, target: self, action: #selector(handleCreatelButton(_:forEvent:)))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
-        
-        /*
+
+        // App Bar
+
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
         appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
         
         // Step 2: Add the headerViewController as a child.
-        //self.addChild(appBarViewController)
+        self.addChild(appBarViewController)
         
         MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
@@ -58,26 +57,20 @@ class RegistViewController: UIViewController {
         // appBarViewController.headerView.trackingScrollView = self.tableView
         
         // Step 2: Register the App Bar views.
-        // view.addSubview(appBarViewController.view)
-        //appBarViewController.didMove(toParent: self)
-        
-        //self.navigationController?.setNavigationBarHidden(false, animated: true)
- */
+        view.addSubview(appBarViewController.view)
+        appBarViewController.didMove(toParent: self)
     }
 
     // ナビゲーションバーの作成ボタンがタップされた時に呼ばれるメソッド
     @objc func handleCreatelButton(_ sender: UIButton, forEvent event: UIEvent) {
-        
         let authViewController = AuthViewController(nibName: "AuthViewController", bundle: nil)
-        //let navigationController = UINavigationController(rootViewController: authViewController)
-        self.navigationController?.pushViewController(authViewController, animated: true)
-        //self.show(authViewController, sender: nil)
+        self.navigationController?.show(authViewController, sender: nil)
     }
     
     // ナビゲーションバーのキャンセルタップされた時に呼ばれるメソッド
     @objc func handleCancelButton(_ sender: UIButton, forEvent event: UIEvent) {
-        //self.dismiss(animated: true, completion: nil)
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+        // self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     func setupTextFields() {

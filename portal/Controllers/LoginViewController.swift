@@ -30,10 +30,13 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupTextFields()
         
-        // App Bar
+        // NavigationBar設定
         self.title = "ログイン"
+        // self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "送信", style: .done, target: self, action: #selector(handleSendlButton(_:forEvent:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
         
-        
+        // App Bar設定
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
         appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
@@ -53,18 +56,11 @@ class LoginViewController: UIViewController {
         // Step 2: Register the App Bar views.
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
-        
-        // NavigationBar表示
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "送信", style: .done, target: self, action: #selector(handleSendlButton(_:forEvent:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
-
     }
     // NavigationBarの送信ボタンがタップされた時に呼ばれるメソッド
     @objc func handleSendlButton(_ sender: UIButton, forEvent event: UIEvent) {
         let authViewController = AuthViewController(nibName: "AuthViewController", bundle: nil)
-        //let navigationController = UINavigationController(rootViewController: authViewController)
-        self.navigationController?.pushViewController(authViewController, animated: true)
+        self.navigationController?.show(authViewController, sender: nil)
     }
     
     // NavigationBarのキャンセルタップされた時に呼ばれるメソッド

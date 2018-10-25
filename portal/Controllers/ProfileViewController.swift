@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MaterialComponents.MDCAppBarNavigationController
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,7 +17,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // self.navigationController?.setNavigationBarHidden(false, animated: true)
         // Do any additional setup after loading the view.
         // let profileTableView = Bundle.main.loadNibNamed("ProfileTableView", owner: self, options: nil)!.first as! ProfileTableView
         // self.view.addSubview(profileTableView)
@@ -25,6 +26,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
         self.profileViewTable.register(nib, forCellReuseIdentifier: "Cell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,21 +48,20 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if indexPath.row == 0 {
             // 新規登録ボタンはRegistViewControllerをモーダルで表示する
             let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
-            let navigationController = UINavigationController(rootViewController:registViewController)
-            // self.present(registViewController, animated: true, completion: nil)
+            let navigationController = MDCAppBarNavigationController(rootViewController: registViewController)
             self.present(navigationController, animated: true, completion: nil)
-            // self.show(registViewController, sender: nil)
-            // self.navigationController?.pushViewController(registViewController, animated: true)
         }
         else if indexPath.row == 1 {
             // ログインボタンはLoginViewControllerをモーダルで表示する
             let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            self.present(loginViewController, animated: true, completion: nil)
+            let navigationController = MDCAppBarNavigationController(rootViewController: loginViewController)
+            self.present(navigationController, animated: true, completion: nil)
         }
         else if indexPath.row == 2 {
             // 設定はSettingViewControllerをモーダルで表示する
             let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
-            self.present(settingViewController, animated: true, completion: nil)
+            let navigationController = MDCAppBarNavigationController(rootViewController: settingViewController)
+            self.present(navigationController, animated: true, completion: nil)
         }
     }
     
