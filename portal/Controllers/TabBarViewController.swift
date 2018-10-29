@@ -23,6 +23,9 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         // Do any additional setup after loading the view.
         bottomNavBar.delegate = self
         colorScheme.backgroundColor = .white
+        colorScheme.primaryColor = .white
+        colorScheme.onPrimaryColor = .black
+        
         view.backgroundColor = colorScheme.backgroundColor
         
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)

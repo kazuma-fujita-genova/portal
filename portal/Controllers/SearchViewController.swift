@@ -30,9 +30,18 @@ class SearchViewController: MDCTabBarViewController {
             UITabBarItem(title: ConstTitle.keywordSearch, image: nil, tag:ConstIndex.keywordSearch),
             UITabBarItem(title: ConstTitle.mapSearch, image: nil, tag:ConstIndex.mapSearch)
         ]
+ 
         mDCTabBar.selectedItem = mDCTabBar.items[0]
         
         mDCTabBar.delegate = self
+        
+        mDCTabBar.setTitleColor(UIColor.gray, for: .normal)
+        mDCTabBar.setTitleColor(UIColor.black, for: .selected)
+        // mDCTabBar.bottomDividerColor = .gray
+        
+        mDCTabBar.selectionIndicatorTemplate = TabIndicator()
+        
+        // mDCTabBar.barTintColor = .gray
         
         return mDCTabBar
     }()
@@ -41,10 +50,12 @@ class SearchViewController: MDCTabBarViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        colorScheme.primaryColor = .white
+        
         MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
         
-        self.view.backgroundColor = colorScheme.backgroundColor
+        // self.view.backgroundColor = colorScheme.backgroundColor
         
         let keywordSearchViewController = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
         let mapSearchViewController = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
@@ -87,15 +98,24 @@ class SearchViewController: MDCTabBarViewController {
                 print("other")
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+class TabIndicator: NSObject, MDCTabBarIndicatorTemplate {
+    /// タブインジケーター高さ
+    private let underlineHeight: CGFloat = 2.0
+    /// タブインジケーター幅
+    // private let underlineWidth: CGFloat = 30.0
+    func indicatorAttributes(for context: MDCTabBarIndicatorContext) -> MDCTabBarIndicatorAttributes {
+        let bounds = context.bounds
+        let attributes = MDCTabBarIndicatorAttributes()
+        let underlineFrame = CGRect(x: bounds.minX,
+                                    y: bounds.maxY - underlineHeight,
+                                    // width: bounds.width - underlineWidth,
+                                    width: bounds.width,
+                                    height: underlineHeight)
+        // UIColor.gray.setStroke()
+        attributes.path = UIBezierPath(rect: underlineFrame)
+        
+        return attributes
     }
-    */
 }
