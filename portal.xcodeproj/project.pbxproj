@@ -20,6 +20,7 @@
 		A450A04F218859C5008D6384 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450A04E218859C5008D6384 /* CardView.xib */; };
 		A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */; };
 		A450A0532189956C008D6384 /* KeywordSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */; };
+		A450A0552189AF50008D6384 /* ProfileLoginBeforeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A0542189AF50008D6384 /* ProfileLoginBeforeView.swift */; };
 		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
 		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
 		A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87DB2178ADA60050369C /* SearchViewController.xib */; };
@@ -65,6 +66,7 @@
 		A450A04E218859C5008D6384 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchTableViewCell.swift; sourceTree = "<group>"; };
 		A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordSearchTableViewCell.xib; sourceTree = "<group>"; };
+		A450A0542189AF50008D6384 /* ProfileLoginBeforeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileLoginBeforeView.swift; path = portal/Controllers/ProfileLoginBeforeView.swift; sourceTree = SOURCE_ROOT; };
 		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A46A87DB2178ADA60050369C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				A46A87F22178AEB50050369C /* NotifyListViewController.swift */,
 				A46A87F62178AED20050369C /* NotifyDetailViewController.swift */,
 				A46A87FA2178AEF30050369C /* ProfileViewController.swift */,
+				A450A0542189AF50008D6384 /* ProfileLoginBeforeView.swift */,
 				A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */,
 				A41DF979218046F0006EABE9 /* SettingViewController.swift */,
 			);
@@ -384,6 +387,7 @@
 				A41DF97B218046F0006EABE9 /* SettingViewController.swift in Sources */,
 				A46A88042178AF370050369C /* RegistViewController.swift in Sources */,
 				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
+				A450A0552189AF50008D6384 /* ProfileLoginBeforeView.swift in Sources */,
 				A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */,
 				A41DF96C217EAD7E006EABE9 /* TabBarViewController.swift in Sources */,
 				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,

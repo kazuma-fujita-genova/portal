@@ -28,7 +28,7 @@ struct ConstTitle {
     static let notify = "お知らせ"
     static let profile = "プロフィール"
     static let keywordSearch = "病院名から探す"
-    static let mapSearch = "地図から探す"
+    static let mapSearch = "現在地から探す"
 }
 
 struct ConstIndex {
