@@ -47,6 +47,9 @@ class RegistViewController: UIViewController {
         // Step 2: Add the headerViewController as a child.
         self.addChild(appBarViewController)
         
+        colorScheme.primaryColor = .white
+        colorScheme.onPrimaryColor = .black
+        
         MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
         

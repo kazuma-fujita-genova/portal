@@ -16,6 +16,10 @@
 		A41DF983218193D5006EABE9 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */; };
 		A41DF984218193D5006EABE9 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
+		A450A04D218859A4008D6384 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A04C218859A4008D6384 /* CardView.swift */; };
+		A450A04F218859C5008D6384 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450A04E218859C5008D6384 /* CardView.xib */; };
+		A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */; };
+		A450A0532189956C008D6384 /* KeywordSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */; };
 		A46A87D92178AD710050369C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87D82178AD710050369C /* CardModel.swift */; };
 		A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87DA2178ADA60050369C /* SearchViewController.swift */; };
 		A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87DB2178ADA60050369C /* SearchViewController.xib */; };
@@ -57,6 +61,10 @@
 		A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A450A04C218859A4008D6384 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A450A04E218859C5008D6384 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchTableViewCell.swift; sourceTree = "<group>"; };
+		A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordSearchTableViewCell.xib; sourceTree = "<group>"; };
 		A46A87D82178AD710050369C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		A46A87DA2178ADA60050369C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A46A87DB2178ADA60050369C /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 				A46A87FF2178AF190050369C /* LoginViewController.xib */,
 				A46A88072178AF550050369C /* AuthViewController.xib */,
 				A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */,
+				A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */,
 				A46A87E72178AE440050369C /* MapSearchViewController.xib */,
 				A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */,
 				A46A87FB2178AEF30050369C /* ProfileViewController.xib */,
@@ -127,6 +136,7 @@
 				A46A87EB2178AE700050369C /* FavoriteViewController.xib */,
 				A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */,
 				A46A87DF2178ADE90050369C /* CardViewController.xib */,
+				A450A04E218859C5008D6384 /* CardView.xib */,
 				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A41DF97A218046F0006EABE9 /* SettingViewController.xib */,
 				A491D33621757182005610DC /* LaunchScreen.storyboard */,
@@ -142,9 +152,11 @@
 				A46A87FE2178AF190050369C /* LoginViewController.swift */,
 				A46A88062178AF550050369C /* AuthViewController.swift */,
 				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
+				A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */,
 				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
 				A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */,
 				A46A87DE2178ADE90050369C /* CardViewController.swift */,
+				A450A04C218859A4008D6384 /* CardView.swift */,
 				A46A87E62178AE440050369C /* MapSearchViewController.swift */,
 				A46A87EA2178AE700050369C /* FavoriteViewController.swift */,
 				A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */,
@@ -289,12 +301,14 @@
 				A46A88052178AF370050369C /* RegistViewController.xib in Resources */,
 				A46A87E52178AE0F0050369C /* KeywordSearchViewController.xib in Resources */,
 				A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */,
+				A450A04F218859C5008D6384 /* CardView.xib in Resources */,
 				A41DF97C218046F0006EABE9 /* SettingViewController.xib in Resources */,
 				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
 				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
 				A41DF984218193D5006EABE9 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */,
+				A450A0532189956C008D6384 /* KeywordSearchTableViewCell.xib in Resources */,
 				A46A88012178AF190050369C /* LoginViewController.xib in Resources */,
 				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
 				A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */,
@@ -366,6 +380,7 @@
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
+				A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */,
 				A41DF97B218046F0006EABE9 /* SettingViewController.swift in Sources */,
 				A46A88042178AF370050369C /* RegistViewController.swift in Sources */,
 				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
@@ -373,6 +388,7 @@
 				A41DF96C217EAD7E006EABE9 /* TabBarViewController.swift in Sources */,
 				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,
 				A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */,
+				A450A04D218859A4008D6384 /* CardView.swift in Sources */,
 				A46A87E02178ADE90050369C /* CardViewController.swift in Sources */,
 				A46A87F42178AEB50050369C /* NotifyListViewController.swift in Sources */,
 				A46A87E42178AE0F0050369C /* KeywordSearchViewController.swift in Sources */,

@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeywordSearchViewController" customModule="portal" customModuleProvider="target">
             <connections>
+                <outlet property="keywordSearchTableView" destination="hZD-i2-721" id="GG1-80-7HG"/>
+                <outlet property="searchField" destination="VVr-lr-s5V" id="9TE-KK-EfP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,15 +21,29 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワード検索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8V-zb-Zum">
-                    <rect key="frame" x="126" y="192" width="122" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-lr-s5V" customClass="MDCTextField">
+                    <rect key="frame" x="37.5" y="80" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="h8z-5i-WLm"/>
+                    </constraints>
                     <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hZD-i2-721">
+                    <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VVr-lr-s5V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="7cg-IE-l7g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hZD-i2-721" secondAttribute="trailing" id="HMz-9N-IcJ"/>
+                <constraint firstItem="hZD-i2-721" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="e9x-Lk-a8B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hZD-i2-721" secondAttribute="bottom" id="hU0-UY-wSC"/>
+                <constraint firstItem="hZD-i2-721" firstAttribute="top" secondItem="VVr-lr-s5V" secondAttribute="bottom" id="qpU-XR-dsL"/>
+                <constraint firstItem="VVr-lr-s5V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="td3-3M-gxJ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="149.77511244377811"/>
         </view>

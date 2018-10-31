@@ -37,6 +37,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cellLabel" destination="c2B-ne-y95" id="3Q7-fe-V8U"/>
+                <outlet property="cellView" destination="H2p-sc-9uM" id="Vyd-QS-TRz"/>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="9Wr-K6-92F"/>
             </connections>
         </tableViewCell>
     </objects>

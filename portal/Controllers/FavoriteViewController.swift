@@ -27,8 +27,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         // テーブル行の高さの概算値を設定しておく
         // 高さ概算値 = 「縦横比1:1のUIImageViewの高さ(=画面幅)」+「いいねボタン、キャプションラベル、その他余白の高さの合計概算(=100pt)」
         // favoriteTableView.estimatedRowHeight = UIScreen.main.bounds.width + 100
-
-
     }
     
     override public var traitCollection: UITraitCollection {

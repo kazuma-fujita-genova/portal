@@ -37,11 +37,9 @@ class SearchViewController: MDCTabBarViewController {
         
         mDCTabBar.setTitleColor(UIColor.gray, for: .normal)
         mDCTabBar.setTitleColor(UIColor.black, for: .selected)
-        // mDCTabBar.bottomDividerColor = .gray
         
-        mDCTabBar.selectionIndicatorTemplate = TabIndicator()
-        
-        // mDCTabBar.barTintColor = .gray
+        // タブバーインジケーターのスタイルを変更する場合はTabIndicatorを調整する
+        // mDCTabBar.selectionIndicatorTemplate = TabIndicator()
         
         return mDCTabBar
     }()
@@ -50,18 +48,18 @@ class SearchViewController: MDCTabBarViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupAppBarView()
+    }
+    
+    private func setupAppBarView() {
         colorScheme.primaryColor = .white
-        
         MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
-        
-        // self.view.backgroundColor = colorScheme.backgroundColor
-        
+
         let keywordSearchViewController = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
         let mapSearchViewController = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
         self.viewControllers = [keywordSearchViewController, mapSearchViewController]
         selectedViewController = self.viewControllers[ConstIndex.keywordSearch]
-
         self.view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
     }
@@ -77,6 +75,7 @@ class SearchViewController: MDCTabBarViewController {
         appBarViewController.headerView.canAlwaysExpandToMaximumHeight = true
         appBarViewController.headerView.sharedWithManyScrollViews = true
         
+        appBarViewController.headerView.tintColor = .gray
         appBarViewController.headerView.minimumHeight = 56
         appBarViewController.headerView.maximumHeight = 128
         
@@ -113,7 +112,6 @@ class TabIndicator: NSObject, MDCTabBarIndicatorTemplate {
                                     // width: bounds.width - underlineWidth,
                                     width: bounds.width,
                                     height: underlineHeight)
-        // UIColor.gray.setStroke()
         attributes.path = UIBezierPath(rect: underlineFrame)
         
         return attributes

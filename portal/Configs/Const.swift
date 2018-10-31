@@ -39,12 +39,17 @@ struct ConstIndex {
     static let profile = 4
     static let keywordSearch = 0
     static let mapSearch = 1
+    static let myCard = 0
+}
+
+struct ConstNavigationImage {
+    static let card = "nav_assignment"
+    static let search = "nav_search"
+    static let favorite = "nav_favorite_border"
+    static let notify = "nav_notifications_none"
+    static let profile = "nav_perm_identity"
 }
 
 struct ConstImage {
-    static let card = "assignment"
     static let search = "search"
-    static let favorite = "favorite_border"
-    static let notify = "notifications_none"
-    static let profile = "perm_identity"
 }

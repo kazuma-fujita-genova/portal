@@ -10,12 +10,17 @@ import UIKit
 
 class MapSearchViewController: UIViewController {
 
+    @IBOutlet weak var labelField: UILabel!
+    
+    @IBOutlet weak var imageField: UIImageView!
+
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
 
     /*
     // MARK: - Navigation

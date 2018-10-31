@@ -22,11 +22,11 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         // Do any additional setup after loading the view.
         bottomNavBar.delegate = self
-        colorScheme.backgroundColor = .white
+        // colorScheme.backgroundColor = .white
         colorScheme.primaryColor = .white
         colorScheme.onPrimaryColor = .black
         
-        view.backgroundColor = colorScheme.backgroundColor
+        // view.backgroundColor = colorScheme.backgroundColor
         
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
@@ -40,12 +40,12 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
         
-        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: ConstImage.card), tag: ConstIndex.card)
-        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: ConstImage.search), tag: ConstIndex.search)
-        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: ConstImage.favorite), tag: ConstIndex.favorite)
-        tabBarItem3.selectedImage = UIImage(named: "favorite")
-        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: ConstImage.notify), tag: ConstIndex.notify)
-        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: ConstImage.profile), tag: ConstIndex.profile)
+        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: ConstNavigationImage.card), tag: ConstIndex.card)
+        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: ConstNavigationImage.search), tag: ConstIndex.search)
+        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: ConstNavigationImage.favorite), tag: ConstIndex.favorite)
+        // tabBarItem3.selectedImage = UIImage(named: "favorite")
+        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: ConstNavigationImage.notify), tag: ConstIndex.notify)
+        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: ConstNavigationImage.profile), tag: ConstIndex.profile)
         
         bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, tabBarItem5 ]
         bottomNavBar.selectedItem = tabBarItem3

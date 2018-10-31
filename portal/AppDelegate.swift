@@ -24,48 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-  
-         // ページを格納する配列
-        /*
-         var viewControllers: [UIViewController] = []
-        
-        let tabBarItem1 = UITabBarItem(title: ConstTitle.card, image: UIImage(named: "assignment"), tag: ConstIndex.card)
-        let tabBarItem2 = UITabBarItem(title: ConstTitle.search, image: UIImage(named: "search"), tag: ConstIndex.search)
-        let tabBarItem3 = UITabBarItem(title: ConstTitle.favorite, image: UIImage(named: "favorite_border"), tag: ConstIndex.favorite)
-        tabBarItem3.selectedImage = UIImage(named: "favorite")
-        let tabBarItem4 = UITabBarItem(title: ConstTitle.notify, image: UIImage(named: "notifications_none"), tag: ConstIndex.notify)
-        let tabBarItem5 = UITabBarItem(title: ConstTitle.profile, image: UIImage(named: "perm_identity"), tag: ConstIndex.profile)
-        
-        let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
-        cardViewController.tabBarItem = tabBarItem1
-        viewControllers.append(cardViewController)
-
-        let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
-        searchViewController.tabBarItem = tabBarItem2
-        viewControllers.append(searchViewController)
-
-        let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
-        favoriteViewController.tabBarItem = tabBarItem3
-        viewControllers.append(favoriteViewController)
-
-        let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
-        notifyListViewController.tabBarItem = tabBarItem4
-        viewControllers.append(notifyListViewController)
-
-        let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        profileViewController.tabBarItem = tabBarItem5
-        viewControllers.append(profileViewController)
- 
- */
-        // ViewControllerをセット
-//        let tabBarController = UITabBarController()
-//        tabBarController.setViewControllers(viewControllers, animated: false)
  
         let tabBarViewController = TabBarViewController()
-        // let navigationBarController = UINavigationController()
         let navigationBarController = UINavigationController(rootViewController: tabBarViewController)
-        //let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
-        //navigationBarController.setViewControllers([tabBarViewController], animated:true)
         // rootViewControllerをTabBarControllerにする
         window = UIWindow()
         window?.rootViewController = navigationBarController
