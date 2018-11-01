@@ -46,9 +46,10 @@ class SearchViewController: MDCTabBarViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setupAppBarView()
+        self.tabBarHidden = true
     }
     
     private func setupAppBarView() {

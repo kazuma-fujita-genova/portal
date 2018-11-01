@@ -31,11 +31,8 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
         let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
-        // TODO: 暫定で新規登録画面表示。新規登録実装後遷移先をかかりつけに変更
-        //let favoriteViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        // let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
         self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileViewController]
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
@@ -68,7 +65,30 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
                                        height: size.height)
         bottomNavBar.frame = bottomNavBarFrame
     }
+    /*
+    func layoutBottomNavBar() {
+        // iPhone X , X以外は0となる
+        let window = UIApplication.shared.keyWindow
+        let size = bottomNavBar.sizeThatFits(view.bounds.size)
+        let screenHeight:CGFloat = (window?.bounds.height)!
     
+        if ( window!.safeAreaInsets.bottom > 0 ) {
+            let bottomNavBarFrame = CGRect(x: 0,
+                                           y: screenHeight - size.height - 34,
+                                           width: size.width,
+                                           height: size.height)
+            bottomNavBar.frame = bottomNavBarFrame
+        }
+        else {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: window!.safeAreaInsets.top + window!.safeAreaInsets.bottom + screenHeight + 20)
+            let bottomNavBarFrame = CGRect(x: 0,
+                                           y: screenHeight - size.height,
+                                           width: size.width,
+                                           height: size.height)
+            bottomNavBar.frame = bottomNavBarFrame
+        }
+    }
+    */
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         layoutBottomNavBar()

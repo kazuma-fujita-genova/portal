@@ -83,6 +83,7 @@ class CardViewController: MDCTabBarViewController {
         self.view.addSubview(cardView)
         
         setupAppBarView()
+        self.tabBarHidden = true
     }
     
     private func setupAppBarView() {
