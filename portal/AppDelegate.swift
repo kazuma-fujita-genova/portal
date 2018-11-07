@@ -20,12 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
  
-        let tabBarViewController = TabBarViewController()
-        let navigationBarController = UINavigationController(rootViewController: tabBarViewController)
+        // let tabBarViewController = TabBarViewController()
+        //let navigationBarController = UINavigationController(rootViewController: tabBarViewController)
         // rootViewControllerをTabBarControllerにする
-        window = UIWindow()
-        window?.rootViewController = navigationBarController
-        window?.makeKeyAndVisible()
+        //window = UIWindow()
+        //window?.rootViewController = navigationBarController
+        //window?.rootViewController = tabBarViewController
+        //window?.makeKeyAndVisible()
  
         // Google Mapsの初期設定
         GMSServices.provideAPIKey(cGoogleMapsAPIKey)

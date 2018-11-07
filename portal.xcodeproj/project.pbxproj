@@ -52,6 +52,7 @@
 		A491D32E21757180005610DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491D32D21757180005610DC /* AppDelegate.swift */; };
 		A491D33521757182005610DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A491D33421757182005610DC /* Assets.xcassets */; };
 		A491D33821757182005610DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491D33621757182005610DC /* LaunchScreen.storyboard */; };
+		A4ECDB4F2192EB3C00208236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ECDB4E2192EB3C00208236 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		A491D33421757182005610DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A491D33721757182005610DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A491D33921757182005610DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4ECDB4E2192EB3C00208236 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C5E0BD01F558F5B1DDFEEA60 /* Pods-portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portal.release.xcconfig"; path = "Pods/Target Support Files/Pods-portal/Pods-portal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +228,7 @@
 		A491D32C21757180005610DC /* portal */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECDB4E2192EB3C00208236 /* Main.storyboard */,
 				A46A880A2178AF890050369C /* Configs */,
 				A46A87D72178A4790050369C /* Resources */,
 				A46A87D62178A44D0050369C /* Models */,
@@ -317,6 +320,7 @@
 				A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */,
 				A450A04F218859C5008D6384 /* CardView.xib in Resources */,
 				A41DF97C218046F0006EABE9 /* SettingViewController.xib in Resources */,
+				A4ECDB4F2192EB3C00208236 /* Main.storyboard in Resources */,
 				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
 				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
