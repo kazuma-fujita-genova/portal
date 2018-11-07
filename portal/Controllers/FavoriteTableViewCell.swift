@@ -2,52 +2,30 @@
 //  FavoriteTableViewCell.swift
 //  portal
 //
-//  Created by 藤田和磨 on 2018/10/25.
+//  Created by 藤田和磨 on 2018/11/06.
 //  Copyright © 2018 藤田和磨. All rights reserved.
 //
 
 import UIKit
-import MaterialComponents.MaterialButtons_ButtonThemer
-import MaterialComponents.MaterialCards_CardThemer
+import FoldingCell
 
-class FavoriteTableViewCell: UITableViewCell {
+class FavoriteTableViewCell: FoldingCell {
 
-    @IBOutlet weak var card: MDCCard!
-    
-    //@IBOutlet weak var cardImageView: CardImageView!
-    @IBOutlet weak var cardImageView: CardImageView!
-    
-    @IBOutlet weak var name: UILabel!
-    
-    @IBOutlet weak var button: MDCButton!
-    
-    var colorScheme = MDCSemanticColorScheme()
-    var shapeScheme = MDCShapeScheme()
-    var typographyScheme = MDCTypographyScheme()
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        //let bundle = Bundle(for: FavoriteViewController.self)
-        //bundle.loadNibNamed("FavoriteViewController", owner: self, options: nil)
-        //self.view.frame = self.view.bounds
+        backgroundColor = UIColor.clear
+        foregroundView.layer.cornerRadius = 5
+        foregroundView.layer.masksToBounds = true
+        containerView.layer.cornerRadius = 5
+        containerView.layer.masksToBounds = true
         
-        // self.contentView.autoresizingMask = autoresizingMask
-        /*
-        let buttonScheme = MDCButtonScheme();
-        buttonScheme.colorScheme = colorScheme
-        buttonScheme.typographyScheme = typographyScheme
-        MDCTextButtonThemer.applyScheme(buttonScheme, to: button)
-        */
-        let cardScheme = MDCCardScheme();
-        cardScheme.colorScheme = colorScheme
-        cardScheme.shapeScheme = shapeScheme
-        MDCCardThemer.applyScheme(cardScheme, to: card)
-        card.isInteractable = false
-        
-        cardImageView.isAccessibilityElement = true
-        cardImageView.accessibilityLabel = "Missing Dish"
-
+        /* TODO Shadowを付ける
+        foregroundView.layer.shadowColor = UIColor.black.cgColor
+        foregroundView.layer.shadowOpacity = 0.5 // 透明度
+        foregroundView.layer.shadowOffset = CGSize(width: 5, height: 5) // 距離
+        foregroundView.layer.shadowRadius = 5 // ぼかし量
+         */
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -56,18 +34,9 @@ class FavoriteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-}
-
-class CardImageView: UIImageView {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.curveImageToCorners()
+    override func animationDuration(_ itemIndex:NSInteger, type:AnimationType)-> TimeInterval {
+        let durations = [0.26, 0.2, 0.2]
+        return durations[itemIndex]
     }
     
-    func curveImageToCorners() {
-        if let card = self.superview as? MDCCard,
-            let shapedShadowLayer = card.layer as? MDCShapedShadowLayer {
-            self.layer.mask = shapedShadowLayer.shapeLayer
-        }
-    }
 }

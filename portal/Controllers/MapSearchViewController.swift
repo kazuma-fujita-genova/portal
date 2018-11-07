@@ -7,29 +7,40 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MapSearchViewController: UIViewController {
 
-    @IBOutlet weak var labelField: UILabel!
-    
-    @IBOutlet weak var imageField: UIImageView!
-
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var googleMap: GMSMapView!
+    //var googleMap : GMSMapView!
+    //緯度経度 -> 金沢駅
+    let latitude: CLLocationDegrees = 36.5780574
+    let longitude: CLLocationDegrees = 136.6486596
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
-        // Do any additional setup after loading the view.
+        // ズームレベル.
+        let zoom: Float = 15
+        
+        // カメラを生成.
+        let camera: GMSCameraPosition = GMSCameraPosition.camera(withLatitude: latitude,longitude: longitude, zoom: zoom)
+        
+        // MapViewを生成.
+        /*
+        googleMap = GMSMapView(frame: CGRect(x:0, y:0, width: self.view.bounds.width, height: self.view.bounds.height))
+        */
+        // MapViewにカメラを追加.
+        googleMap.camera = camera
+        
+        //マーカーの作成
+        let marker: GMSMarker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(latitude, longitude)
+        marker.map = googleMap
+        
+        
+        //viewにMapViewを追加.
+        self.view.addSubview(googleMap)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

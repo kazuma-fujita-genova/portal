@@ -50,7 +50,7 @@ class CardViewController: MDCTabBarViewController {
             let item = UITabBarItem(title: tabTitle, image: nil, tag: index)
             items.append(item)
         }
-        items.append(UITabBarItem(title: "診察券を追加", image: nil, tag: self.cardDict.count))
+        items.append(UITabBarItem(title: "家族の診察券を追加", image: nil, tag: self.cardDict.count))
         mDCTabBar.items = items
         /*
         mDCTabBar.items = [
@@ -90,13 +90,6 @@ class CardViewController: MDCTabBarViewController {
         colorScheme.primaryColor = .white
         MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
-        
-        /* 家族診察券の遷移先を動的に生成
-        let keywordSearchViewController = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
-        let mapSearchViewController = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
-        self.viewControllers = [keywordSearchViewController, mapSearchViewController]
-        selectedViewController = self.viewControllers[ConstIndex.keywordSearch]
-         */
         self.view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
     }

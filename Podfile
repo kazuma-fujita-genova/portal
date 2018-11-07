@@ -6,14 +6,8 @@ target 'portal' do
   use_frameworks!
 
   # Pods for portal
-  # pod 'ESTabBarController','0.2'
-  # pod 'RAMAnimatedTabBarController','4.0.1'
-  # pod 'XLPagerTabStrip','8.0.1'
-  # pod 'HMSegmentedControl'
-  # pod 'PageMenu'
-  # pod 'PagingMenuController','2.2.0'
-  pod 'MaterialComponents'
-  # pod 'MaterialComponents/BottomNavigation+ColorThemer'
-  # pod 'MaterialComponents/schemes/Color'
+  pod 'MaterialComponents','67.0.0'
+  pod 'GoogleMaps','2.7.0'
   pod 'Alamofire','4.7.3'
+  pod 'FoldingCell','4.0.1'
 end

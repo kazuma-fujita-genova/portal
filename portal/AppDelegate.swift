@@ -7,20 +7,15 @@
 //
 
 import UIKit
-// import MaterialComponents.MaterialBottomNavigation_ColorThemer
-// import MaterialComponents.MaterialTypographyScheme
-
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    // var colorScheme = MDCSemanticColorScheme()
-    // var typographyScheme = MDCTypographyScheme()
-    
-    // let bottomNavBar = MDCBottomNavigationBar()
-
+    // TODO 環境ごとにAPIキーを変える
+    let cGoogleMapsAPIKey = "AIzaSyAIYoqq8y7A799Oi0DvyvMPYQCOgjs_wd4"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -32,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationBarController
         window?.makeKeyAndVisible()
  
+        // Google Mapsの初期設定
+        GMSServices.provideAPIKey(cGoogleMapsAPIKey)
+        
         return true
     }
 

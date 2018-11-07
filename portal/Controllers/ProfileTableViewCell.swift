@@ -18,8 +18,8 @@ class ProfileTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        cellView.layer.borderWidth = CGFloat(0.5)
-        cellView.layer.borderColor = UIColor.gray.cgColor
+        //cellView.layer.borderWidth = CGFloat(0.5)
+        //cellView.layer.borderColor = UIColor.gray.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

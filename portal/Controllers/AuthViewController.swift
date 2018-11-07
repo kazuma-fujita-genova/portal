@@ -36,13 +36,19 @@ class AuthViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "確認", style: .done, target: self, action: #selector(handleAuthButton(_:forEvent:)))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
 
-        // AppBar設定
+        setupAppBar()
+    }
+    
+    private func setupAppBar() {
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
         appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
         
         // Step 2: Add the headerViewController as a child.
         self.addChild(appBarViewController)
+        
+        colorScheme.primaryColor = .white
+        colorScheme.onPrimaryColor = .black
         
         MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
         MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)

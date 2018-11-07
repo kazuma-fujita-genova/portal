@@ -33,13 +33,15 @@ class RegistViewController: UIViewController {
         setupTextFields()
         
         // NavigationBar設定
-        self.title = "アカウント作成"
+        self.title = "新規アカウント作成"
         // self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "作成", style: .done, target: self, action: #selector(handleCreatelButton(_:forEvent:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
+        
+        setupAppBar()
+    }
 
-        // App Bar
-
+    private func setupAppBar() {
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
         appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
@@ -56,14 +58,11 @@ class RegistViewController: UIViewController {
         // Allows us to avoid forwarding events, but means we can't enable shift behaviors.
         appBarViewController.headerView.observesTrackingScrollViewScrollEvents = true
         
-        // Recommended step: Set the tracking scroll view.
-        // appBarViewController.headerView.trackingScrollView = self.tableView
-        
         // Step 2: Register the App Bar views.
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
     }
-
+    
     // ナビゲーションバーの作成ボタンがタップされた時に呼ばれるメソッド
     @objc func handleCreatelButton(_ sender: UIButton, forEvent event: UIEvent) {
         let authViewController = AuthViewController(nibName: "AuthViewController", bundle: nil)
@@ -72,8 +71,7 @@ class RegistViewController: UIViewController {
     
     // ナビゲーションバーのキャンセルタップされた時に呼ばれるメソッド
     @objc func handleCancelButton(_ sender: UIButton, forEvent event: UIEvent) {
-        self.dismiss(animated: true, completion: nil)
-        // self.navigationController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func setupTextFields() {

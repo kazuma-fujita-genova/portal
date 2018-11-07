@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (4.7.3)
+  - FoldingCell (4.0.1)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
   - MaterialComponents (67.0.0):
     - MaterialComponents/ActivityIndicator (= 67.0.0)
     - "MaterialComponents/ActivityIndicator+ColorThemer (= 67.0.0)"
@@ -495,11 +501,15 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
+  - FoldingCell (= 4.0.1)
+  - GoogleMaps
   - MaterialComponents
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FoldingCell
+    - GoogleMaps
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -509,6 +519,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  FoldingCell: acf29a96085b7ab96234be75d543f5640ead0b3c
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   MaterialComponents: ba0b153b1fa427be83aad80b05784b2cfecec847
   MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
@@ -516,6 +528,6 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: 995a636455fd7ee77b894a23923675f8fca0cdc9
+PODFILE CHECKSUM: 2807758032ed77223654f086630ce64b2ad1caeb
 
 COCOAPODS: 1.5.3

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistLoginSelectViewController" customModule="portal" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="5Ti-we-DzU" id="E0m-5f-RJy"/>
+                <outlet property="loginButton" destination="jjv-oT-Ee1" id="5rh-zA-b6R"/>
+                <outlet property="privacyPolicyButton" destination="QBr-Ey-M4Y" id="lgR-Vy-Rwg"/>
+                <outlet property="registButton" destination="89m-ql-ZZ4" id="VqG-HR-kMj"/>
+                <outlet property="termsButton" destination="ZIf-cK-lh0" id="K7H-A0-qSA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="OOZ-Mc-BIy">
+                    <rect key="frame" x="0.0" y="270" width="375" height="245"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bt3-qa-rNs">
+                            <rect key="frame" x="74" y="0.0" width="227.5" height="24"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIf-cK-lh0" customClass="MDCButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="利用規約 "/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0H-F2-Q8s">
+                                    <rect key="frame" x="52" y="0.0" width="10.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-Ey-M4Y" customClass="MDCButton">
+                                    <rect key="frame" x="70.5" y="0.0" width="103" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="プライバシーポリシー"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="に同意する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48W-TY-DIh">
+                                    <rect key="frame" x="181.5" y="0.0" width="46" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="Daf-gn-UcB">
+                            <rect key="frame" x="53" y="76" width="269" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjv-oT-Ee1" customClass="MDCButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                    <state key="normal" title="ログイン"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89m-ql-ZZ4" customClass="MDCButton">
+                                    <rect key="frame" x="131" y="0.0" width="138" height="30"/>
+                                    <state key="normal" title="新規アカウント作成"/>
+                                </button>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="qRA-2V-87U"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="exL-tH-tDk">
+                            <rect key="frame" x="100.5" y="158" width="174" height="87"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ti-we-DzU" customClass="MDCButton">
+                                    <rect key="frame" x="30.5" y="0.0" width="113" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="ログインせずに利用する"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※ ご利用いただける機能に制限があります" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H88-dY-xDw">
+                                    <rect key="frame" x="0.0" y="76" width="174" height="11"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OOZ-Mc-BIy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="250" id="6lM-AS-qyE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OOZ-Mc-BIy" secondAttribute="trailing" id="CbI-1z-uG9"/>
+                <constraint firstItem="OOZ-Mc-BIy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ne0-YW-cc5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

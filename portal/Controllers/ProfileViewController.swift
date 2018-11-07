@@ -8,12 +8,15 @@
 
 import UIKit
 import MaterialComponents.MDCAppBarNavigationController
+import MaterialComponents.MaterialButtons_ButtonThemer
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var profileViewTable: UITableView!
     
-    let tableList = ["新規登録", "ログイン", "設定"]
+    @IBOutlet weak var loginButton: MDCButton!
+    
+    let tableList = ["設定"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +24,37 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
         // let profileTableView = Bundle.main.loadNibNamed("ProfileTableView", owner: self, options: nil)!.first as! ProfileTableView
         // self.view.addSubview(profileTableView)
-        self.profileViewTable.delegate = self
-        self.profileViewTable.dataSource = self
+        profileViewTable.delegate = self
+        profileViewTable.dataSource = self
+        
+        // wellcomLabel.sizeToFit()
         
         let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
-        self.profileViewTable.register(nib, forCellReuseIdentifier: "Cell")
+        profileViewTable.register(nib, forCellReuseIdentifier: "Cell")
+        
+        // Cell内の高さ
+        profileViewTable.rowHeight = 65.0
+        // TableViewの余計なcellを打ち消す
+        profileViewTable.tableFooterView = UIView()
+    
+        let frame = CGRect(x: 0, y: 0, width: profileViewTable.frame.width, height:1)
+        profileViewTable.tableHeaderView = UIView(frame: frame)
+        
+        buttonSetup()
+    }
+    
+    private func buttonSetup() {
+        //let backgroundColor = UIColor(white: 0.1, alpha: 1.0)
+        
+        let buttonScheme = MDCButtonScheme()
+        MDCContainedButtonThemer.applyScheme(buttonScheme, to: loginButton)
+        loginButton.addTarget(self, action: #selector(handleLoginButton(_:forEvent:)), for: .touchUpInside)
+    }
+    
+    @objc func handleLoginButton (_ sender: UIButton, forEvent event: UIEvent) {
+        let registLoginSelectViewController = RegistLoginSelectViewController(nibName: "RegistLoginSelectViewController", bundle: nil)
+        let navigationController = MDCAppBarNavigationController(rootViewController: registLoginSelectViewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +74,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+/*
         if indexPath.row == 0 {
             // 新規登録ボタンはRegistViewControllerをモーダルで表示する
             let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
@@ -63,9 +93,21 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let navigationController = MDCAppBarNavigationController(rootViewController: settingViewController)
             self.present(navigationController, animated: true, completion: nil)
         }
+ */
+        if indexPath.row == 0 {
+            // 設定はSettingViewControllerをモーダルで表示する
+            let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
+            // let navigationController = MDCAppBarNavigationController(rootViewController: settingViewController)
+            // self.present(navigationController, animated: true, completion: nil)
+            //self.present(settingViewController, animated: true, completion: nil)
+            self.navigationController?.show(settingViewController, sender: nil)
+            // self.navigationController?.show(navigationController, sender: nil)
+
+        }
+        // 遷移戻り時のCellのグレーアウトを戻す
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-
     /*
     // MARK: - Navigation
 

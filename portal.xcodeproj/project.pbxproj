@@ -13,9 +13,13 @@
 		A41DF97C218046F0006EABE9 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97A218046F0006EABE9 /* SettingViewController.xib */; };
 		A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */; };
 		A41DF98021804EB5006EABE9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */; };
-		A41DF983218193D5006EABE9 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */; };
-		A41DF984218193D5006EABE9 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
+		A44BD13A21912DD400E683D4 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */; };
+		A44BD13B21912DD400E683D4 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */; };
+		A44BD14021913A2000E683D4 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */; };
+		A44BD14121913A2000E683D4 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */; };
+		A44BD1442191880200E683D4 /* RegistLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD1422191880200E683D4 /* RegistLoginSelectViewController.swift */; };
+		A44BD1452191880200E683D4 /* RegistLoginSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD1432191880200E683D4 /* RegistLoginSelectViewController.xib */; };
 		A450A04D218859A4008D6384 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A04C218859A4008D6384 /* CardView.swift */; };
 		A450A04F218859C5008D6384 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450A04E218859C5008D6384 /* CardView.xib */; };
 		A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */; };
@@ -31,8 +35,6 @@
 		A46A87E52178AE0F0050369C /* KeywordSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */; };
 		A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87E62178AE440050369C /* MapSearchViewController.swift */; };
 		A46A87E92178AE440050369C /* MapSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87E72178AE440050369C /* MapSearchViewController.xib */; };
-		A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87EA2178AE700050369C /* FavoriteViewController.swift */; };
-		A46A87ED2178AE700050369C /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87EB2178AE700050369C /* FavoriteViewController.xib */; };
 		A46A87F02178AE8D0050369C /* InstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */; };
 		A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */; };
 		A46A87F42178AEB50050369C /* NotifyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A87F22178AEB50050369C /* NotifyListViewController.swift */; };
@@ -60,9 +62,13 @@
 		A41DF97A218046F0006EABE9 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
-		A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
-		A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		A44BD1422191880200E683D4 /* RegistLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistLoginSelectViewController.swift; sourceTree = "<group>"; };
+		A44BD1432191880200E683D4 /* RegistLoginSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistLoginSelectViewController.xib; sourceTree = "<group>"; };
 		A450A04C218859A4008D6384 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A450A04E218859C5008D6384 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,8 +84,6 @@
 		A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordSearchViewController.xib; sourceTree = "<group>"; };
 		A46A87E62178AE440050369C /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
 		A46A87E72178AE440050369C /* MapSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapSearchViewController.xib; sourceTree = "<group>"; };
-		A46A87EA2178AE700050369C /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		A46A87EB2178AE700050369C /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionViewController.swift; sourceTree = "<group>"; };
 		A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstitutionViewController.xib; sourceTree = "<group>"; };
 		A46A87F22178AEB50050369C /* NotifyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyListViewController.swift; sourceTree = "<group>"; };
@@ -126,9 +130,13 @@
 		A46A87D42178A4040050369C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A44BD1432191880200E683D4 /* RegistLoginSelectViewController.xib */,
 				A46A88032178AF370050369C /* RegistViewController.xib */,
 				A46A87FF2178AF190050369C /* LoginViewController.xib */,
 				A46A88072178AF550050369C /* AuthViewController.xib */,
+				A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */,
+				A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */,
+				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */,
 				A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */,
 				A46A87E72178AE440050369C /* MapSearchViewController.xib */,
@@ -138,11 +146,8 @@
 				A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */,
 				A46A87F32178AEB50050369C /* NotifyListViewController.xib */,
 				A46A87F72178AED20050369C /* NotifyDetailViewController.xib */,
-				A46A87EB2178AE700050369C /* FavoriteViewController.xib */,
-				A41DF982218193D5006EABE9 /* FavoriteTableViewCell.xib */,
 				A46A87DF2178ADE90050369C /* CardViewController.xib */,
 				A450A04E218859C5008D6384 /* CardView.xib */,
-				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A41DF97A218046F0006EABE9 /* SettingViewController.xib */,
 				A491D33621757182005610DC /* LaunchScreen.storyboard */,
 			);
@@ -153,18 +158,19 @@
 			isa = PBXGroup;
 			children = (
 				A41DF96B217EAD7E006EABE9 /* TabBarViewController.swift */,
+				A44BD1422191880200E683D4 /* RegistLoginSelectViewController.swift */,
 				A46A88022178AF370050369C /* RegistViewController.swift */,
 				A46A87FE2178AF190050369C /* LoginViewController.swift */,
 				A46A88062178AF550050369C /* AuthViewController.swift */,
+				A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */,
+				A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */,
+				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
 				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
 				A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */,
-				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
+				A46A87E62178AE440050369C /* MapSearchViewController.swift */,
 				A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */,
 				A46A87DE2178ADE90050369C /* CardViewController.swift */,
 				A450A04C218859A4008D6384 /* CardView.swift */,
-				A46A87E62178AE440050369C /* MapSearchViewController.swift */,
-				A46A87EA2178AE700050369C /* FavoriteViewController.swift */,
-				A41DF981218193D5006EABE9 /* FavoriteTableViewCell.swift */,
 				A46A87F22178AEB50050369C /* NotifyListViewController.swift */,
 				A46A87F62178AED20050369C /* NotifyDetailViewController.swift */,
 				A46A87FA2178AEF30050369C /* ProfileViewController.swift */,
@@ -251,6 +257,7 @@
 				A491D32721757180005610DC /* Frameworks */,
 				A491D32821757180005610DC /* Resources */,
 				A490A73B074D3BB114CF8B53 /* [CP] Embed Pods Frameworks */,
+				286CF0E2E558A53D12ED5183 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,7 +310,7 @@
 				A41DF98021804EB5006EABE9 /* ProfileTableViewCell.xib in Resources */,
 				A491D33521757182005610DC /* Assets.xcassets in Resources */,
 				A450A0572189BB87008D6384 /* ProfileLoginBeforeView.xib in Resources */,
-				A46A87ED2178AE700050369C /* FavoriteViewController.xib in Resources */,
+				A44BD13B21912DD400E683D4 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87E92178AE440050369C /* MapSearchViewController.xib in Resources */,
 				A46A88052178AF370050369C /* RegistViewController.xib in Resources */,
 				A46A87E52178AE0F0050369C /* KeywordSearchViewController.xib in Resources */,
@@ -313,18 +320,41 @@
 				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
 				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
-				A41DF984218193D5006EABE9 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */,
 				A450A0532189956C008D6384 /* KeywordSearchTableViewCell.xib in Resources */,
+				A44BD14121913A2000E683D4 /* FavoriteViewController.xib in Resources */,
 				A46A88012178AF190050369C /* LoginViewController.xib in Resources */,
 				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
 				A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */,
+				A44BD1452191880200E683D4 /* RegistLoginSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		286CF0E2E558A53D12ED5183 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-portal/Pods-portal-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-portal/Pods-portal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3A66D23C9F2B6F7EB2E56066 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +381,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-portal/Pods-portal-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
@@ -361,6 +392,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
@@ -380,19 +412,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44BD14021913A2000E683D4 /* FavoriteViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
-				A41DF983218193D5006EABE9 /* FavoriteTableViewCell.swift in Sources */,
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
+				A44BD1442191880200E683D4 /* RegistLoginSelectViewController.swift in Sources */,
 				A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */,
 				A41DF97B218046F0006EABE9 /* SettingViewController.swift in Sources */,
 				A46A88042178AF370050369C /* RegistViewController.swift in Sources */,
 				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
 				A450A0552189AF50008D6384 /* ProfileLoginBeforeView.swift in Sources */,
-				A46A87EC2178AE700050369C /* FavoriteViewController.swift in Sources */,
+				A44BD13A21912DD400E683D4 /* FavoriteTableViewCell.swift in Sources */,
 				A41DF96C217EAD7E006EABE9 /* TabBarViewController.swift in Sources */,
 				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,
 				A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */,
