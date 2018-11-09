@@ -89,8 +89,8 @@ class ReadQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjects
             found(code: stringValue)
         }
         
-        let cardRegistConfirmViewController = CardRegistConfirmViewController(nibName: "CardRegistConfirmViewController", bundle: nil)
-        self.navigationController?.show(cardRegistConfirmViewController, sender: nil)
+        let registCardConfirmViewController = RegistCardConfirmViewController(nibName: "RegistCardConfirmViewController", bundle: nil)
+        self.navigationController?.show(registCardConfirmViewController, sender: nil)
     }
     
     func found(code: String) {

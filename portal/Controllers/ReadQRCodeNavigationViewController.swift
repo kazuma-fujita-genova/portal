@@ -1,5 +1,5 @@
 //
-//  CardRegistNavigationViewController.swift
+//  ReadQRCodeNavigationViewController.swift
 //  portal
 //
 //  Created by 藤田和磨 on 2018/11/08.
@@ -11,7 +11,7 @@ import UIKit
 import MaterialComponents.MaterialTextFields
 import MaterialComponents.MaterialButtons_ButtonThemer
 
-class CardRegistNavigationViewController: UIViewController {
+class ReadQRCodeNavigationViewController: UIViewController {
 
     @IBOutlet weak var skipButton: MDCButton!
     

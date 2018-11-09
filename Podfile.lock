@@ -502,8 +502,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
   - FoldingCell (= 4.0.1)
-  - GoogleMaps
-  - MaterialComponents
+  - GoogleMaps (= 2.7.0)
+  - MaterialComponents (= 67.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -528,6 +528,6 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: 2807758032ed77223654f086630ce64b2ad1caeb
+PODFILE CHECKSUM: e674fcc3ff48a18dca72183422054365e2260a78
 
 COCOAPODS: 1.5.3

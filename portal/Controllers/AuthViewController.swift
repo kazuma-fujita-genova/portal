@@ -30,9 +30,9 @@ class AuthViewController: UIViewController {
 
     // Navigation Barの確認ボタンがタップされた時に呼ばれるメソッド
     @objc func handleAuthButton(_ sender: UIButton, forEvent event: UIEvent) {
-        let cardRegistNavigationViewController = CardRegistNavigationViewController(nibName: "CardRegistNavigationViewController", bundle: nil)
+        let registCardNavigationViewController = RegistCardNavigationViewController(nibName: "RegistCardNavigationViewController", bundle: nil)
         // Push遷移
-        self.navigationController?.show(cardRegistNavigationViewController, sender: nil)
+        self.navigationController?.show(registCardNavigationViewController, sender: nil)
     }
     
     // Navigation Barのキャンセルタップされた時に呼ばれるメソッド
