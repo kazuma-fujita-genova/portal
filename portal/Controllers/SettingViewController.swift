@@ -10,7 +10,7 @@ import UIKit
 import MaterialComponents.MaterialTextFields
 
 class SettingViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +18,7 @@ class SettingViewController: UIViewController {
         self.title = "設定"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
     }
-
+    
     // NavigationBarのキャンセルタップされた時に呼ばれるメソッド
     @objc func handleCancelButton(_ sender: UIButton, forEvent event: UIEvent) {
         self.navigationController?.popViewController(animated: true)

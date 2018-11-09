@@ -23,7 +23,6 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         // Do any additional setup after loading the view.
         
         bottomNavBar.delegate = self
-        // colorScheme.backgroundColor = .white
         colorScheme.primaryColor = .white
         colorScheme.onPrimaryColor = .black
         
@@ -34,7 +33,8 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileViewController]
+        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+        self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileNavigationController]
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
         
@@ -55,7 +55,6 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func layoutBottomNavBar() {

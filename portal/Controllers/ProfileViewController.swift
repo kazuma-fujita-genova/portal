@@ -70,15 +70,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            // 設定はSettingViewControllerをモーダルで表示する
             let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
-            // let navigationController = UINavigationController(rootViewController: settingViewController)
-            // self.present(navigationController, animated: true, completion: nil)
-            //self.present(settingViewController, animated: true, completion: nil)
-            // self.navigationController?.show(settingViewController, sender: nil)
-            // self.navigationController?.show(navigationController, sender: nil)
             self.navigationController?.show(settingViewController, sender: nil)
-
         }
         // 遷移戻り時のCellのグレーアウトを戻す
         tableView.deselectRow(at: indexPath, animated: true)
