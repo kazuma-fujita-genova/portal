@@ -29,10 +29,19 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         keywordSearchTableView.delegate = self
         keywordSearchTableView.dataSource = self
 
+        // テーブルセルのタップを無効にする
+        keywordSearchTableView.allowsSelection = false
+
         let nib = UINib(nibName: "KeywordSearchTableViewCell", bundle: nil)
         keywordSearchTableView.register(nib, forCellReuseIdentifier: "Cell")
         
         setupTextFields()
+        
+        // テーブル行の高さをAutoLayoutで自動調整する
+        keywordSearchTableView.rowHeight = UITableView.automaticDimension
+        // テーブル行の高さの概算値を設定しておく
+        keywordSearchTableView.estimatedRowHeight = UIScreen.main.bounds.width + 600
+
     }
     
     func setupTextFields() {
@@ -46,7 +55,7 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +63,18 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! KeywordSearchTableViewCell
         cell.name.text = "マテリアル医院"
         //cell.
+        /*
+        if indexPath.count == 1 {
+            cell.imageView?.isHidden = true
+        }
+        */
         return cell
-
     }
+    /*
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     
+        keywordSearchTableView.estimatedRowHeight = 600 //セルの高さ
+        return UITableView.automaticDimension //自動設定
+    }
+    */
 }

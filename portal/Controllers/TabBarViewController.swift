@@ -21,6 +21,7 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         bottomNavBar.delegate = self
         // colorScheme.backgroundColor = .white
         colorScheme.primaryColor = .white
@@ -54,7 +55,7 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func layoutBottomNavBar() {

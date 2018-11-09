@@ -9,18 +9,18 @@
 import UIKit
 
 import MaterialComponents.MaterialTextFields
-import MaterialComponents.MaterialAppBar
-import MaterialComponents.MaterialAppBar_ColorThemer
-import MaterialComponents.MaterialAppBar_TypographyThemer
+// import MaterialComponents.MaterialAppBar
+// import MaterialComponents.MaterialAppBar_ColorThemer
+// import MaterialComponents.MaterialAppBar_TypographyThemer
 
 class RegistViewController: UIViewController {
     
     var allTextFieldControllers = [MDCTextInputControllerUnderline]()
     
     // Step 1: Create and initialize an App Bar.
-    let appBarViewController = MDCAppBarViewController()
-    var colorScheme = MDCSemanticColorScheme()
-    var typographyScheme = MDCTypographyScheme()
+    // let appBarViewController = MDCAppBarViewController()
+    // var colorScheme = MDCSemanticColorScheme()
+    // var typographyScheme = MDCTypographyScheme()
     
     @IBOutlet weak var nicknameField: MDCTextField!
     
@@ -38,9 +38,9 @@ class RegistViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "作成", style: .done, target: self, action: #selector(handleCreatelButton(_:forEvent:)))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
         
-        setupAppBar()
+        // setupAppBar()
     }
-
+    /*
     private func setupAppBar() {
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
@@ -62,7 +62,7 @@ class RegistViewController: UIViewController {
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
     }
-    
+    */
     // ナビゲーションバーの作成ボタンがタップされた時に呼ばれるメソッド
     @objc func handleCreatelButton(_ sender: UIButton, forEvent event: UIEvent) {
         let authViewController = AuthViewController(nibName: "AuthViewController", bundle: nil)

@@ -27,7 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //window?.rootViewController = navigationBarController
         //window?.rootViewController = tabBarViewController
         //window?.makeKeyAndVisible()
- 
+        // NavigationBarItemの色を変更
+        UINavigationBar.appearance().tintColor = UIColor.black
+        // NavigationBarの背景を変更
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        // NavigationBarのタイトル文字列の色を変更
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
+        // NavigationBarを透過させ下線部を消す
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
         // Google Mapsの初期設定
         GMSServices.provideAPIKey(cGoogleMapsAPIKey)
         

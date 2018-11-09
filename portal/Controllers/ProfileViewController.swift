@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MaterialComponents.MDCAppBarNavigationController
+// import MaterialComponents.MDCAppBarNavigationController
 import MaterialComponents.MaterialButtons_ButtonThemer
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -20,10 +20,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // self.navigationController?.setNavigationBarHidden(false, animated: true)
-        // Do any additional setup after loading the view.
-        // let profileTableView = Bundle.main.loadNibNamed("ProfileTableView", owner: self, options: nil)!.first as! ProfileTableView
-        // self.view.addSubview(profileTableView)
         profileViewTable.delegate = self
         profileViewTable.dataSource = self
         
@@ -53,13 +49,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func handleLoginButton (_ sender: UIButton, forEvent event: UIEvent) {
         let registLoginSelectViewController = RegistLoginSelectViewController(nibName: "RegistLoginSelectViewController", bundle: nil)
-        let navigationController = MDCAppBarNavigationController(rootViewController: registLoginSelectViewController)
+        let navigationController = UINavigationController(rootViewController: registLoginSelectViewController)
         self.present(navigationController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,34 +69,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-/*
-        if indexPath.row == 0 {
-            // 新規登録ボタンはRegistViewControllerをモーダルで表示する
-            let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
-            let navigationController = MDCAppBarNavigationController(rootViewController: registViewController)
-            self.present(navigationController, animated: true, completion: nil)
-        }
-        else if indexPath.row == 1 {
-            // ログインボタンはLoginViewControllerをモーダルで表示する
-            let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            let navigationController = MDCAppBarNavigationController(rootViewController: loginViewController)
-            self.present(navigationController, animated: true, completion: nil)
-        }
-        else if indexPath.row == 2 {
-            // 設定はSettingViewControllerをモーダルで表示する
-            let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
-            let navigationController = MDCAppBarNavigationController(rootViewController: settingViewController)
-            self.present(navigationController, animated: true, completion: nil)
-        }
- */
         if indexPath.row == 0 {
             // 設定はSettingViewControllerをモーダルで表示する
             let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
-            // let navigationController = MDCAppBarNavigationController(rootViewController: settingViewController)
+            // let navigationController = UINavigationController(rootViewController: settingViewController)
             // self.present(navigationController, animated: true, completion: nil)
             //self.present(settingViewController, animated: true, completion: nil)
-            self.navigationController?.show(settingViewController, sender: nil)
+            // self.navigationController?.show(settingViewController, sender: nil)
             // self.navigationController?.show(navigationController, sender: nil)
+            self.navigationController?.show(settingViewController, sender: nil)
 
         }
         // 遷移戻り時のCellのグレーアウトを戻す

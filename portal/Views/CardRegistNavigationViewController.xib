@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardRegistNavigationViewController" customModule="portal" customModuleProvider="target">
+            <connections>
+                <outlet property="readQrCodeButton" destination="ekY-wP-tBg" id="8fN-Aq-QMq"/>
+                <outlet property="skipButton" destination="XXq-fc-KyH" id="nQ9-sT-M3d"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="HLk-lh-4zd">
+                    <rect key="frame" x="0.0" y="153" width="375" height="352"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9f-2K-SW0">
+                            <rect key="frame" x="10" y="0.0" width="355" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">医療機関により発行された
+QRコードをスキャンして施設を追加します</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-wP-tBg" customClass="MDCButton">
+                            <rect key="frame" x="100.5" y="210" width="174" height="30"/>
+                            <state key="normal" title="QRコードをスキャンする"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-fc-KyH" customClass="MDCButton">
+                            <rect key="frame" x="141.5" y="322" width="92" height="30"/>
+                            <state key="normal" title="スキップする"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Z9f-2K-SW0" secondAttribute="trailing" constant="10" id="fCr-nk-PGO"/>
+                        <constraint firstItem="Z9f-2K-SW0" firstAttribute="leading" secondItem="HLk-lh-4zd" secondAttribute="leading" constant="10" id="n5g-86-1Si"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HLk-lh-4zd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IEu-Lp-Y39"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HLk-lh-4zd" secondAttribute="bottom" constant="162" id="TmD-o5-ffl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HLk-lh-4zd" secondAttribute="trailing" id="gYN-Ut-hEN"/>
+                <constraint firstItem="HLk-lh-4zd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="133" id="h68-FX-Nr0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+        </view>
+    </objects>
+</document>

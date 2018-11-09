@@ -9,9 +9,9 @@
 import UIKit
 
 import MaterialComponents.MaterialTextFields
-import MaterialComponents.MaterialAppBar
-import MaterialComponents.MaterialAppBar_ColorThemer
-import MaterialComponents.MaterialAppBar_TypographyThemer
+// import MaterialComponents.MaterialAppBar
+// import MaterialComponents.MaterialAppBar_ColorThemer
+// import MaterialComponents.MaterialAppBar_TypographyThemer
 import MaterialComponents.MaterialButtons_ButtonThemer
 
 class LoginViewController: UIViewController {
@@ -19,9 +19,9 @@ class LoginViewController: UIViewController {
     var allTextFieldControllers = [MDCTextInputControllerUnderline]()
     
     // Step 1: Create and initialize an App Bar.
-    let appBarViewController = MDCAppBarViewController()
-    var colorScheme = MDCSemanticColorScheme()
-    var typographyScheme = MDCTypographyScheme()
+    // let appBarViewController = MDCAppBarViewController()
+    // var colorScheme = MDCSemanticColorScheme()
+    // var typographyScheme = MDCTypographyScheme()
     
     @IBOutlet weak var mobileTelField: MDCTextField!
     
@@ -31,14 +31,15 @@ class LoginViewController: UIViewController {
         // NavigationBar設定
         self.title = "ログイン"
         // self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "送信", style: .done, target: self, action: #selector(handleSendButton(_:forEvent:)))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
 
         setupTextFields()
         // setupButton()
-        setupAppBar()
+        // setupAppBar()
     }
-    
+    /*
     private func setupAppBar() {
         // Behavioral flags.
         appBarViewController.inferTopSafeAreaInsetFromViewController = true
@@ -60,11 +61,13 @@ class LoginViewController: UIViewController {
         view.addSubview(appBarViewController.view)
         appBarViewController.didMove(toParent: self)
     }
+     */
     
     @objc func handleToRegistButton (_ sender: UIButton, forEvent event: UIEvent) {
         self.dismiss(animated: true, completion: nil)
         let registViewController = RegistViewController(nibName: "RegistViewController", bundle: nil)
-        let navigationController = MDCAppBarNavigationController(rootViewController: registViewController)
+        // let navigationController = MDCAppBarNavigationController(rootViewController: registViewController)
+        let navigationController = UINavigationController(rootViewController: registViewController)
         self.present(navigationController, animated: true, completion: nil)
     }
     

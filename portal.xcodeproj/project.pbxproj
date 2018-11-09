@@ -13,6 +13,10 @@
 		A41DF97C218046F0006EABE9 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97A218046F0006EABE9 /* SettingViewController.xib */; };
 		A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */; };
 		A41DF98021804EB5006EABE9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */; };
+		A424A3B92194107000ED0C24 /* CardRegistNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424A3B72194107000ED0C24 /* CardRegistNavigationViewController.swift */; };
+		A424A3BA2194107000ED0C24 /* CardRegistNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424A3B82194107000ED0C24 /* CardRegistNavigationViewController.xib */; };
+		A424A3BD219428BB00ED0C24 /* ReadQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424A3BB219428BB00ED0C24 /* ReadQRCodeViewController.swift */; };
+		A424A3BE219428BB00ED0C24 /* ReadQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424A3BC219428BB00ED0C24 /* ReadQRCodeViewController.xib */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
 		A44BD13A21912DD400E683D4 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */; };
 		A44BD13B21912DD400E683D4 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */; };
@@ -63,6 +67,10 @@
 		A41DF97A218046F0006EABE9 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		A424A3B72194107000ED0C24 /* CardRegistNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegistNavigationViewController.swift; sourceTree = "<group>"; };
+		A424A3B82194107000ED0C24 /* CardRegistNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardRegistNavigationViewController.xib; sourceTree = "<group>"; };
+		A424A3BB219428BB00ED0C24 /* ReadQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadQRCodeViewController.swift; sourceTree = "<group>"; };
+		A424A3BC219428BB00ED0C24 /* ReadQRCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadQRCodeViewController.xib; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
@@ -132,10 +140,14 @@
 		A46A87D42178A4040050369C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECDB4E2192EB3C00208236 /* Main.storyboard */,
+				A491D33621757182005610DC /* LaunchScreen.storyboard */,
 				A44BD1432191880200E683D4 /* RegistLoginSelectViewController.xib */,
 				A46A88032178AF370050369C /* RegistViewController.xib */,
 				A46A87FF2178AF190050369C /* LoginViewController.xib */,
 				A46A88072178AF550050369C /* AuthViewController.xib */,
+				A424A3B82194107000ED0C24 /* CardRegistNavigationViewController.xib */,
+				A424A3BC219428BB00ED0C24 /* ReadQRCodeViewController.xib */,
 				A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */,
 				A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */,
 				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
@@ -151,7 +163,6 @@
 				A46A87DF2178ADE90050369C /* CardViewController.xib */,
 				A450A04E218859C5008D6384 /* CardView.xib */,
 				A41DF97A218046F0006EABE9 /* SettingViewController.xib */,
-				A491D33621757182005610DC /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +175,8 @@
 				A46A88022178AF370050369C /* RegistViewController.swift */,
 				A46A87FE2178AF190050369C /* LoginViewController.swift */,
 				A46A88062178AF550050369C /* AuthViewController.swift */,
+				A424A3B72194107000ED0C24 /* CardRegistNavigationViewController.swift */,
+				A424A3BB219428BB00ED0C24 /* ReadQRCodeViewController.swift */,
 				A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */,
 				A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */,
 				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
@@ -228,7 +241,6 @@
 		A491D32C21757180005610DC /* portal */ = {
 			isa = PBXGroup;
 			children = (
-				A4ECDB4E2192EB3C00208236 /* Main.storyboard */,
 				A46A880A2178AF890050369C /* Configs */,
 				A46A87D72178A4790050369C /* Resources */,
 				A46A87D62178A44D0050369C /* Models */,
@@ -315,12 +327,14 @@
 				A450A0572189BB87008D6384 /* ProfileLoginBeforeView.xib in Resources */,
 				A44BD13B21912DD400E683D4 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87E92178AE440050369C /* MapSearchViewController.xib in Resources */,
+				A424A3BE219428BB00ED0C24 /* ReadQRCodeViewController.xib in Resources */,
 				A46A88052178AF370050369C /* RegistViewController.xib in Resources */,
 				A46A87E52178AE0F0050369C /* KeywordSearchViewController.xib in Resources */,
 				A46A87DD2178ADA60050369C /* SearchViewController.xib in Resources */,
 				A450A04F218859C5008D6384 /* CardView.xib in Resources */,
 				A41DF97C218046F0006EABE9 /* SettingViewController.xib in Resources */,
 				A4ECDB4F2192EB3C00208236 /* Main.storyboard in Resources */,
+				A424A3BA2194107000ED0C24 /* CardRegistNavigationViewController.xib in Resources */,
 				A46A88092178AF550050369C /* AuthViewController.xib in Resources */,
 				A46A87FD2178AEF30050369C /* ProfileViewController.xib in Resources */,
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
@@ -416,8 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A424A3BD219428BB00ED0C24 /* ReadQRCodeViewController.swift in Sources */,
 				A44BD14021913A2000E683D4 /* FavoriteViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
+				A424A3B92194107000ED0C24 /* CardRegistNavigationViewController.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
