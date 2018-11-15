@@ -80,6 +80,24 @@ extension FavoriteViewController {
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
+        
+        if indexPath.row == 1 {
+            cell.foregroundImageView.isHidden = true
+            cell.forgroundViewHeight.constant = 40
+            cell.foregroundImageViewHeight.constant = 0
+            cell.containerViewHeight.constant = 200
+            cell.containerImageViewHeight.constant = 0
+            cell.containerInstitutionViewHeight.constant = 40
+        }
+        else {
+            cell.foregroundImageView.isHidden = false
+            cell.forgroundViewHeight.constant = 80
+            cell.foregroundImageViewHeight.constant = 40
+            cell.containerViewHeight.constant = 240
+            cell.containerImageViewHeight.constant = 40
+            cell.containerInstitutionViewHeight.constant = 80
+        }
+        
         return cell
     }
     

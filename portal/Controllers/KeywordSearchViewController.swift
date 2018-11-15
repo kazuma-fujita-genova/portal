@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Hero
+
 import MaterialComponents.MaterialTextFields
 import MaterialComponents.MaterialAppBar
 import MaterialComponents.MaterialAppBar_ColorThemer
@@ -55,7 +57,7 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,12 +66,35 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         cell.name.text = "マテリアル医院"
         //cell.
         /*
-        if indexPath.count == 1 {
-            cell.imageView?.isHidden = true
+        if indexPath.row == 0 || indexPath.row == 3 {
+            cell.institutionImageView?.isHidden = true
+            cell.imageViewHeight.constant = 0
+            cell.cardHeight.constant = 300
+        } else {
+            cell.institutionImageView?.isHidden = false
+            cell.imageViewHeight.constant = 300
+            cell.cardHeight.constant = 600
+        }
+        
+        if indexPath.row == 1 {
+            // cell.cardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            // cell.institutionImageView.hero.id = "institutionImageView"
+            // cell.name.hero.id = "nameLabel"
+            // cell.cardView.isUserInteractionEnabled = true
+            cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
         }
         */
+        cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
+
         return cell
     }
+    
+    @objc func handleInstitutionViewButton(gestureRecognizer: UITapGestureRecognizer) {
+        let institutionViewController = InstitutionViewController(nibName: "InstitutionViewController", bundle: nil)
+        self.present(institutionViewController, animated: true, completion: nil)
+    }
+    
+    
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
      

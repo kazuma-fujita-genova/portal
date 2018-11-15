@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstitutionViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstitutionViewController" customModule="portal" customModuleProvider="target">
             <connections>
+                <outlet property="institutionImageView" destination="p0V-KJ-HvT" id="WwX-Ms-ggv"/>
+                <outlet property="nameLabel" destination="xzo-6b-VrZ" id="28a-CK-vDq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +20,37 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mMu-cO-rks">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="p0V-KJ-HvT">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="p0V-KJ-HvT" secondAttribute="height" multiplier="4:3" id="4Ck-6G-RlW"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-6b-VrZ">
+                            <rect key="frame" x="0.0" y="284.5" width="52" height="362.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMu-cO-rks" secondAttribute="trailing" id="0hJ-I7-VFI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mMu-cO-rks" secondAttribute="bottom" id="BfR-Tu-j6c"/>
+                <constraint firstItem="mMu-cO-rks" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vy2-pG-Ekw"/>
+                <constraint firstItem="mMu-cO-rks" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oVs-pR-vDG"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-47.200000000000003" y="142.57871064467767"/>
         </view>
     </objects>
+    <resources>
+        <image name="sample-image" width="920" height="616"/>
+    </resources>
 </document>

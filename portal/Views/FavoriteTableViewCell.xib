@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,17 +21,31 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOA-Yv-Lkc" customClass="RotatedView" customModule="FoldingCell">
                         <rect key="frame" x="28" y="39" width="548" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljn-Ic-91f">
-                                <rect key="frame" x="239" y="30" width="18" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="boE-nB-OiO">
+                                <rect key="frame" x="0.0" y="0.0" width="548" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCc-FV-6Oj">
+                                        <rect key="frame" x="216.5" y="0.0" width="115" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1Dm-TZ-SNn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx1-na-vE1">
+                                        <rect key="frame" x="248" y="40" width="52" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="boE-nB-OiO" firstAttribute="leading" secondItem="WOA-Yv-Lkc" secondAttribute="leading" id="2VY-Nl-zS3"/>
+                            <constraint firstItem="boE-nB-OiO" firstAttribute="top" secondItem="WOA-Yv-Lkc" secondAttribute="top" id="Pzi-fK-icv"/>
                             <constraint firstAttribute="height" constant="80" id="ffo-5I-Akt"/>
+                            <constraint firstAttribute="trailing" secondItem="boE-nB-OiO" secondAttribute="trailing" id="qMB-hQ-EUM"/>
+                            <constraint firstAttribute="bottom" secondItem="boE-nB-OiO" secondAttribute="bottom" id="zU3-7D-jtP"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgM-qC-GKc">
@@ -42,17 +54,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TzQ-Fd-K3c">
                                 <rect key="frame" x="0.0" y="0.0" width="548" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="裏1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g54-QZ-2Cm">
-                                        <rect key="frame" x="244" y="30" width="25" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LEj-w3-WbA">
+                                        <rect key="frame" x="0.0" y="0.0" width="548" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-uY-RaW">
+                                                <rect key="frame" x="216.5" y="0.0" width="115" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TuR-QH-zD2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-s3-4w4">
+                                                <rect key="frame" x="248" y="40" width="52" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="NMe-ZI-tBv"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="LEj-w3-WbA" firstAttribute="top" secondItem="TzQ-Fd-K3c" secondAttribute="top" id="3oS-vn-ZbU"/>
                                     <constraint firstAttribute="height" constant="80" id="BDR-B1-iQA"/>
+                                    <constraint firstAttribute="bottom" secondItem="LEj-w3-WbA" secondAttribute="bottom" id="LLW-rX-tqx"/>
+                                    <constraint firstItem="LEj-w3-WbA" firstAttribute="leading" secondItem="TzQ-Fd-K3c" secondAttribute="leading" id="PKM-ol-Qcu"/>
+                                    <constraint firstAttribute="trailing" secondItem="LEj-w3-WbA" secondAttribute="trailing" id="nRU-nI-tVb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAe-ne-Y7k" customClass="RotatedView" customModule="FoldingCell">
@@ -65,6 +94,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpl-VZ-98D">
+                                        <rect key="frame" x="66" y="25" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -81,6 +117,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvE-TA-N0O">
+                                        <rect key="frame" x="65" y="30" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -122,10 +165,17 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="containerImageView" destination="Rek-uY-RaW" id="cj1-KY-prF"/>
+                <outlet property="containerImageViewHeight" destination="TuR-QH-zD2" id="ccO-dL-ISe"/>
+                <outlet property="containerInstitutionViewHeight" destination="NMe-ZI-tBv" id="pzV-vj-lQz"/>
                 <outlet property="containerView" destination="zgM-qC-GKc" id="scv-Lx-rgA"/>
+                <outlet property="containerViewHeight" destination="SCH-aV-hGi" id="OzF-bs-XZW"/>
                 <outlet property="containerViewTop" destination="rk5-ba-z0V" id="pUb-Ql-jx3"/>
+                <outlet property="foregroundImageView" destination="RCc-FV-6Oj" id="vFn-dW-pdo"/>
+                <outlet property="foregroundImageViewHeight" destination="1Dm-TZ-SNn" id="lGk-SH-nae"/>
                 <outlet property="foregroundView" destination="WOA-Yv-Lkc" id="mzR-NZ-5Si"/>
                 <outlet property="foregroundViewTop" destination="NR6-Ih-F8u" id="Sw2-KF-I8C"/>
+                <outlet property="forgroundViewHeight" destination="ffo-5I-Akt" id="cfz-dq-kvE"/>
             </connections>
             <point key="canvasLocation" x="14.4" y="423.23838080959524"/>
         </tableViewCell>

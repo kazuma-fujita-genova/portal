@@ -11,6 +11,19 @@ import FoldingCell
 
 class FavoriteTableViewCell: FoldingCell {
 
+    @IBOutlet weak var forgroundViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var foregroundImageViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var foregroundImageView: UIImageView!
+    
+    @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var containerInstitutionViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var containerImageViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var containerImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

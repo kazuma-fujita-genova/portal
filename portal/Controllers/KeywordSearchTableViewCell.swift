@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class KeywordSearchTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var cardView: MDCCard!
+    
+    @IBOutlet weak var cardHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var institutionImageView: UIImageView!
+    
     @IBOutlet weak var name: UILabel!
     
     override func awakeFromNib() {
