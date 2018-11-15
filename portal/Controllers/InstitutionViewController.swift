@@ -19,8 +19,8 @@ class InstitutionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // self.hero.isEnabled = true
-        // institutionImageView.hero.id = "institutionImageView"
-        // nameLabel.hero.id = "nameLabel"
+        self.hero.isEnabled = true
+        institutionImageView.hero.id = "institutionImageView"
+        nameLabel.hero.id = "nameLabel"
     }
 }
