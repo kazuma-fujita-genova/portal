@@ -87,6 +87,7 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         //cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
         cell.institutionImageView.hero.id = "institutionImageView"
         cell.name.hero.id = "nameLabel"
+        //cell.cardView.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
         cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
         return cell
     }

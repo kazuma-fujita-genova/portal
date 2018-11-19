@@ -22,5 +22,12 @@ class InstitutionViewController: UIViewController {
         self.hero.isEnabled = true
         institutionImageView.hero.id = "institutionImageView"
         nameLabel.hero.id = "nameLabel"
+        institutionImageView.isUserInteractionEnabled = true
+        institutionImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCancelButton(gestureRecognizer:))))
+        // nameLabel.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
+    }
+    
+    @objc func handleCancelButton(gestureRecognizer: UITapGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
