@@ -18,10 +18,6 @@
 		A424A3C121957CF300ED0C24 /* RegistCardConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424A3BF21957CF200ED0C24 /* RegistCardConfirmViewController.swift */; };
 		A424A3C221957CF300ED0C24 /* RegistCardConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424A3C021957CF300ED0C24 /* RegistCardConfirmViewController.xib */; };
 		A428BC962176CCCE008BB7D3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428BC952176CCCE008BB7D3 /* Const.swift */; };
-		A44BD13A21912DD400E683D4 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */; };
-		A44BD13B21912DD400E683D4 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */; };
-		A44BD14021913A2000E683D4 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */; };
-		A44BD14121913A2000E683D4 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */; };
 		A44BD1442191880200E683D4 /* RegistLoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BD1422191880200E683D4 /* RegistLoginSelectViewController.swift */; };
 		A44BD1452191880200E683D4 /* RegistLoginSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44BD1432191880200E683D4 /* RegistLoginSelectViewController.xib */; };
 		A450A04D218859A4008D6384 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450A04C218859A4008D6384 /* CardView.swift */; };
@@ -56,6 +52,10 @@
 		A491D32E21757180005610DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491D32D21757180005610DC /* AppDelegate.swift */; };
 		A491D33521757182005610DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A491D33421757182005610DC /* Assets.xcassets */; };
 		A491D33821757182005610DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491D33621757182005610DC /* LaunchScreen.storyboard */; };
+		A499898321A2965200E224E2 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */; };
+		A499898421A2965200E224E2 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A499898221A2965200E224E2 /* FavoriteTableViewCell.xib */; };
+		A499898721A296EB00E224E2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499898521A296EB00E224E2 /* FavoriteViewController.swift */; };
+		A499898821A296EB00E224E2 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A499898621A296EB00E224E2 /* FavoriteViewController.xib */; };
 		A49AD4DF2195829A00404540 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AD4DD2195829A00404540 /* SettingViewController.swift */; };
 		A49AD4E02195829A00404540 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49AD4DE2195829A00404540 /* SettingViewController.xib */; };
 		A49AD4E32195A65100404540 /* RegistCardAccountSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AD4E12195A65100404540 /* RegistCardAccountSelectViewController.swift */; };
@@ -78,10 +78,6 @@
 		A424A3BF21957CF200ED0C24 /* RegistCardConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistCardConfirmViewController.swift; sourceTree = "<group>"; };
 		A424A3C021957CF300ED0C24 /* RegistCardConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistCardConfirmViewController.xib; sourceTree = "<group>"; };
 		A428BC952176CCCE008BB7D3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
-		A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
-		A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		A44BD1422191880200E683D4 /* RegistLoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistLoginSelectViewController.swift; sourceTree = "<group>"; };
 		A44BD1432191880200E683D4 /* RegistLoginSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistLoginSelectViewController.xib; sourceTree = "<group>"; };
 		A450A04C218859A4008D6384 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -118,6 +114,10 @@
 		A491D33421757182005610DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A491D33721757182005610DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A491D33921757182005610DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		A499898221A2965200E224E2 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		A499898521A296EB00E224E2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		A499898621A296EB00E224E2 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		A49AD4DD2195829A00404540 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A49AD4DE2195829A00404540 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		A49AD4E12195A65100404540 /* RegistCardAccountSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistCardAccountSelectViewController.swift; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 				A424A3B82194107000ED0C24 /* ReadQRCodeNavigationViewController.xib */,
 				A424A3BC219428BB00ED0C24 /* ReadQRCodeViewController.xib */,
 				A424A3C021957CF300ED0C24 /* RegistCardConfirmViewController.xib */,
-				A44BD13F21913A2000E683D4 /* FavoriteViewController.xib */,
-				A44BD13921912DD400E683D4 /* FavoriteTableViewCell.xib */,
+				A499898621A296EB00E224E2 /* FavoriteViewController.xib */,
+				A499898221A2965200E224E2 /* FavoriteTableViewCell.xib */,
 				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */,
 				A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */,
@@ -195,8 +195,8 @@
 				A424A3B72194107000ED0C24 /* ReadQRCodeNavigationViewController.swift */,
 				A424A3BB219428BB00ED0C24 /* ReadQRCodeViewController.swift */,
 				A424A3BF21957CF200ED0C24 /* RegistCardConfirmViewController.swift */,
-				A44BD13E21913A2000E683D4 /* FavoriteViewController.swift */,
-				A44BD13821912DD400E683D4 /* FavoriteTableViewCell.swift */,
+				A499898521A296EB00E224E2 /* FavoriteViewController.swift */,
+				A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */,
 				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
 				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
 				A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */,
@@ -344,7 +344,6 @@
 				A424A3C221957CF300ED0C24 /* RegistCardConfirmViewController.xib in Resources */,
 				A491D33521757182005610DC /* Assets.xcassets in Resources */,
 				A450A0572189BB87008D6384 /* ProfileLoginBeforeView.xib in Resources */,
-				A44BD13B21912DD400E683D4 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87E92178AE440050369C /* MapSearchViewController.xib in Resources */,
 				A424A3BE219428BB00ED0C24 /* ReadQRCodeViewController.xib in Resources */,
 				A46A88052178AF370050369C /* RegistViewController.xib in Resources */,
@@ -358,14 +357,15 @@
 				A46A87E12178ADE90050369C /* CardViewController.xib in Resources */,
 				A46A87F52178AEB50050369C /* NotifyListViewController.xib in Resources */,
 				A450A0532189956C008D6384 /* KeywordSearchTableViewCell.xib in Resources */,
-				A44BD14121913A2000E683D4 /* FavoriteViewController.xib in Resources */,
 				A46A88012178AF190050369C /* LoginViewController.xib in Resources */,
 				A49AD4E02195829A00404540 /* SettingViewController.xib in Resources */,
 				A49AD4E42195A65100404540 /* RegistCardAccountSelectViewController.xib in Resources */,
 				A49AD4E82195ABFD00404540 /* RegistCardNavigationViewController.xib in Resources */,
+				A499898421A2965200E224E2 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
 				A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */,
 				A44BD1452191880200E683D4 /* RegistLoginSelectViewController.xib in Resources */,
+				A499898821A296EB00E224E2 /* FavoriteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,15 +454,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A424A3BD219428BB00ED0C24 /* ReadQRCodeViewController.swift in Sources */,
-				A44BD14021913A2000E683D4 /* FavoriteViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
 				A49AD4E32195A65100404540 /* RegistCardAccountSelectViewController.swift in Sources */,
 				A49AD4DF2195829A00404540 /* SettingViewController.swift in Sources */,
+				A499898321A2965200E224E2 /* FavoriteTableViewCell.swift in Sources */,
 				A424A3B92194107000ED0C24 /* ReadQRCodeNavigationViewController.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
+				A499898721A296EB00E224E2 /* FavoriteViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
 				A44BD1442191880200E683D4 /* RegistLoginSelectViewController.swift in Sources */,
 				A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */,
@@ -470,7 +471,6 @@
 				A46A87D92178AD710050369C /* CardModel.swift in Sources */,
 				A450A0552189AF50008D6384 /* ProfileLoginBeforeView.swift in Sources */,
 				A424A3C121957CF300ED0C24 /* RegistCardConfirmViewController.swift in Sources */,
-				A44BD13A21912DD400E683D4 /* FavoriteTableViewCell.swift in Sources */,
 				A41DF96C217EAD7E006EABE9 /* TabBarViewController.swift in Sources */,
 				A46A88002178AF190050369C /* LoginViewController.swift in Sources */,
 				A46A87F82178AED20050369C /* NotifyDetailViewController.swift in Sources */,

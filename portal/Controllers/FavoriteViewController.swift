@@ -2,132 +2,44 @@
 //  FavoriteViewController.swift
 //  portal
 //
-//  Created by 藤田和磨 on 2018/10/18.
+//  Created by 藤田和磨 on 2018/11/19.
 //  Copyright © 2018 藤田和磨. All rights reserved.
 //
-import FoldingCell
+
 import UIKit
 
-class FavoriteViewController: UITableViewController {
+class FavoriteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var favoriteTableView: UITableView!
-    
-    enum Const {
-        static let closeCellHeight: CGFloat = 96
-        static let openCellHeight: CGFloat = 260
-        static let rowsCount = 10
-    }
-    
-    var cellHeights: [CGFloat] = []
+    @IBOutlet weak var favoriteTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-    }
-    
-    private func setup() {
+        // Do any additional setup after loading the view.
         
+        favoriteTableView.delegate = self
+        favoriteTableView.dataSource = self
+
+        // テーブルセルのタップを無効にする
+        favoriteTableView.allowsSelection = false
         let nib = UINib(nibName: "FavoriteTableViewCell", bundle: nil)
         favoriteTableView.register(nib, forCellReuseIdentifier: "Cell")
         
-        cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount)
-        favoriteTableView.estimatedRowHeight = Const.closeCellHeight
+        // テーブル行の高さの概算値を設定
+        //favoriteTableView.estimatedRowHeight = UIScreen.main.bounds.width + 760
+        favoriteTableView.estimatedRowHeight = 760
+        // テーブル行の高さをAutoLayoutで自動調整する
         favoriteTableView.rowHeight = UITableView.automaticDimension
-        // favoriteTableView.backgroundColor = UIColor.gray
-        if #available(iOS 10.0, *) {
-            favoriteTableView.refreshControl = UIRefreshControl()
-            favoriteTableView.refreshControl?.addTarget(self, action: #selector(refreshHandler), for: .valueChanged)
-        }
-    }
-    
-    @objc func refreshHandler() {
-        let deadlineTime = DispatchTime.now() + .seconds(1)
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: { [weak self] in
-            if #available(iOS 10.0, *) {
-                self?.favoriteTableView.refreshControl?.endRefreshing()
-            }
-            self?.favoriteTableView.reloadData()
-        })
-    }
-}
 
-// MARK: - TableView
-
-extension FavoriteViewController {
-    
-    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return Const.rowsCount
     }
     
-    override func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard case let cell as FavoriteTableViewCell = cell else {
-            return
-        }
-        
-        cell.backgroundColor = .clear
-        
-        if cellHeights[indexPath.row] == Const.closeCellHeight {
-            cell.unfold(false, animated: false, completion: nil)
-        } else {
-            cell.unfold(true, animated: false, completion: nil)
-        }
-        
-        // cell.number = indexPath.row
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FavoriteTableViewCell
-        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
-        cell.durationsForExpandedState = durations
-        cell.durationsForCollapsedState = durations
-        
-        if indexPath.row == 1 {
-            cell.foregroundImageView.isHidden = true
-            cell.forgroundViewHeight.constant = 40
-            cell.foregroundImageViewHeight.constant = 0
-            cell.containerViewHeight.constant = 200
-            cell.containerImageViewHeight.constant = 0
-            cell.containerInstitutionViewHeight.constant = 40
-        }
-        else {
-            cell.foregroundImageView.isHidden = false
-            cell.forgroundViewHeight.constant = 80
-            cell.foregroundImageViewHeight.constant = 40
-            cell.containerViewHeight.constant = 240
-            cell.containerImageViewHeight.constant = 40
-            cell.containerInstitutionViewHeight.constant = 80
-        }
-        
         return cell
     }
-    
-    override func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = tableView.cellForRow(at: indexPath) as! FavoriteTableViewCell
-        
-        if cell.isAnimating() {
-            return
-        }
-        
-        var duration = 0.0
-        let cellIsCollapsed = cellHeights[indexPath.row] == Const.closeCellHeight
-        if cellIsCollapsed {
-            cellHeights[indexPath.row] = Const.openCellHeight
-            cell.unfold(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {
-            cellHeights[indexPath.row] = Const.closeCellHeight
-            cell.unfold(false, animated: true, completion: nil)
-            duration = 0.8
-        }
-        
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-        }, completion: nil)
-    }
+
 }
