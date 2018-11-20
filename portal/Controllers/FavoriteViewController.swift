@@ -25,11 +25,9 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         favoriteTableView.register(nib, forCellReuseIdentifier: "Cell")
         
         // テーブル行の高さの概算値を設定
-        //favoriteTableView.estimatedRowHeight = UIScreen.main.bounds.width + 760
-        favoriteTableView.estimatedRowHeight = 760
+        favoriteTableView.estimatedRowHeight = 755
         // テーブル行の高さをAutoLayoutで自動調整する
         favoriteTableView.rowHeight = UITableView.automaticDimension
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +37,9 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FavoriteTableViewCell
+        // cell.contentView.backgroundColor = UIColor.lightGray
+        cell.institutionImageView.hero.id = "institutionImageView"
+        cell.institutionNameLabel.hero.id = "institutionNameLabel"
         return cell
     }
-
 }

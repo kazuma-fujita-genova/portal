@@ -9,6 +9,6 @@ target 'portal' do
   pod 'MaterialComponents','67.0.0'
   pod 'GoogleMaps','2.7.0'
   pod 'Alamofire','4.7.3'
-  pod 'FoldingCell','4.0.1'
+  # pod 'FoldingCell','4.0.1'
   pod 'Hero','1.4.0'
 end
