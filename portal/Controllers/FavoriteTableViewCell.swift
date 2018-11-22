@@ -10,10 +10,11 @@ import UIKit
 
 class FavoriteTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var institutionView: UIStackView!
+    
     @IBOutlet weak var institutionImageView: UIImageView!
     
     @IBOutlet weak var institutionNameLabel: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

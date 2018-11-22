@@ -14,27 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    // TODO 環境ごとにAPIキーを変える
+    // TODO: 環境ごとにAPIキーを変える
     let cGoogleMapsAPIKey = "AIzaSyAIYoqq8y7A799Oi0DvyvMPYQCOgjs_wd4"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
  
-        // let tabBarViewController = TabBarViewController()
-        //let navigationBarController = UINavigationController(rootViewController: tabBarViewController)
-        // rootViewControllerをTabBarControllerにする
-        //window = UIWindow()
-        //window?.rootViewController = navigationBarController
-        //window?.rootViewController = tabBarViewController
-        //window?.makeKeyAndVisible()
         // NavigationBarItemの色を変更
         UINavigationBar.appearance().tintColor = UIColor.black
         // NavigationBarの背景を変更
         UINavigationBar.appearance().barTintColor = UIColor.white
         // NavigationBarのタイトル文字列の色を変更
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        // NavigationBarを透過させ下線部を消す
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        // NavigationBarを透過
+        // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        // NavigationBarの下線を消す
         UINavigationBar.appearance().shadowImage = UIImage()
         // Google Mapsの初期設定
         GMSServices.provideAPIKey(cGoogleMapsAPIKey)

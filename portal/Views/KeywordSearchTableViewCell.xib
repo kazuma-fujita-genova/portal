@@ -117,7 +117,7 @@
                 <outlet property="cardView" destination="QPY-7g-ob4" id="Lew-4w-6TN"/>
                 <outlet property="imageViewHeight" destination="7l4-ES-onr" id="mA8-35-eH7"/>
                 <outlet property="institutionImageView" destination="dx1-Kl-q2S" id="8oF-kj-USN"/>
-                <outlet property="name" destination="yZn-qx-JN8" id="tqm-oe-Ipy"/>
+                <outlet property="institutionNameLabel" destination="yZn-qx-JN8" id="p8Q-Gd-pjc"/>
             </connections>
             <point key="canvasLocation" x="-452" y="442.12893553223392"/>
         </tableViewCell>

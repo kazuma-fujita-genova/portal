@@ -39,6 +39,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         buttonSetup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // UX向上の為、画面戻りで選択していたcellをハイライト
+        profileViewTable.indexPathsForSelectedRows?.forEach {
+            profileViewTable.deselectRow(at: $0, animated: true)
+        }
+    }
+    
     private func buttonSetup() {
         //let backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         
@@ -53,10 +61,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.present(navigationController, animated: true, completion: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
     }
@@ -73,8 +77,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let settingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
             self.navigationController?.show(settingViewController, sender: nil)
         }
-        // 遷移戻り時のCellのグレーアウトを戻す
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     /*

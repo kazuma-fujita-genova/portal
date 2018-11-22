@@ -11,4 +11,7 @@ target 'portal' do
   pod 'Alamofire','4.7.3'
   # pod 'FoldingCell','4.0.1'
   pod 'Hero','1.4.0'
+  pod "FDFullscreenPopGesture",'1.1'
+  pod 'SkeletonView','1.4.1'
+  pod 'AMScrollingNavbar','5.1.1'
 end

@@ -8,6 +8,7 @@
 
 import MaterialComponents.MaterialBottomNavigation_ColorThemer
 import MaterialComponents.MaterialTypographyScheme
+import AMScrollingNavbar
 
 class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     
@@ -28,13 +29,22 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         // view.backgroundColor = colorScheme.backgroundColor
         
+        // 診察券VC設定
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        // 施設検索VC設定
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        // かかりつけVCをrootとしたUINavigationBarを設定
         let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        // let favoriteNavigationController = UINavigationController(rootViewController: favoriteViewController)
+        // AMScrollingNavbarでスクロール時NavigationBarの表示/非表示切り替え
+        let favoriteNavigationController = ScrollingNavigationController(rootViewController: favoriteViewController)
+        // お知らせVC設定
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
+        // プロフィールVCをrootとしたUINavigationBarを設定
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
-        self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileNavigationController]
+        // self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileNavigationController]
+        self.viewControllers = [cardViewController, searchViewController, favoriteNavigationController, notifyListViewController, profileNavigationController]
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
         
@@ -59,10 +69,7 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
     
     func layoutBottomNavBar() {
         let size = bottomNavBar.sizeThatFits(view.bounds.size)
-        let bottomNavBarFrame = CGRect(x: 0,
-                                       y: view.bounds.height - size.height,
-                                       width: size.width,
-                                       height: size.height)
+        let bottomNavBarFrame = CGRect(x: 0, y: view.bounds.height - size.height, width: size.width, height: size.height)
         bottomNavBar.frame = bottomNavBarFrame
     }
     /*

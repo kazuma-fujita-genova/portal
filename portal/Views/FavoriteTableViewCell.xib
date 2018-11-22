@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,50 +15,44 @@
             <rect key="frame" x="0.0" y="0.0" width="422" height="798"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="422" height="797.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="422" height="797.66666666666663"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-AN-ddq" customClass="CardView" customModule="portal" customModuleProvider="target">
-                        <rect key="frame" x="20" y="31" width="382" height="755"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-AN-ddq">
+                        <rect key="frame" x="40" y="55.333333333333314" width="342" height="755"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hka-ok-gWW">
-                                <rect key="frame" x="-9" y="0.0" width="400" height="380"/>
+                                <rect key="frame" x="11" y="0.0" width="320" height="224"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="orR-bN-kxF">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="400" id="fck-6D-XPr"/>
-                                            <constraint firstAttribute="width" secondItem="orR-bN-kxF" secondAttribute="height" multiplier="4:3" id="rjh-jb-Xdp"/>
+                                            <constraint firstAttribute="width" constant="320" id="fck-6D-XPr"/>
+                                            <constraint firstAttribute="width" secondItem="orR-bN-kxF" secondAttribute="height" multiplier="16:9" id="rjh-jb-Xdp"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3J-xZ-vPl">
-                                        <rect key="frame" x="0.0" y="320" width="52" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-FD-XaY">
-                                        <rect key="frame" x="0.0" y="359.5" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3J-xZ-vPl">
+                                        <rect key="frame" x="0.0" y="200" width="61.333333333333336" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="380" id="h9V-Gg-NAo"/>
+                                    <constraint firstItem="S3J-xZ-vPl" firstAttribute="top" secondItem="orR-bN-kxF" secondAttribute="bottom" constant="20" id="Sv1-eN-pkb"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX8-cJ-MWP" customClass="CardView" customModule="portal" customModuleProvider="target">
-                                <rect key="frame" x="20" y="400" width="342" height="100"/>
+                                <rect key="frame" x="20" y="244" width="302" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="診察券番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REy-Yk-m02">
-                                        <rect key="frame" x="10" y="10" width="87" height="20.5"/>
+                                        <rect key="frame" x="10" y="9.9999999999999982" width="86.666666666666671" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8i-Tl-GQc" customClass="MDCTextField">
-                                        <rect key="frame" x="20" y="50.5" width="302" height="30"/>
+                                        <rect key="frame" x="20" y="50.333333333333314" width="262" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -75,16 +69,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyG-0U-pxK" customClass="CardView" customModule="portal" customModuleProvider="target">
-                                <rect key="frame" x="20" y="520" width="342" height="100"/>
+                                <rect key="frame" x="20" y="364" width="302" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次回予約メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5G-QW-3SW">
-                                        <rect key="frame" x="20" y="20" width="104" height="20.5"/>
+                                        <rect key="frame" x="20" y="20" width="104" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GZc-86-peo">
-                                        <rect key="frame" x="20" y="60.5" width="302" height="30"/>
+                                        <rect key="frame" x="20" y="60.333333333333314" width="262" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="gdm-X1-2ld"/>
                                         </constraints>
@@ -104,16 +98,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyV-Qf-sXU" customClass="CardView" customModule="portal" customModuleProvider="target">
-                                <rect key="frame" x="20" y="640" width="342" height="100"/>
+                                <rect key="frame" x="20" y="484" width="302" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前回受付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-HO-i9u">
-                                        <rect key="frame" x="20" y="20" width="69.5" height="20.5"/>
+                                        <rect key="frame" x="20" y="20" width="69.333333333333329" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/11/23 10:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwV-LZ-fdS">
-                                        <rect key="frame" x="20" y="60.5" width="126" height="20.5"/>
+                                        <rect key="frame" x="20" y="60.333333333333378" width="126" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -149,21 +143,22 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="yBN-AN-ddq" secondAttribute="trailing" constant="40" id="7mc-fO-T9K"/>
                     <constraint firstItem="yBN-AN-ddq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="A1m-cx-yKU"/>
-                    <constraint firstItem="yBN-AN-ddq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="A77-2f-SFc"/>
                     <constraint firstAttribute="bottomMargin" secondItem="yBN-AN-ddq" secondAttribute="bottom" id="bLl-mp-52g"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="yBN-AN-ddq" secondAttribute="trailing" id="tHB-ki-GyC"/>
+                    <constraint firstItem="yBN-AN-ddq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="iuj-Mk-BKW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="institutionImageView" destination="orR-bN-kxF" id="dWx-oc-avr"/>
                 <outlet property="institutionNameLabel" destination="S3J-xZ-vPl" id="pui-xo-McB"/>
+                <outlet property="institutionView" destination="Hka-ok-gWW" id="5Et-gD-MoQ"/>
             </connections>
             <point key="canvasLocation" x="-870.39999999999998" y="601.79910044977521"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="sample-image" width="920" height="616"/>
+        <image name="sample-image" width="920" height="615.66668701171875"/>
     </resources>
 </document>

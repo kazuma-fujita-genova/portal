@@ -10,9 +10,6 @@ import UIKit
 
 class RegistCardNavigationViewController: UIViewController {
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

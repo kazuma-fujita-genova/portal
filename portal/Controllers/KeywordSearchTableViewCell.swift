@@ -19,7 +19,7 @@ class KeywordSearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var institutionImageView: UIImageView!
     
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var institutionNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

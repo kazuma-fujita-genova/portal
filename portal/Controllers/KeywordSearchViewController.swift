@@ -63,7 +63,7 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! KeywordSearchTableViewCell
-        cell.name.text = "マテリアル医院"
+        cell.institutionNameLabel.text = "マテリアル医院"
         //cell.
         /*
         if indexPath.row == 0 || indexPath.row == 3 {
@@ -86,7 +86,7 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         */
         //cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
         cell.institutionImageView.hero.id = "institutionImageView"
-        cell.name.hero.id = "nameLabel"
+        cell.institutionNameLabel.hero.id = "institutionNameLabel"
         //cell.cardView.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
         cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
         return cell

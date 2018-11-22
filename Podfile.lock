@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
-  - FoldingCell (4.0.1)
+  - AMScrollingNavbar (5.1.1)
+  - FDFullscreenPopGesture (1.1)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
@@ -499,18 +500,22 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
+  - SkeletonView (1.4.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
-  - FoldingCell (= 4.0.1)
+  - AMScrollingNavbar
+  - FDFullscreenPopGesture (= 1.1)
   - GoogleMaps (= 2.7.0)
   - Hero (= 1.4.0)
   - MaterialComponents (= 67.0.0)
+  - SkeletonView (= 1.4.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - FoldingCell
+    - AMScrollingNavbar
+    - FDFullscreenPopGesture
     - GoogleMaps
     - Hero
     - MaterialComponents
@@ -519,10 +524,12 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - MotionTransitioning
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  FoldingCell: acf29a96085b7ab96234be75d543f5640ead0b3c
+  AMScrollingNavbar: 128e9e17af3b93f80d6705befe7cc2ae5e8a8435
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   MaterialComponents: ba0b153b1fa427be83aad80b05784b2cfecec847
@@ -531,7 +538,8 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
 
-PODFILE CHECKSUM: b6b0a3522289debc7a3b111224bce5892cf60b18
+PODFILE CHECKSUM: a9ac6efb5034943fc05c38ca865a2d37c3fa18c0
 
 COCOAPODS: 1.5.3

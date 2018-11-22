@@ -8,6 +8,7 @@
 
 import UIKit
 import MaterialComponents.MaterialTextFields
+import FDFullscreenPopGesture
 
 class SettingViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class SettingViewController: UIViewController {
         // NavigationBar設定
         self.title = "設定"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleCancelButton(_:forEvent:)))
+        // スワイプで画面戻る処理追加
+        self.navigationController?.fd_fullscreenPopGestureRecognizer.isEnabled = true
     }
     
     // NavigationBarのキャンセルタップされた時に呼ばれるメソッド

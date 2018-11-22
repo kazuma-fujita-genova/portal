@@ -54,8 +54,8 @@
 		A491D33821757182005610DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A491D33621757182005610DC /* LaunchScreen.storyboard */; };
 		A499898321A2965200E224E2 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */; };
 		A499898421A2965200E224E2 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A499898221A2965200E224E2 /* FavoriteTableViewCell.xib */; };
-		A499898721A296EB00E224E2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499898521A296EB00E224E2 /* FavoriteViewController.swift */; };
-		A499898821A296EB00E224E2 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A499898621A296EB00E224E2 /* FavoriteViewController.xib */; };
+		A499898B21A5613F00E224E2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499898921A5613F00E224E2 /* FavoriteViewController.swift */; };
+		A499898C21A5613F00E224E2 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A499898A21A5613F00E224E2 /* FavoriteViewController.xib */; };
 		A49AD4DF2195829A00404540 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AD4DD2195829A00404540 /* SettingViewController.swift */; };
 		A49AD4E02195829A00404540 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49AD4DE2195829A00404540 /* SettingViewController.xib */; };
 		A49AD4E32195A65100404540 /* RegistCardAccountSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AD4E12195A65100404540 /* RegistCardAccountSelectViewController.swift */; };
@@ -116,8 +116,8 @@
 		A491D33921757182005610DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		A499898221A2965200E224E2 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
-		A499898521A296EB00E224E2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		A499898621A296EB00E224E2 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		A499898921A5613F00E224E2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		A499898A21A5613F00E224E2 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		A49AD4DD2195829A00404540 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A49AD4DE2195829A00404540 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		A49AD4E12195A65100404540 /* RegistCardAccountSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistCardAccountSelectViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				A424A3B82194107000ED0C24 /* ReadQRCodeNavigationViewController.xib */,
 				A424A3BC219428BB00ED0C24 /* ReadQRCodeViewController.xib */,
 				A424A3C021957CF300ED0C24 /* RegistCardConfirmViewController.xib */,
-				A499898621A296EB00E224E2 /* FavoriteViewController.xib */,
+				A499898A21A5613F00E224E2 /* FavoriteViewController.xib */,
 				A499898221A2965200E224E2 /* FavoriteTableViewCell.xib */,
 				A46A87DB2178ADA60050369C /* SearchViewController.xib */,
 				A46A87E32178AE0F0050369C /* KeywordSearchViewController.xib */,
@@ -195,7 +195,7 @@
 				A424A3B72194107000ED0C24 /* ReadQRCodeNavigationViewController.swift */,
 				A424A3BB219428BB00ED0C24 /* ReadQRCodeViewController.swift */,
 				A424A3BF21957CF200ED0C24 /* RegistCardConfirmViewController.swift */,
-				A499898521A296EB00E224E2 /* FavoriteViewController.swift */,
+				A499898921A5613F00E224E2 /* FavoriteViewController.swift */,
 				A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */,
 				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
 				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
@@ -365,7 +365,7 @@
 				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
 				A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */,
 				A44BD1452191880200E683D4 /* RegistLoginSelectViewController.xib in Resources */,
-				A499898821A296EB00E224E2 /* FavoriteViewController.xib in Resources */,
+				A499898C21A5613F00E224E2 /* FavoriteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +415,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-portal/Pods-portal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMScrollingNavbar/AMScrollingNavbar.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
@@ -424,11 +425,13 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMScrollingNavbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
@@ -436,6 +439,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -459,7 +463,7 @@
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
-				A499898721A296EB00E224E2 /* FavoriteViewController.swift in Sources */,
+				A499898B21A5613F00E224E2 /* FavoriteViewController.swift in Sources */,
 				A46A88082178AF550050369C /* AuthViewController.swift in Sources */,
 				A44BD1442191880200E683D4 /* RegistLoginSelectViewController.swift in Sources */,
 				A450A0522189956C008D6384 /* KeywordSearchTableViewCell.swift in Sources */,
