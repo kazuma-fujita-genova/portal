@@ -15,6 +15,7 @@ import MaterialComponents.MaterialAppBar_TypographyThemer
 import MaterialComponents.MaterialTabs
 import MaterialComponents.MaterialTypographyScheme
 import MaterialComponents.MaterialFlexibleHeader_CanAlwaysExpandToMaximumHeight
+import PagingMenuController
 
 class CardViewController: MDCTabBarViewController {
     

@@ -62,6 +62,8 @@
 		A49AD4E42195A65100404540 /* RegistCardAccountSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49AD4E22195A65100404540 /* RegistCardAccountSelectViewController.xib */; };
 		A49AD4E72195ABFD00404540 /* RegistCardNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AD4E52195ABFD00404540 /* RegistCardNavigationViewController.swift */; };
 		A49AD4E82195ABFD00404540 /* RegistCardNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49AD4E62195ABFD00404540 /* RegistCardNavigationViewController.xib */; };
+		A4D1956D21ACF4C3006359BE /* InstitutionDetailWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D1956C21ACF4C3006359BE /* InstitutionDetailWidgetView.swift */; };
+		A4D1956F21ACF4E6006359BE /* InstitutionDetailWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D1956E21ACF4E6006359BE /* InstitutionDetailWidgetView.xib */; };
 		A4ECDB4F2192EB3C00208236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ECDB4E2192EB3C00208236 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,8 @@
 		A49AD4E22195A65100404540 /* RegistCardAccountSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistCardAccountSelectViewController.xib; sourceTree = "<group>"; };
 		A49AD4E52195ABFD00404540 /* RegistCardNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistCardNavigationViewController.swift; sourceTree = "<group>"; };
 		A49AD4E62195ABFD00404540 /* RegistCardNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistCardNavigationViewController.xib; sourceTree = "<group>"; };
+		A4D1956C21ACF4C3006359BE /* InstitutionDetailWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionDetailWidgetView.swift; sourceTree = "<group>"; };
+		A4D1956E21ACF4E6006359BE /* InstitutionDetailWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstitutionDetailWidgetView.xib; sourceTree = "<group>"; };
 		A4ECDB4E2192EB3C00208236 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C5E0BD01F558F5B1DDFEEA60 /* Pods-portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portal.release.xcconfig"; path = "Pods/Target Support Files/Pods-portal/Pods-portal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +174,7 @@
 				A450A0512189956B008D6384 /* KeywordSearchTableViewCell.xib */,
 				A46A87E72178AE440050369C /* MapSearchViewController.xib */,
 				A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */,
+				A4D1956E21ACF4E6006359BE /* InstitutionDetailWidgetView.xib */,
 				A46A87FB2178AEF30050369C /* ProfileViewController.xib */,
 				A450A0562189BB87008D6384 /* ProfileLoginBeforeView.xib */,
 				A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */,
@@ -185,6 +190,7 @@
 		A46A87D52178A42A0050369C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A491D32D21757180005610DC /* AppDelegate.swift */,
 				A41DF96B217EAD7E006EABE9 /* TabBarViewController.swift */,
 				A44BD1422191880200E683D4 /* RegistLoginSelectViewController.swift */,
 				A46A88022178AF370050369C /* RegistViewController.swift */,
@@ -195,15 +201,16 @@
 				A424A3B72194107000ED0C24 /* ReadQRCodeNavigationViewController.swift */,
 				A424A3BB219428BB00ED0C24 /* ReadQRCodeViewController.swift */,
 				A424A3BF21957CF200ED0C24 /* RegistCardConfirmViewController.swift */,
-				A499898921A5613F00E224E2 /* FavoriteViewController.swift */,
-				A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */,
+				A46A87DE2178ADE90050369C /* CardViewController.swift */,
+				A450A04C218859A4008D6384 /* CardView.swift */,
 				A46A87DA2178ADA60050369C /* SearchViewController.swift */,
 				A46A87E22178AE0F0050369C /* KeywordSearchViewController.swift */,
 				A450A0502189956B008D6384 /* KeywordSearchTableViewCell.swift */,
 				A46A87E62178AE440050369C /* MapSearchViewController.swift */,
+				A499898921A5613F00E224E2 /* FavoriteViewController.swift */,
+				A499898121A2965200E224E2 /* FavoriteTableViewCell.swift */,
 				A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */,
-				A46A87DE2178ADE90050369C /* CardViewController.swift */,
-				A450A04C218859A4008D6384 /* CardView.swift */,
+				A4D1956C21ACF4C3006359BE /* InstitutionDetailWidgetView.swift */,
 				A46A87F22178AEB50050369C /* NotifyListViewController.swift */,
 				A46A87F62178AED20050369C /* NotifyDetailViewController.swift */,
 				A46A87FA2178AEF30050369C /* ProfileViewController.swift */,
@@ -264,7 +271,6 @@
 				A46A87D62178A44D0050369C /* Models */,
 				A46A87D52178A42A0050369C /* Controllers */,
 				A46A87D42178A4040050369C /* Views */,
-				A491D32D21757180005610DC /* AppDelegate.swift */,
 				A491D33921757182005610DC /* Info.plist */,
 			);
 			path = portal;
@@ -339,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D1956F21ACF4E6006359BE /* InstitutionDetailWidgetView.xib in Resources */,
 				A491D33821757182005610DC /* LaunchScreen.storyboard in Resources */,
 				A41DF98021804EB5006EABE9 /* ProfileTableViewCell.xib in Resources */,
 				A424A3C221957CF300ED0C24 /* RegistCardConfirmViewController.xib in Resources */,
@@ -425,6 +432,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -439,6 +447,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +470,7 @@
 				A424A3B92194107000ED0C24 /* ReadQRCodeNavigationViewController.swift in Sources */,
 				A46A87E82178AE440050369C /* MapSearchViewController.swift in Sources */,
 				A46A87DC2178ADA60050369C /* SearchViewController.swift in Sources */,
+				A4D1956D21ACF4C3006359BE /* InstitutionDetailWidgetView.swift in Sources */,
 				A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */,
 				A46A87FC2178AEF30050369C /* ProfileViewController.swift in Sources */,
 				A499898B21A5613F00E224E2 /* FavoriteViewController.swift in Sources */,

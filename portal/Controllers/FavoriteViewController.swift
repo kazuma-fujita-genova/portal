@@ -65,11 +65,12 @@ extension FavoriteViewController {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FavoriteTableViewCell
         // cell.contentView.backgroundColor = UIColor.lightGray
-        cell.institutionImageView.hero.id = "institutionImageView"
-        cell.institutionNameLabel.hero.id = "institutionNameLabel"
-        cell.institutionNameLabel.text = "GENOVAかかりつけ医院"
-        cell.institutionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
-        
+        if indexPath.row == 0 {
+            cell.institutionImageView.hero.id = "institutionImageView"
+            cell.institutionNameLabel.hero.id = "institutionNameLabel"
+            cell.institutionNameLabel.text = "GENOVAかかりつけ医院"
+            cell.institutionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
+        }
         
         //setup blur vibrant view
         // cell.institutionImageView.blurView.setup(style: UIBlurEffectStyle.dark, alpha: 1).enable()

@@ -14,4 +14,5 @@ target 'portal' do
   pod "FDFullscreenPopGesture",'1.1'
   pod 'SkeletonView','1.4.1'
   pod 'AMScrollingNavbar','5.1.1'
+  pod 'PagingMenuController'
 end

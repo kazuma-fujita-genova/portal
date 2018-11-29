@@ -23,6 +23,8 @@ class InstitutionViewController: UIViewController {
     
     @IBOutlet weak var institutionImageView: UIImageView!
     
+    @IBOutlet weak var categoryView: InstitutionDetailWidgetView!
+    
     // imageView
     /*
     let appBarViewController = MDCAppBarViewController()
@@ -38,9 +40,13 @@ class InstitutionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //self.view.addSubview(categoryView)
+        
         self.hero.isEnabled = true
         institutionImageView.hero.id = "institutionImageView"
         institutionNameLabel.hero.id = "institutionNameLabel"
+        // institutionAddressLabel.hero.id = "institutionAddressLabel"
         //institutionDetailView.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
         institutionDetailView.hero.modifiers = [.fade, .scale(0.5)]
         
@@ -48,6 +54,19 @@ class InstitutionViewController: UIViewController {
         institutionImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCancelButton(gestureRecognizer:))))
         // nameLabel.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
         
+        institutionNameLabel.text = "GENOVAかかりつけ医院"
+        // institutionAddressLabel.text = "東京都渋谷区宇田川町10-3 Daiwa SHIBUYA EDGEビル5F"
+        
+        /////////////
+        /*
+        guard let widgetView = UINib(nibName: "InstitutionDetailWidgetView", bundle: nil).instantiate(withOwner: InstitutionDetailWidgetView.self, options: nil).first as? InstitutionDetailWidgetView else {
+            return
+        }
+         // IBからひいてきた　InstitutionDetailWidgetView が表示できない
+        categoryView.headingLabel?.text = "診療科目"
+        categoryView.descriptionLabel?.text = "説明説明"
+        */
+        /////////////
         
         // UX向上: ローディングのときにスケルトンを表示させる
         /* TODO https://tech.recruit-mp.co.jp/mobile/ios-ux-tips/
@@ -101,7 +120,18 @@ class InstitutionViewController: UIViewController {
         
         self.addChild(appBarViewController)
         */
+    
+        setupLabels()
     }
+    
+    private func setupLabels() {
+        //institutionAddressLabel.textColor = UIColor.gray
+        //institutionAddressLabel.font = UIFont.systemFont(ofSize: 10)
+        //institutionAddressLabel.numberOfLines = 0
+        //institutionAddressLabel.sizeToFit()
+        //institutionAddressLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
+    }
+
     /*
     init() {
         super.init(nibName: nil, bundle: nil)

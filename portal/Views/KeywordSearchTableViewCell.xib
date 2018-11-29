@@ -11,115 +11,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="667" id="KGk-i7-Jjw" customClass="KeywordSearchTableViewCell" customModule="portal" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="491" height="667"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="420" id="KGk-i7-Jjw" customClass="KeywordSearchTableViewCell" customModule="portal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="491" height="420"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="491" height="666.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="491" height="419.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPY-7g-ob4" customClass="MDCCard">
-                        <rect key="frame" x="40" y="31" width="400" height="600"/>
+                        <rect key="frame" x="30" y="11" width="431" height="250"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4gT-rj-YPa">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="dx1-Kl-q2S">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="7l4-ES-onr"/>
-                                            <constraint firstAttribute="width" secondItem="dx1-Kl-q2S" secondAttribute="height" multiplier="4:3" id="WK3-5s-mrS"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-5k-DdF">
-                                        <rect key="frame" x="10" y="300" width="385" height="300"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-qx-JN8">
-                                                <rect key="frame" x="0.0" y="0.0" width="385" height="75"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-NY-t0j">
-                                                <rect key="frame" x="0.0" y="85" width="385" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="診療科目 / 診療科目 / 診療科目 / 診療科目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-gi-TsY">
-                                                <rect key="frame" x="0.0" y="113" width="385" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こだわり・特徴 / こだわり・特徴 / こだわり・特徴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-k7-kGD">
-                                                <rect key="frame" x="0.0" y="143.5" width="385" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="診療時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HZ-Ht-pmB">
-                                                <rect key="frame" x="0.0" y="174" width="385" height="27.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 〜 18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWP-4U-R34">
-                                                <rect key="frame" x="0.0" y="211.5" width="385" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休診日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVI-ia-F2F">
-                                                <rect key="frame" x="0.0" y="242" width="385" height="27.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="毎週水曜日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB2-za-QFv">
-                                                <rect key="frame" x="0.0" y="279.5" width="385" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="dx1-Kl-q2S">
+                                <rect key="frame" x="0.0" y="0.0" width="431" height="242.5"/>
                                 <constraints>
-                                    <constraint firstItem="Cc5-5k-DdF" firstAttribute="leading" secondItem="4gT-rj-YPa" secondAttribute="leading" constant="10" id="0Eh-i9-DVq"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cc5-5k-DdF" secondAttribute="trailing" constant="5" id="AS0-eR-lJL"/>
+                                    <constraint firstAttribute="width" secondItem="dx1-Kl-q2S" secondAttribute="height" multiplier="16:9" id="WK3-5s-mrS"/>
                                 </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-5k-DdF">
+                                <rect key="frame" x="10" y="252.5" width="61.5" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-qx-JN8">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-NY-t0j">
+                                        <rect key="frame" x="0.0" y="34" width="61.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4gT-rj-YPa" secondAttribute="trailing" id="4uJ-TO-Oke"/>
-                            <constraint firstItem="4gT-rj-YPa" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="6Gx-fO-0V5"/>
-                            <constraint firstItem="4gT-rj-YPa" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="E0n-WM-scp"/>
-                            <constraint firstItem="4gT-rj-YPa" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="R9M-AA-Szd"/>
-                            <constraint firstAttribute="trailing" secondItem="4gT-rj-YPa" secondAttribute="trailing" id="TE1-JK-eSn"/>
-                            <constraint firstAttribute="bottom" secondItem="4gT-rj-YPa" secondAttribute="bottom" id="Th2-AP-nV5"/>
-                            <constraint firstAttribute="height" constant="600" id="YTA-zu-EOS"/>
-                            <constraint firstItem="4gT-rj-YPa" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="h8p-N4-jxZ"/>
+                            <constraint firstItem="Cc5-5k-DdF" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" constant="10" id="57e-tc-7X6"/>
+                            <constraint firstItem="dx1-Kl-q2S" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="Pp9-1p-5Cm"/>
+                            <constraint firstAttribute="trailing" secondItem="dx1-Kl-q2S" secondAttribute="trailing" id="bgv-lr-vHq"/>
+                            <constraint firstAttribute="height" constant="250" id="erh-je-Xrn"/>
+                            <constraint firstItem="Cc5-5k-DdF" firstAttribute="top" secondItem="dx1-Kl-q2S" secondAttribute="bottom" constant="10" id="ifB-wK-FO3"/>
+                            <constraint firstItem="dx1-Kl-q2S" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="yn5-u6-Tdb"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="QPY-7g-ob4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="GA4-Jb-PWN"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="QPY-7g-ob4" secondAttribute="trailing" constant="20" id="NJO-i6-HDW"/>
-                    <constraint firstItem="QPY-7g-ob4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="a6Y-Ks-xwB"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="QPY-7g-ob4" secondAttribute="bottom" id="ab6-zF-aMC"/>
+                    <constraint firstItem="QPY-7g-ob4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AYL-NS-YSL"/>
+                    <constraint firstItem="QPY-7g-ob4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="P51-Mo-ROc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QPY-7g-ob4" secondAttribute="bottom" id="Uod-Ct-AZB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QPY-7g-ob4" secondAttribute="trailing" constant="10" id="eka-ZM-mGe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cardHeight" destination="YTA-zu-EOS" id="Agu-Z5-DVY"/>
                 <outlet property="cardView" destination="QPY-7g-ob4" id="Lew-4w-6TN"/>
-                <outlet property="imageViewHeight" destination="7l4-ES-onr" id="mA8-35-eH7"/>
+                <outlet property="institutionAddressLabel" destination="uHd-NY-t0j" id="27z-9u-kGh"/>
                 <outlet property="institutionImageView" destination="dx1-Kl-q2S" id="8oF-kj-USN"/>
                 <outlet property="institutionNameLabel" destination="yZn-qx-JN8" id="p8Q-Gd-pjc"/>
             </connections>
-            <point key="canvasLocation" x="-452" y="442.12893553223392"/>
+            <point key="canvasLocation" x="-452" y="331.0344827586207"/>
         </tableViewCell>
     </objects>
     <resources>

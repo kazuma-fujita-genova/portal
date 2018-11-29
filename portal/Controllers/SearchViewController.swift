@@ -2,119 +2,79 @@
 //  SearchViewController.swift
 //  portal
 //
-//  Created by 藤田和磨 on 2018/10/18.
+//  Created by 藤田和磨 on 2018/10/17.
 //  Copyright © 2018 藤田和磨. All rights reserved.
 //
 
 import UIKit
+import PagingMenuController
 
-import MaterialComponents.MaterialColorScheme
-import MaterialComponents.MaterialAppBar
-import MaterialComponents.MaterialAppBar_ColorThemer
-import MaterialComponents.MaterialAppBar_TypographyThemer
-import MaterialComponents.MaterialTabs
-import MaterialComponents.MaterialTypographyScheme
-import MaterialComponents.MaterialFlexibleHeader_CanAlwaysExpandToMaximumHeight
-
-class SearchViewController: MDCTabBarViewController {
-
-    lazy var appBarViewController: MDCAppBarViewController = self.makeAppBar()
-    var colorScheme = MDCSemanticColorScheme()
-    var typographyScheme = MDCTypographyScheme()
-    
-    lazy var mDCTabBar: MDCTabBar = {
-        let mDCTabBar = MDCTabBar()
-        mDCTabBar.alignment = .justified
-        
-        mDCTabBar.items = [
-            UITabBarItem(title: ConstTitle.keywordSearch, image: nil, tag:ConstIndex.keywordSearch),
-            UITabBarItem(title: ConstTitle.mapSearch, image: nil, tag:ConstIndex.mapSearch)
-        ]
- 
-        mDCTabBar.selectedItem = mDCTabBar.items[0]
-        
-        mDCTabBar.delegate = self
-        
-        mDCTabBar.setTitleColor(UIColor.gray, for: .normal)
-        mDCTabBar.setTitleColor(UIColor.black, for: .selected)
-        
-        // タブバーインジケーターのスタイルを変更する場合はTabIndicatorを調整する
-        // mDCTabBar.selectionIndicatorTemplate = TabIndicator()
-        
-        return mDCTabBar
-    }()
+class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let options = PagingMenuOptions()
+        let pagingMenuController = PagingMenuController(options: options)
         
-        // Do any additional setup after loading the view.
-        setupAppBarView()
-        self.tabBarHidden = true
+        // 高さ調整。この2行を追加
+        pagingMenuController.view.frame.origin.y += 50
+        pagingMenuController.view.frame.size.height -= 50
+        
+        addChild(pagingMenuController)
+        view.addSubview(pagingMenuController.view)
+        pagingMenuController.didMove(toParent: self)
     }
     
-    private func setupAppBarView() {
-        colorScheme.primaryColor = .white
-        MDCAppBarColorThemer.applyColorScheme(colorScheme, to: appBarViewController)
-        MDCAppBarTypographyThemer.applyTypographyScheme(typographyScheme, to: appBarViewController)
+    private struct PagingMenuOptions: PagingMenuControllerCustomizable {
+        
+        //let vc1 = UIStoryboard(name: ConstStoryBoard.searchName, bundle: nil).instantiateViewController(withIdentifier: ConstStoryBoard.keywordSearchId) as! KeywordSearchViewController
+        //let vc2 = UIStoryboard(name: ConstStoryBoard.searchName, bundle: nil).instantiateViewController(withIdentifier: ConstStoryBoard.mapSearchId) as! MapSearchViewController
+        
+        let vc1 = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
+        let vc2 = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
 
-        let keywordSearchViewController = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
-        let mapSearchViewController = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
-        self.viewControllers = [keywordSearchViewController, mapSearchViewController]
-        selectedViewController = self.viewControllers[ConstIndex.keywordSearch]
-        self.view.addSubview(appBarViewController.view)
-        appBarViewController.didMove(toParent: self)
-    }
-    
-    private func makeAppBar() -> MDCAppBarViewController {
-        let appBarViewController = MDCAppBarViewController()
         
-        self.addChild(appBarViewController)
+        fileprivate var componentType: ComponentType {
+            return .all(menuOptions: MenuOptions(), pagingControllers: pagingControllers)
+        }
         
-        // Give the tab bar enough height to accomodate all possible item appearances.
-        appBarViewController.headerView.minMaxHeightIncludesSafeArea = false
-        appBarViewController.inferTopSafeAreaInsetFromViewController = true
-        appBarViewController.headerView.canAlwaysExpandToMaximumHeight = true
-        appBarViewController.headerView.sharedWithManyScrollViews = true
+        fileprivate var pagingControllers: [UIViewController] {
+            return [vc1, vc2]
+        }
         
-        appBarViewController.headerView.tintColor = .gray
-        appBarViewController.headerView.minimumHeight = 56
-        appBarViewController.headerView.maximumHeight = 128
+        fileprivate struct MenuOptions: MenuViewCustomizable {
+            var displayMode: MenuDisplayMode {
+                return .segmentedControl
+            }
+            var height: CGFloat {
+                return 47
+            }
+            var backgroundColor: UIColor {
+                return UIColor.white
+            }
+            var selectedBackgroundColor: UIColor {
+                return UIColor.white
+            }
+            var focusMode: MenuFocusMode {
+                return .underline(height: 2, color: UIColor.darkGray, horizontalPadding: 40, verticalPadding: 0)
+            }
+            var itemsOptions: [MenuItemViewCustomizable] {
+                return [MenuItem1(), MenuItem2()]
+            }
+        }
         
-        appBarViewController.headerStackView.bottomBar = mDCTabBar
+        fileprivate struct MenuItem1: MenuItemViewCustomizable {
+            var displayMode: MenuItemDisplayMode {
+                return .text(title: MenuItemText(text: ConstTitle.keywordSearch, color: UIColor.darkGray, selectedColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), selectedFont:UIFont.boldSystemFont(ofSize: 14)))
+            }
+        }
         
-        return appBarViewController
-    }
-    
-    override func tabBar(_ tabBar: MDCTabBar, didSelect item: UITabBarItem) {
-        switch item.tag {
-            case ConstIndex.keywordSearch:
-                print("KeywordSearch")
-                selectedViewController = self.viewControllers[ConstIndex.keywordSearch]
-            case ConstIndex.mapSearch:
-                print("MapSearch")
-                selectedViewController = self.viewControllers[ConstIndex.mapSearch]
-                view.addSubview(appBarViewController.view)
-            default:
-                print("other")
+        fileprivate struct MenuItem2: MenuItemViewCustomizable {
+            var displayMode: MenuItemDisplayMode {
+                return .text(title: MenuItemText(text: ConstTitle.mapSearch, color: UIColor.darkGray, selectedColor: UIColor.black, font: UIFont.systemFont(ofSize: 14), selectedFont:UIFont.boldSystemFont(ofSize: 14)))
+            }
         }
     }
-}
-
-class TabIndicator: NSObject, MDCTabBarIndicatorTemplate {
-    /// タブインジケーター高さ
-    private let underlineHeight: CGFloat = 2.0
-    /// タブインジケーター幅
-    // private let underlineWidth: CGFloat = 30.0
-    func indicatorAttributes(for context: MDCTabBarIndicatorContext) -> MDCTabBarIndicatorAttributes {
-        let bounds = context.bounds
-        let attributes = MDCTabBarIndicatorAttributes()
-        let underlineFrame = CGRect(x: bounds.minX,
-                                    y: bounds.maxY - underlineHeight,
-                                    // width: bounds.width - underlineWidth,
-                                    width: bounds.width,
-                                    height: underlineHeight)
-        attributes.path = UIBezierPath(rect: underlineFrame)
-        
-        return attributes
-    }
+    
 }

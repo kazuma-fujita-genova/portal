@@ -20,16 +20,27 @@ class KeywordSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var institutionImageView: UIImageView!
     
     @IBOutlet weak var institutionNameLabel: UILabel!
+
+    @IBOutlet weak var institutionAddressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupLabels()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func setupLabels() {
+        institutionAddressLabel.textColor = UIColor.gray
+        institutionAddressLabel.font = UIFont.systemFont(ofSize: 10)
+        institutionAddressLabel.numberOfLines = 0
+        institutionAddressLabel.sizeToFit()
+        institutionAddressLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
     
 }

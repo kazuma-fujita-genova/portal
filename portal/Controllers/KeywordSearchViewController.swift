@@ -42,7 +42,8 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         // テーブル行の高さをAutoLayoutで自動調整する
         keywordSearchTableView.rowHeight = UITableView.automaticDimension
         // テーブル行の高さの概算値を設定しておく
-        keywordSearchTableView.estimatedRowHeight = UIScreen.main.bounds.width + 600
+        // keywordSearchTableView.estimatedRowHeight = UIScreen.main.bounds.width + 600
+        keywordSearchTableView.estimatedRowHeight = 350
 
     }
     
@@ -55,54 +56,61 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         // searchFieldController.helperText = "ヘルプテキスト"
         self.allTextFieldControllers.append(searchFieldController)
     }
-    
+}
+
+extension KeywordSearchViewController {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! KeywordSearchTableViewCell
-        cell.institutionNameLabel.text = "マテリアル医院"
+        cell.institutionNameLabel.text = "GENOVAかかりつけ医院"
+        cell.institutionAddressLabel.text = "東京都渋谷区宇田川町10-3 Daiwa SHIBUYA EDGEビル5F"
         //cell.
         /*
-        if indexPath.row == 0 || indexPath.row == 3 {
-            cell.institutionImageView?.isHidden = true
-            cell.imageViewHeight.constant = 0
-            cell.cardHeight.constant = 300
-        } else {
-            cell.institutionImageView?.isHidden = false
-            cell.imageViewHeight.constant = 300
-            cell.cardHeight.constant = 600
-        }
+         if indexPath.row == 0 || indexPath.row == 3 {
+         cell.institutionImageView?.isHidden = true
+         cell.imageViewHeight.constant = 0
+         cell.cardHeight.constant = 300
+         } else {
+         cell.institutionImageView?.isHidden = false
+         cell.imageViewHeight.constant = 300
+         cell.cardHeight.constant = 600
+         }
+         
+         if indexPath.row == 1 {
+         // cell.cardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+         // cell.institutionImageView.hero.id = "institutionImageView"
+         // cell.name.hero.id = "nameLabel"
+         // cell.cardView.isUserInteractionEnabled = true
+         cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
+         }
+         */
+        //cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
         
         if indexPath.row == 1 {
-            // cell.cardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            // cell.institutionImageView.hero.id = "institutionImageView"
-            // cell.name.hero.id = "nameLabel"
-            // cell.cardView.isUserInteractionEnabled = true
-            cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
+            cell.institutionImageView.hero.id = "institutionImageView"
+            cell.institutionNameLabel.hero.id = "institutionNameLabel"
+            // cell.institutionAddressLabel.hero.id = "institutionAddressLabel"
+            //cell.cardView.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
+            cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
         }
-        */
-        //cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("handleInstitutionViewButton:"))))
-        cell.institutionImageView.hero.id = "institutionImageView"
-        cell.institutionNameLabel.hero.id = "institutionNameLabel"
-        //cell.cardView.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
-        cell.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
         return cell
     }
-    
+
     @objc func handleInstitutionViewButton(gestureRecognizer: UITapGestureRecognizer) {
         let institutionViewController = InstitutionViewController(nibName: "InstitutionViewController", bundle: nil)
         self.present(institutionViewController, animated: true, completion: nil)
     }
-    
-    
+
     /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
      
-        keywordSearchTableView.estimatedRowHeight = 600 //セルの高さ
-        return UITableView.automaticDimension //自動設定
-    }
-    */
+     keywordSearchTableView.estimatedRowHeight = 600 //セルの高さ
+     return UITableView.automaticDimension //自動設定
+     }
+     */
 }

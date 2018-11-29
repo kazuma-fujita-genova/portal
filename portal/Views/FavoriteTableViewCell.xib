@@ -42,7 +42,7 @@
                                     <constraint firstItem="S3J-xZ-vPl" firstAttribute="top" secondItem="orR-bN-kxF" secondAttribute="bottom" constant="20" id="Sv1-eN-pkb"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX8-cJ-MWP" customClass="CardView" customModule="portal" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX8-cJ-MWP">
                                 <rect key="frame" x="20" y="244" width="302" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="診察券番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REy-Yk-m02">
@@ -68,7 +68,7 @@
                                     <constraint firstItem="REy-Yk-m02" firstAttribute="leading" secondItem="oX8-cJ-MWP" secondAttribute="leading" constant="10" id="o9Z-y9-GCF"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyG-0U-pxK" customClass="CardView" customModule="portal" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyG-0U-pxK">
                                 <rect key="frame" x="20" y="364" width="302" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次回予約メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5G-QW-3SW">
@@ -97,7 +97,7 @@
                                     <constraint firstItem="GZc-86-peo" firstAttribute="top" secondItem="S5G-QW-3SW" secondAttribute="bottom" constant="20" id="rqf-ab-AcY"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyV-Qf-sXU" customClass="CardView" customModule="portal" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyV-Qf-sXU">
                                 <rect key="frame" x="20" y="484" width="302" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前回受付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-HO-i9u">
