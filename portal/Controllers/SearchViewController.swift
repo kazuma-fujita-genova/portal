@@ -25,7 +25,7 @@ class SearchViewController: UIViewController {
         view.addSubview(pagingMenuController.view)
         pagingMenuController.didMove(toParent: self)
     }
-    
+        
     private struct PagingMenuOptions: PagingMenuControllerCustomizable {
         
         let vc1 = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)

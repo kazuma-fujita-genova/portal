@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.3)
   - AMScrollingNavbar (5.1.1)
   - FDFullscreenPopGesture (1.1)
+  - FSPagerView (0.8.1)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
@@ -507,6 +508,7 @@ DEPENDENCIES:
   - Alamofire (= 4.7.3)
   - AMScrollingNavbar (= 5.1.1)
   - FDFullscreenPopGesture (= 1.1)
+  - FSPagerView
   - GoogleMaps (= 2.7.0)
   - Hero (= 1.4.0)
   - MaterialComponents (= 67.0.0)
@@ -518,6 +520,7 @@ SPEC REPOS:
     - Alamofire
     - AMScrollingNavbar
     - FDFullscreenPopGesture
+    - FSPagerView
     - GoogleMaps
     - Hero
     - MaterialComponents
@@ -533,6 +536,7 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AMScrollingNavbar: 128e9e17af3b93f80d6705befe7cc2ae5e8a8435
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   MaterialComponents: ba0b153b1fa427be83aad80b05784b2cfecec847
@@ -544,6 +548,6 @@ SPEC CHECKSUMS:
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
 
-PODFILE CHECKSUM: 0e12575a3814a32f84fd30671d86feb15dd29152
+PODFILE CHECKSUM: 9482718346ab2226183a3cf3192b737019e1d7ae
 
 COCOAPODS: 1.5.3

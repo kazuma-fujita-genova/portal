@@ -28,7 +28,8 @@ class FavoriteViewController: UITableViewController {
         // テーブルセルのタップを無効
         favoriteTableView.allowsSelection = false
         // テーブル行の高さの概算値を設定
-        favoriteTableView.estimatedRowHeight = 755
+        // favoriteTableView.estimatedRowHeight = 755
+        favoriteTableView.estimatedRowHeight = 450
         // テーブル行の高さをAutoLayoutで自動調整
         favoriteTableView.rowHeight = UITableView.automaticDimension
         
@@ -65,11 +66,16 @@ extension FavoriteViewController {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FavoriteTableViewCell
         // cell.contentView.backgroundColor = UIColor.lightGray
+        // self.hero.isEnabled = true
         if indexPath.row == 0 {
-            cell.institutionImageView.hero.id = "institutionImageView"
+            // cell.pagerView.isUserInteractionEnabled = true
+            cell.pagerView.hero.id = "institutionImageView"
+            //cell.institutionImageView.hero.id = "institutionImageView"
             cell.institutionNameLabel.hero.id = "institutionNameLabel"
             cell.institutionNameLabel.text = "GENOVAかかりつけ医院"
-            cell.institutionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
+            cell.pagerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
+
+            //cell.institutionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleInstitutionViewButton(gestureRecognizer:))))
         }
         
         //setup blur vibrant view

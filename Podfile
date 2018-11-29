@@ -15,4 +15,5 @@ target 'portal' do
   pod 'SkeletonView','1.4.1'
   pod 'AMScrollingNavbar','5.1.1'
   pod 'PagingMenuController'
+  pod 'FSPagerView'
 end

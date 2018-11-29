@@ -13,78 +13,91 @@
             <connections>
                 <outlet property="categoryView" destination="dq2-S4-DZB" id="3Xf-de-x1y"/>
                 <outlet property="institutionDetailView" destination="tm0-iz-9TC" id="vNh-Bz-LYJ"/>
-                <outlet property="institutionImageView" destination="BzS-4y-qbp" id="T97-VZ-93Z"/>
                 <outlet property="institutionNameLabel" destination="aAX-H7-Cyr" id="85L-Qc-abW"/>
                 <outlet property="institutionScrollView" destination="a69-E5-1iv" id="m49-v1-ajJ"/>
+                <outlet property="pageControl" destination="chi-kZ-d3u" id="mmn-Lc-tIb"/>
+                <outlet property="pagerView" destination="6RM-Oz-C10" id="fEh-b6-a02"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a69-E5-1iv">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="1080"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="BzS-4y-qbp">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RM-Oz-C10" customClass="FSPagerView" customModule="FSPagerView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chi-kZ-d3u" customClass="FSPageControl" customModule="FSPagerView">
+                                    <rect key="frame" x="0.0" y="251.5" width="375" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Cr6-rM-nte"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="BzS-4y-qbp" secondAttribute="height" multiplier="4:3" id="tgX-hl-8fe"/>
+                                <constraint firstAttribute="trailing" secondItem="chi-kZ-d3u" secondAttribute="trailing" id="9Uz-H7-OfM"/>
+                                <constraint firstAttribute="width" secondItem="6RM-Oz-C10" secondAttribute="height" multiplier="4:3" id="MUL-FX-gG4"/>
+                                <constraint firstAttribute="bottom" secondItem="chi-kZ-d3u" secondAttribute="bottom" id="Maf-xu-Pzd"/>
+                                <constraint firstItem="chi-kZ-d3u" firstAttribute="leading" secondItem="6RM-Oz-C10" secondAttribute="leading" id="fk5-CI-34Z"/>
                             </constraints>
-                        </imageView>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAX-H7-Cyr">
-                            <rect key="frame" x="20" y="291.5" width="61.5" height="24"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <rect key="frame" x="20" y="301.5" width="76" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tm0-iz-9TC">
-                            <rect key="frame" x="20" y="335.5" width="343" height="720"/>
+                            <rect key="frame" x="20" y="350.5" width="335" height="720"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq2-S4-DZB" customClass="InstitutionDetailWidgetView" customModule="portal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-Vr-Snm" customClass="InstitutionDetailWidgetView" customModule="portal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="120" width="343" height="120"/>
+                                    <rect key="frame" x="0.0" y="120" width="335" height="120"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMm-1c-gRX" customClass="InstitutionDetailWidgetView" customModule="portal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="240" width="343" height="120"/>
+                                    <rect key="frame" x="0.0" y="240" width="335" height="120"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-Te-Jx0" customClass="InstitutionDetailWidgetView" customModule="portal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="360" width="343" height="120"/>
+                                    <rect key="frame" x="0.0" y="360" width="335" height="120"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWb-hv-WK6" customClass="InstitutionDetailWidgetView" customModule="portal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="480" width="343" height="120"/>
+                                    <rect key="frame" x="0.0" y="480" width="335" height="120"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2s-Wf-533" customClass="InstitutionDetailWidgetView" customModule="portal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="600" width="343" height="120"/>
+                                    <rect key="frame" x="0.0" y="600" width="335" height="120"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="720" id="WAu-e0-LPF"/>
+                                <constraint firstAttribute="height" constant="720" id="QAN-uo-RbH"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="BaH-KZ-RsI"/>
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="tm0-iz-9TC" secondAttribute="trailing" constant="20" id="3hS-8T-Lmr"/>
-                        <constraint firstItem="aAX-H7-Cyr" firstAttribute="top" secondItem="BzS-4y-qbp" secondAttribute="bottom" constant="10" id="57C-Ue-iPP"/>
-                        <constraint firstItem="BzS-4y-qbp" firstAttribute="leading" secondItem="a69-E5-1iv" secondAttribute="leading" id="6h1-jP-zPu"/>
-                        <constraint firstItem="BzS-4y-qbp" firstAttribute="width" secondItem="a69-E5-1iv" secondAttribute="width" id="FbD-mk-zFX"/>
-                        <constraint firstItem="tm0-iz-9TC" firstAttribute="top" secondItem="aAX-H7-Cyr" secondAttribute="bottom" constant="20" id="Qxm-6y-KNs"/>
-                        <constraint firstItem="aAX-H7-Cyr" firstAttribute="leading" secondItem="a69-E5-1iv" secondAttribute="leading" constant="20" id="iA7-co-OM3"/>
-                        <constraint firstAttribute="bottom" secondItem="tm0-iz-9TC" secondAttribute="bottom" id="mfI-79-HeS"/>
-                        <constraint firstItem="tm0-iz-9TC" firstAttribute="leading" secondItem="a69-E5-1iv" secondAttribute="leading" constant="20" id="nWa-Sr-KYF"/>
-                        <constraint firstItem="BzS-4y-qbp" firstAttribute="top" secondItem="a69-E5-1iv" secondAttribute="top" id="qmN-oR-Aqo"/>
-                        <constraint firstItem="tm0-iz-9TC" firstAttribute="leading" secondItem="aAX-H7-Cyr" secondAttribute="leading" id="uds-AH-yyq"/>
-                        <constraint firstItem="BzS-4y-qbp" firstAttribute="trailing" secondItem="a69-E5-1iv" secondAttribute="trailingMargin" id="zro-VJ-NWs"/>
+                        <constraint firstItem="6RM-Oz-C10" firstAttribute="leading" secondItem="a69-E5-1iv" secondAttribute="leading" id="8fJ-qH-bgh"/>
+                        <constraint firstItem="aAX-H7-Cyr" firstAttribute="top" secondItem="6RM-Oz-C10" secondAttribute="bottom" constant="20" id="NdZ-tv-32y"/>
+                        <constraint firstItem="aAX-H7-Cyr" firstAttribute="leading" secondItem="a69-E5-1iv" secondAttribute="leading" constant="20" id="P48-pN-2j7"/>
+                        <constraint firstItem="6RM-Oz-C10" firstAttribute="top" secondItem="a69-E5-1iv" secondAttribute="top" id="W5K-Xa-D4l"/>
+                        <constraint firstAttribute="bottom" secondItem="tm0-iz-9TC" secondAttribute="bottom" constant="-5" id="gYd-Lg-bxr"/>
+                        <constraint firstAttribute="trailing" secondItem="6RM-Oz-C10" secondAttribute="trailing" id="mGS-rP-EiW"/>
+                        <constraint firstAttribute="trailing" secondItem="tm0-iz-9TC" secondAttribute="trailing" constant="20" id="rQu-xH-eMU"/>
+                        <constraint firstItem="tm0-iz-9TC" firstAttribute="leading" secondItem="a69-E5-1iv" secondAttribute="leading" constant="20" id="xdI-DG-GKL"/>
+                        <constraint firstItem="6RM-Oz-C10" firstAttribute="centerX" secondItem="a69-E5-1iv" secondAttribute="centerX" id="zJ6-mA-vxs"/>
+                        <constraint firstItem="tm0-iz-9TC" firstAttribute="top" secondItem="aAX-H7-Cyr" secondAttribute="bottom" constant="19" id="zx3-ar-0SW"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -95,11 +108,9 @@
                 <constraint firstItem="a69-E5-1iv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="l4y-5f-t0I"/>
                 <constraint firstItem="a69-E5-1iv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="n7X-6C-9Vg"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-532" y="261"/>
+            <point key="canvasLocation" x="-527.20000000000005" y="494.75262368815595"/>
         </view>
     </objects>
-    <resources>
-        <image name="sample-image" width="920" height="616"/>
-    </resources>
 </document>

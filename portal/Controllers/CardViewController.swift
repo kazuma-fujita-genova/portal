@@ -30,7 +30,7 @@ class CardViewController: UIViewController {
         // TODO: safeArea / NaviBar を考慮し動的に TabMenuを表示させたい
         // pagingMenuController.view.frame.origin.y += navigationController!.navigationBar.frame.origin.y
         // pagingMenuController.view.frame.size.height -= navigationController!.navigationBar.frame.size.height
-
+        // iPhoneXのsafeArea対策。他画面サイズにも適用させること
         pagingMenuController.view.frame.origin.y += navigationController!.navigationBar.frame.origin.y + 120
         pagingMenuController.view.frame.size.height -= navigationController!.navigationBar.frame.size.height + 120
         
@@ -45,6 +45,15 @@ class CardViewController: UIViewController {
             // Large Title
             self.navigationController?.navigationBar.prefersLargeTitles = true
         }
+    }
+    
+    // delegateも用意されているのでハンドリングも可能 TODO:ちゃんと呼ばれるように設定すること
+    func willMoveToPageMenuController(menuController: UIViewController, previousMenuController: UIViewController) {
+        print(menuController)
+        print(previousMenuController)
+    }
+    // delegateも用意されているのでハンドリングも可能 TODO:ちゃんと呼ばれるように設定すること
+    func didMoveToPageMenuController(menuController: UIViewController, previousMenuController: UIViewController) {
     }
     
     private struct PagingMenuOptions: PagingMenuControllerCustomizable {
@@ -94,16 +103,16 @@ class CardViewController: UIViewController {
                 return .segmentedControl
             }
             */
-            
+            /*
             var displayMode: MenuDisplayMode {
                 return .infinite(widthMode: .flexible, scrollingMode: .scrollEnabled)
             }
+            */
             
-            /*
             var displayMode: MenuDisplayMode {
                 return .standard(widthMode: .flexible, centerItem: true, scrollingMode: .scrollEnabledAndBouces)
             }
-            */
+            
             var height: CGFloat {
                 return 47
             }

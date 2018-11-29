@@ -8,6 +8,7 @@
 
 import UIKit
 import Hero
+import FSPagerView
 // import MaterialComponents.MaterialAppBar
 // import MaterialComponents.MaterialAppBar_ColorThemer
 // UX向上
@@ -20,8 +21,25 @@ class InstitutionViewController: UIViewController {
     @IBOutlet weak var institutionScrollView: UIScrollView!
     
     @IBOutlet weak var institutionNameLabel: UILabel!
+
+    @IBOutlet weak var pageControl: FSPageControl! {
+        didSet {
+            self.pageControl.contentHorizontalAlignment = .left
+            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        }
+    }
     
-    @IBOutlet weak var institutionImageView: UIImageView!
+    @IBOutlet weak var pagerView: FSPagerView! {
+        didSet {
+            self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+        }
+    }
+    
+    fileprivate var coverflowContents: [Coverflow] = [] {
+        didSet {
+            self.pagerView.reloadData()
+        }
+    }
     
     @IBOutlet weak var categoryView: InstitutionDetailWidgetView!
     
@@ -35,6 +53,7 @@ class InstitutionViewController: UIViewController {
         appBarViewController.headerView.trackingScrollView = nil
     }
     */
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +63,17 @@ class InstitutionViewController: UIViewController {
         //self.view.addSubview(categoryView)
         
         self.hero.isEnabled = true
-        institutionImageView.hero.id = "institutionImageView"
+        // institutionImageView.hero.id = "institutionImageView"
+        pagerView.hero.id = "institutionImageView"
         institutionNameLabel.hero.id = "institutionNameLabel"
         // institutionAddressLabel.hero.id = "institutionAddressLabel"
         //institutionDetailView.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
         institutionDetailView.hero.modifiers = [.fade, .scale(0.5)]
         
-        institutionImageView.isUserInteractionEnabled = true
-        institutionImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCancelButton(gestureRecognizer:))))
+        // institutionImageView.isUserInteractionEnabled = true
+        pagerView.isUserInteractionEnabled = true
+        pagerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCancelButton(gestureRecognizer:))))
+        //institutionImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCancelButton(gestureRecognizer:))))
         // nameLabel.hero.modifiers = [.translate(y: 500), .useGlobalCoordinateSpace]
         
         institutionNameLabel.text = "GENOVAかかりつけ医院"
@@ -122,6 +144,7 @@ class InstitutionViewController: UIViewController {
         */
     
         setupLabels()
+        setupPagerView()
     }
     
     private func setupLabels() {
@@ -130,6 +153,36 @@ class InstitutionViewController: UIViewController {
         //institutionAddressLabel.numberOfLines = 0
         //institutionAddressLabel.sizeToFit()
         //institutionAddressLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
+    }
+    
+    private func setupPagerView() {
+        //UICollectionViewとほとんど同じ感じで設定ができる
+        
+        pagerView.delegate = self
+        pagerView.dataSource = self
+        pagerView.isInfinite = true
+        // エフェクト coverFlow .linear, .overlap などは以下を有効にする
+        // pagerView.itemSize = CGSize(width: 180, height: 120)
+        // pagerView.interitemSpacing = 16
+        // pagerView.transformer = FSPagerViewTransformer(type: .coverFlow)
+        // エフェクト .crossFading, .zoomOut, .depth のときは以下を有効
+        // pagerView.transformer = FSPagerViewTransformer(type: .depth)
+        pagerView.itemSize = FSPagerView.automaticSize
+        pagerView.decelerationDistance = 1
+        
+        // Automatic Slider
+        pagerView.automaticSlidingInterval = 4
+        
+        // 画像をmodelから取得
+        coverflowContents = Coverflow.getSampleData()
+        
+        // pageControl設定
+        pageControl.numberOfPages = coverflowContents.count
+        
+        pageControl.itemSpacing = 7
+        pageControl.interitemSpacing = 10
+        
+        pagerView.addSubview(pageControl)
     }
 
     /*
@@ -162,3 +215,41 @@ class InstitutionViewController: UIViewController {
     }
     */
 }
+
+
+//MARK: - FSPagerViewDataSource, FSPagerViewDelegate
+
+extension InstitutionViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+    
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return coverflowContents.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        let coverflow = coverflowContents[index]
+        
+        cell.contentView.layer.shadowOpacity = 0.4
+        cell.contentView.layer.opacity = 0.86
+        
+        cell.imageView?.image = coverflow.thumbnail
+        cell.imageView?.contentMode = .scaleAspectFill
+        //cell.imageView?.contentMode = .scaleAspectFit
+        cell.imageView?.clipsToBounds = true
+        return cell
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        pagerView.deselectItem(at: index, animated: true)
+        pagerView.scrollToItem(at: index, animated: true)
+    }
+    
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        self.pageControl.currentPage = targetIndex
+    }
+    
+    func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
+        self.pageControl.currentPage = pagerView.currentIndex
+    }
+}
+
