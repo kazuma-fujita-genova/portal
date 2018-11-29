@@ -28,9 +28,6 @@ class SearchViewController: UIViewController {
     
     private struct PagingMenuOptions: PagingMenuControllerCustomizable {
         
-        //let vc1 = UIStoryboard(name: ConstStoryBoard.searchName, bundle: nil).instantiateViewController(withIdentifier: ConstStoryBoard.keywordSearchId) as! KeywordSearchViewController
-        //let vc2 = UIStoryboard(name: ConstStoryBoard.searchName, bundle: nil).instantiateViewController(withIdentifier: ConstStoryBoard.mapSearchId) as! MapSearchViewController
-        
         let vc1 = KeywordSearchViewController(nibName: "KeywordSearchViewController", bundle: nil)
         let vc2 = MapSearchViewController(nibName: "MapSearchViewController", bundle: nil)
 

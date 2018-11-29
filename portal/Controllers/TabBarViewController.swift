@@ -29,8 +29,10 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         
         // view.backgroundColor = colorScheme.backgroundColor
         
-        // 診察券VC設定
+        // let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        // 診察券VCをrootとしたUINavigationBarを設定
         let cardViewController = CardViewController(nibName: "CardViewController", bundle: nil)
+        let cardNavigationController = UINavigationController(rootViewController: cardViewController)
         // 施設検索VC設定
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
         // かかりつけVCをrootとしたUINavigationBarを設定
@@ -44,7 +46,8 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
         // self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileNavigationController]
-        self.viewControllers = [cardViewController, searchViewController, favoriteNavigationController, notifyListViewController, profileNavigationController]
+        // self.viewControllers = [cardViewController, searchViewController, favoriteNavigationController, notifyListViewController, profileNavigationController]
+        self.viewControllers = [cardNavigationController, searchViewController, favoriteNavigationController, notifyListViewController, profileNavigationController]
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
         
