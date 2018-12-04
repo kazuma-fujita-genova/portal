@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import FSPagerView
+import MXParallaxHeader
 // import MaterialComponents.MaterialAppBar
 // import MaterialComponents.MaterialAppBar_ColorThemer
 // UX向上
@@ -53,7 +54,15 @@ class InstitutionViewController: UIViewController {
         appBarViewController.headerView.trackingScrollView = nil
     }
     */
-
+    
+    //var parallaxScrollView: MXScrollView!
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        institutionScrollView.parallaxHeader.minimumHeight = topLayoutGuide.length
+    }
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,6 +154,9 @@ class InstitutionViewController: UIViewController {
     
         setupLabels()
         setupPagerView()
+        // これコメントインすると画面崩れる
+        // setupParallraxView()
+        
     }
     
     private func setupLabels() {
@@ -154,6 +166,34 @@ class InstitutionViewController: UIViewController {
         //institutionAddressLabel.sizeToFit()
         //institutionAddressLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
+    
+    private func setupParallraxView() {
+        //institutionScrollView.parallaxHeader.height = 300
+        // institutionScrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
+        // institutionScrollView.parallaxHeader.delegate = self as! MXParallaxHeaderDelegate
+        // Parallax Header
+        
+        //institutionScrollView = MXScrollView()
+        institutionScrollView.parallaxHeader.view = pagerView
+        institutionScrollView.parallaxHeader.height = 300
+        institutionScrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill
+        institutionScrollView.parallaxHeader.minimumHeight = 100
+        institutionScrollView.contentSize = CGSize(width: 500, height: 300)
+        //view.addSubview(institutionScrollView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        /*
+        var frame = view.frame
+        institutionScrollView.frame = frame
+        institutionScrollView.contentSize = frame.size
+        frame.size.height -= institutionScrollView.parallaxHeader.minimumHeight
+        institutionDetailView.frame = frame
+        */
+    }
+    
     
     private func setupPagerView() {
         //UICollectionViewとほとんど同じ感じで設定ができる
@@ -166,7 +206,7 @@ class InstitutionViewController: UIViewController {
         // pagerView.interitemSpacing = 16
         // pagerView.transformer = FSPagerViewTransformer(type: .coverFlow)
         // エフェクト .crossFading, .zoomOut, .depth のときは以下を有効
-        // pagerView.transformer = FSPagerViewTransformer(type: .depth)
+        pagerView.transformer = FSPagerViewTransformer(type: .depth)
         pagerView.itemSize = FSPagerView.automaticSize
         pagerView.decelerationDistance = 1
         
@@ -215,7 +255,6 @@ class InstitutionViewController: UIViewController {
     }
     */
 }
-
 
 //MARK: - FSPagerViewDataSource, FSPagerViewDelegate
 

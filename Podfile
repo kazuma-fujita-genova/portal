@@ -1,9 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
+use_frameworks!
 
-target 'portal' do
+def install_pods
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
 
   # Pods for portal
   pod 'MaterialComponents','67.0.0'
@@ -16,4 +16,27 @@ target 'portal' do
   pod 'AMScrollingNavbar','5.1.1'
   pod 'PagingMenuController'
   pod 'FSPagerView'
+  # pod 'ParallaxHeader', '~> 2.0.0'
+  pod "MXParallaxHeader"
+
+end
+
+target 'portal' do
+  install_pods
+end
+
+swift3_names = [
+  'PagingMenuController',
+]
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            if swift3_names.include? target.name
+                config.build_settings['SWIFT_VERSION'] = "3"
+            else
+                config.build_settings['SWIFT_VERSION'] = "4.2"
+            end
+        end
+    end
 end

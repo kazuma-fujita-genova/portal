@@ -501,6 +501,7 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
+  - MXParallaxHeader (0.6.1)
   - PagingMenuController (2.2.0)
   - SkeletonView (1.4.1)
 
@@ -512,6 +513,7 @@ DEPENDENCIES:
   - GoogleMaps (= 2.7.0)
   - Hero (= 1.4.0)
   - MaterialComponents (= 67.0.0)
+  - MXParallaxHeader
   - PagingMenuController
   - SkeletonView (= 1.4.1)
 
@@ -529,6 +531,7 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - MotionTransitioning
+    - MXParallaxHeader
     - PagingMenuController
     - SkeletonView
 
@@ -545,9 +548,10 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
+  MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
 
-PODFILE CHECKSUM: 9482718346ab2226183a3cf3192b737019e1d7ae
+PODFILE CHECKSUM: 5a1a2a8ffc57e500a0c75be94084ade609cf56ba
 
 COCOAPODS: 1.5.3

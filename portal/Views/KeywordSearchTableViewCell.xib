@@ -11,56 +11,69 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="420" id="KGk-i7-Jjw" customClass="KeywordSearchTableViewCell" customModule="portal" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="491" height="420"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="335" id="KGk-i7-Jjw" customClass="KeywordSearchTableViewCell" customModule="portal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="491" height="419.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="334.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPY-7g-ob4" customClass="MDCCard">
-                        <rect key="frame" x="30" y="11" width="431" height="250"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8n-mD-jRb">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="320"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="dx1-Kl-q2S">
-                                <rect key="frame" x="0.0" y="0.0" width="431" height="242.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dx1-Kl-q2S" secondAttribute="height" multiplier="16:9" id="WK3-5s-mrS"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-5k-DdF">
-                                <rect key="frame" x="10" y="252.5" width="61.5" height="52"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPY-7g-ob4" customClass="MDCCard">
+                                <rect key="frame" x="10" y="10" width="315" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-qx-JN8">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-NY-t0j">
-                                        <rect key="frame" x="0.0" y="34" width="61.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="dx1-Kl-q2S">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="177"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dx1-Kl-q2S" secondAttribute="height" multiplier="16:9" id="2UC-QL-gc3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-5k-DdF">
+                                        <rect key="frame" x="8" y="195" width="61.5" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-qx-JN8">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-NY-t0j">
+                                                <rect key="frame" x="0.0" y="28" width="61.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dx1-Kl-q2S" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="9dz-cU-UCx"/>
+                                    <constraint firstItem="dx1-Kl-q2S" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="Pp0-se-LyK"/>
+                                    <constraint firstAttribute="height" constant="300" id="QMw-5a-0HP"/>
+                                    <constraint firstItem="dx1-Kl-q2S" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="bi5-om-Few"/>
+                                    <constraint firstAttribute="trailing" secondItem="dx1-Kl-q2S" secondAttribute="trailing" id="etj-xj-FBP"/>
+                                    <constraint firstItem="dx1-Kl-q2S" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="kIM-8T-nei"/>
+                                    <constraint firstAttribute="trailing" secondItem="dx1-Kl-q2S" secondAttribute="trailing" id="la2-H1-k5f"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cc5-5k-DdF" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" constant="10" id="57e-tc-7X6"/>
-                            <constraint firstItem="dx1-Kl-q2S" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="Pp9-1p-5Cm"/>
-                            <constraint firstAttribute="trailing" secondItem="dx1-Kl-q2S" secondAttribute="trailing" id="bgv-lr-vHq"/>
-                            <constraint firstAttribute="height" constant="250" id="erh-je-Xrn"/>
-                            <constraint firstItem="Cc5-5k-DdF" firstAttribute="top" secondItem="dx1-Kl-q2S" secondAttribute="bottom" constant="10" id="ifB-wK-FO3"/>
-                            <constraint firstItem="dx1-Kl-q2S" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="yn5-u6-Tdb"/>
+                            <constraint firstItem="QPY-7g-ob4" firstAttribute="top" secondItem="n8n-mD-jRb" secondAttribute="top" constant="10" id="9i3-YI-0I3"/>
+                            <constraint firstAttribute="trailing" secondItem="QPY-7g-ob4" secondAttribute="trailing" constant="10" id="AC3-aw-QhT"/>
+                            <constraint firstAttribute="bottom" secondItem="QPY-7g-ob4" secondAttribute="bottom" constant="10" id="iAU-yX-hHd"/>
+                            <constraint firstItem="QPY-7g-ob4" firstAttribute="leading" secondItem="n8n-mD-jRb" secondAttribute="leading" constant="10" id="x44-12-hdj"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="QPY-7g-ob4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AYL-NS-YSL"/>
-                    <constraint firstItem="QPY-7g-ob4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="P51-Mo-ROc"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="QPY-7g-ob4" secondAttribute="bottom" id="Uod-Ct-AZB"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="QPY-7g-ob4" secondAttribute="trailing" constant="10" id="eka-ZM-mGe"/>
+                    <constraint firstAttribute="trailing" secondItem="n8n-mD-jRb" secondAttribute="trailing" id="QN2-70-CMS"/>
+                    <constraint firstItem="n8n-mD-jRb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lUQ-Dx-ph4"/>
+                    <constraint firstItem="n8n-mD-jRb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nU9-Cp-dQA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -70,7 +83,7 @@
                 <outlet property="institutionImageView" destination="dx1-Kl-q2S" id="8oF-kj-USN"/>
                 <outlet property="institutionNameLabel" destination="yZn-qx-JN8" id="p8Q-Gd-pjc"/>
             </connections>
-            <point key="canvasLocation" x="-452" y="331.0344827586207"/>
+            <point key="canvasLocation" x="-820" y="260.41979010494754"/>
         </tableViewCell>
     </objects>
     <resources>

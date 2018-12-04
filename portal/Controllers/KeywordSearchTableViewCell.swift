@@ -36,11 +36,12 @@ class KeywordSearchTableViewCell: UITableViewCell {
     }
     
     private func setupLabels() {
-        institutionAddressLabel.textColor = UIColor.gray
-        institutionAddressLabel.font = UIFont.systemFont(ofSize: 10)
-        institutionAddressLabel.numberOfLines = 0
+        // 以下はIBで設定
+        // institutionAddressLabel.textColor = UIColor.gray
+        // institutionAddressLabel.font = UIFont.systemFont(ofSize: 10)
+        // institutionAddressLabel.numberOfLines = 0
+        // institutionAddressLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
         institutionAddressLabel.sizeToFit()
-        institutionAddressLabel.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
     
 }

@@ -38,6 +38,7 @@ class FavoriteViewController: UITableViewController {
         // NavigationBarの下線部を消す処理
         // self.navigationController?.navigationBar.shadowImage = UIImage()
         
+        
         // NavigationBar設定
         self.title = "かかりつけ"
         // iOS 11 からの機能
@@ -86,6 +87,7 @@ extension FavoriteViewController {
     
     @objc func handleInstitutionViewButton(gestureRecognizer: UITapGestureRecognizer) {
         let institutionViewController = InstitutionViewController(nibName: "InstitutionViewController", bundle: nil)
+        // self.navigationController?.show(institutionViewController, sender: nil)
         self.present(institutionViewController, animated: true, completion: nil)
     }
 }

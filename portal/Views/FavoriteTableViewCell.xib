@@ -38,8 +38,8 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3J-xZ-vPl">
-                        <rect key="frame" x="40" y="237.33333333333334" width="61" height="43.666666666666657"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <rect key="frame" x="40" y="237.33333333333337" width="61" height="43.666666666666657"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
