@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8n-mD-jRb">
-                        <rect key="frame" x="0.0" y="0.0" width="335" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="270"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPY-7g-ob4" customClass="MDCCard">
-                                <rect key="frame" x="10" y="10" width="315" height="300"/>
+                                <rect key="frame" x="10" y="10" width="315" height="250"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="dx1-Kl-q2S">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="177"/>
@@ -53,7 +53,6 @@
                                 <constraints>
                                     <constraint firstItem="dx1-Kl-q2S" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="9dz-cU-UCx"/>
                                     <constraint firstItem="dx1-Kl-q2S" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="Pp0-se-LyK"/>
-                                    <constraint firstAttribute="height" constant="300" id="QMw-5a-0HP"/>
                                     <constraint firstItem="dx1-Kl-q2S" firstAttribute="leading" secondItem="QPY-7g-ob4" secondAttribute="leading" id="bi5-om-Few"/>
                                     <constraint firstAttribute="trailing" secondItem="dx1-Kl-q2S" secondAttribute="trailing" id="etj-xj-FBP"/>
                                     <constraint firstItem="dx1-Kl-q2S" firstAttribute="top" secondItem="QPY-7g-ob4" secondAttribute="top" id="kIM-8T-nei"/>
@@ -65,6 +64,7 @@
                         <constraints>
                             <constraint firstItem="QPY-7g-ob4" firstAttribute="top" secondItem="n8n-mD-jRb" secondAttribute="top" constant="10" id="9i3-YI-0I3"/>
                             <constraint firstAttribute="trailing" secondItem="QPY-7g-ob4" secondAttribute="trailing" constant="10" id="AC3-aw-QhT"/>
+                            <constraint firstAttribute="height" constant="270" id="InO-Y0-IEU"/>
                             <constraint firstAttribute="bottom" secondItem="QPY-7g-ob4" secondAttribute="bottom" constant="10" id="iAU-yX-hHd"/>
                             <constraint firstItem="QPY-7g-ob4" firstAttribute="leading" secondItem="n8n-mD-jRb" secondAttribute="leading" constant="10" id="x44-12-hdj"/>
                         </constraints>

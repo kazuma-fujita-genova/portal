@@ -43,8 +43,7 @@ class KeywordSearchViewController: UIViewController, UITableViewDelegate, UITabl
         keywordSearchTableView.rowHeight = UITableView.automaticDimension
         // テーブル行の高さの概算値を設定しておく
         // keywordSearchTableView.estimatedRowHeight = UIScreen.main.bounds.width + 600
-        keywordSearchTableView.estimatedRowHeight = 300
-
+        keywordSearchTableView.estimatedRowHeight = 270
     }
     
     func setupTextFields() {

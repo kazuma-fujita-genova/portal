@@ -8,6 +8,7 @@
 
 import UIKit
 import FSPagerView
+import MaterialComponents.MaterialButtons_ButtonThemer
 
 class FavoriteTableViewCell: UITableViewCell {
 
@@ -17,6 +18,9 @@ class FavoriteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var institutionNameLabel: UILabel!
     
+    @IBOutlet weak var nextReserveButton: UIButton!
+    
+    var datePicker: UIDatePicker = UIDatePicker()
     
     @IBOutlet weak var pageControl: FSPageControl! {
         didSet {
@@ -40,13 +44,29 @@ class FavoriteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        buttonSetup()
         setupPagerView()
+        setupDatePicker()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func buttonSetup() {
+        //let backgroundColor = UIColor(white: 0.1, alpha: 1.0)
+        
+        //let buttonScheme = MDCButtonScheme()
+        //MDCContainedButtonThemer.applyScheme(buttonScheme, to: nextReserveButton)
+        // nextReserveButton.addTarget(self, action: #selector(handleNextReserveButton(_:forEvent:)), for: .touchUpInside)
+    }
+    
+    @objc func handleNextReserveButton (_ sender: UIButton, forEvent event: UIEvent) {
+    }
+    
+    private func setupDatePicker() {
     }
     
     private func setupPagerView() {
@@ -78,7 +98,9 @@ class FavoriteTableViewCell: UITableViewCell {
         
         pagerView.addSubview(pageControl)
     }
+    
 }
+
 //MARK: - FSPagerViewDataSource, FSPagerViewDelegate
 
 extension FavoriteTableViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
@@ -112,5 +134,97 @@ extension FavoriteTableViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     
     func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
         self.pageControl.currentPage = pagerView.currentIndex
+    }
+}
+
+//MARK: -
+
+// class DatePickerKeyboard: MDCButton {
+class DatePickerKeyboard: UIButton {
+    private var datePicker: UIDatePicker!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commoninit()
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commoninit()
+    }
+    private func commoninit() {
+        // datePickerの設定
+        /*
+        datePicker = UIDatePicker()
+        datePicker.date = Date()
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "ja")
+        datePicker.addTarget(self, action: #selector(setText), for: .valueChanged)
+        */
+
+
+        // textFieldのtextに日付を表示する
+        setText()
+        
+        //inputView = datePicker
+        //inputAccessoryView = createToolbar()
+    }
+    
+    
+    override var inputView: UIView? {
+        // datePickerの設定
+        datePicker = UIDatePicker()
+        datePicker.date = Date()
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "ja")
+        datePicker.addTarget(self, action: #selector(setText), for: .valueChanged)
+
+        return datePicker
+    }
+    
+    // キーボードのアクセサリービューを作成する
+    override var inputAccessoryView: UIView? {
+        let toolbar = UIToolbar()
+        toolbar.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 44)
+        
+        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
+        space.width = 12
+        let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let todayButtonItem = UIBarButtonItem(title: "今日", style: .done, target: self, action: #selector(todayPicker))
+        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+        
+        let toolbarItems = [flexSpaceItem, todayButtonItem, doneButtonItem, space]
+        
+        toolbar.setItems(toolbarItems, animated: true)
+        
+        return toolbar
+    }
+    
+    // キーボードの完了ボタンタップ時に呼ばれる
+    @objc private func donePicker() {
+        resignFirstResponder()
+    }
+    // キーボードの今日ボタンタップ時に呼ばれる
+    @objc private func todayPicker() {
+        datePicker.date = Date()
+        setText()
+    }
+    
+    // datePickerの日付けをtextFieldのtextに反映させる
+    @objc private func setText() {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.locale = Locale(identifier: "ja")
+        
+        // titleLabel?.text = f.string(from: datePicker.date)
+    }
+    
+    // クラス外から日付を取り出すためのメソッド
+    func getDate() -> Date {
+        return datePicker.date
+    }
+    
+    // コピペ等禁止
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        return false
     }
 }
