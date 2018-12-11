@@ -10,6 +10,7 @@ import UIKit
 import Hero
 import FSPagerView
 import MXParallaxHeader
+import FaveButton
 // import MaterialComponents.MaterialAppBar
 // import MaterialComponents.MaterialAppBar_ColorThemer
 // UX向上
@@ -63,7 +64,24 @@ class InstitutionViewController: UIViewController {
         institutionScrollView.parallaxHeader.minimumHeight = topLayoutGuide.length
     }
     */
-    
+    /*
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // ナビゲーションを透明にする処理
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+    }
+    */
+    /*
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // 透明にしたナビゲーションを元に戻す処理
+        self.navigationController!.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController!.navigationBar.shadowImage = nil
+    }
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -154,9 +172,25 @@ class InstitutionViewController: UIViewController {
     
         setupLabels()
         setupPagerView()
+        setupNavigationBar()
         // これコメントインすると画面崩れる
         // setupParallraxView()
         
+    }
+
+    private func setupNavigationBar() {
+        self.title = ""
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleReturnButton(_:forEvent:)))
+        let button = FaveButton(frame: CGRect(x:0, y:0, width: 35, height: 35),faveIconNormal: UIImage(named: "heart"))
+        //let barButtonItem = UIBarButtonItem(image: UIImage(named: "heart.png"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(handleReturnButton(_:forEvent:)))
+        button.addTarget(self, action: #selector(handleReturnButton(_:forEvent:)), for:UIControl.Event.touchUpInside)
+        // TODO: NavigationBarにFaveButtonを組み込むと上手く動作しない。以下コメントインすると落ちる
+        //button.setSelected(selected: true, animated: true)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+        // ナビゲーションを透明にする処理
+        //self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        //self.navigationController!.navigationBar.shadowImage = UIImage()
     }
     
     private func setupLabels() {
@@ -243,7 +277,14 @@ class InstitutionViewController: UIViewController {
     }
     */
     @objc func handleCancelButton(gestureRecognizer: UITapGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    // NavigationBarのキャンセルタップされた時に呼ばれるメソッド
+    @objc func handleReturnButton(_ sender: UIButton, forEvent event: UIEvent) {
+        self.navigationController?.popViewController(animated: true)
+        //self.dismiss(animated: true, completion: nil)
     }
     /* UX向上:scroll viewを入れた時に一瞬スクロールバーが表示される
     @IBOutlet private weak var scrollView: UIScrollView!

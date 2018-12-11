@@ -37,17 +37,18 @@ class TabBarViewController: UITabBarController, MDCBottomNavigationBarDelegate {
         let searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
         // かかりつけVCをrootとしたUINavigationBarを設定
         let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
-        // let favoriteNavigationController = UINavigationController(rootViewController: favoriteViewController)
+        let favoriteNavigationController = UINavigationController(rootViewController: favoriteViewController)
         // AMScrollingNavbarでスクロール時NavigationBarの表示/非表示切り替え
-        let favoriteNavigationController = ScrollingNavigationController(rootViewController: favoriteViewController)
+        //let favoriteNavigationController = ScrollingNavigationController(rootViewController: favoriteViewController)
         // お知らせVC設定
         let notifyListViewController = NotifyListViewController(nibName: "NotifyListViewController", bundle: nil)
+        let notifyNavigationController = UINavigationController(rootViewController: notifyListViewController)
         // プロフィールVCをrootとしたUINavigationBarを設定
         let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
         // self.viewControllers = [cardViewController, searchViewController, favoriteViewController, notifyListViewController, profileNavigationController]
         // self.viewControllers = [cardViewController, searchViewController, favoriteNavigationController, notifyListViewController, profileNavigationController]
-        self.viewControllers = [cardNavigationController, searchViewController, favoriteNavigationController, notifyListViewController, profileNavigationController]
+        self.viewControllers = [cardNavigationController, searchViewController, favoriteNavigationController, notifyNavigationController, profileNavigationController]
         
         selectedViewController = self.viewControllers?[ConstIndex.favorite]
         

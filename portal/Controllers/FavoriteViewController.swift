@@ -9,11 +9,14 @@
 
 import UIKit
 import AMScrollingNavbar
+import Hero
 
 class FavoriteViewController: UITableViewController {
     
     //@IBOutlet weak var favoriteTableView: UITableView!
     @IBOutlet var favoriteTableView: UITableView!
+    
+    fileprivate let heroTransition = HeroTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +49,10 @@ class FavoriteViewController: UITableViewController {
             // Large Title有効 TODO: 有効にするとスクロール時、AMScrollingNavbarでcellが一部隠れる事象発生
             // self.navigationController?.navigationBar.prefersLargeTitles = true
         // }
+        
+        self.navigationController?.delegate = self
+        //self.navigationController?.hero.navigationAnimationType = .autoReverse(presenting: .slide(direction: .left))
+        self.navigationController?.hero.navigationAnimationType = .autoReverse(presenting: .zoom)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,7 +94,31 @@ extension FavoriteViewController {
     
     @objc func handleInstitutionViewButton(gestureRecognizer: UITapGestureRecognizer) {
         let institutionViewController = InstitutionViewController(nibName: "InstitutionViewController", bundle: nil)
-        // self.navigationController?.show(institutionViewController, sender: nil)
-        self.present(institutionViewController, animated: true, completion: nil)
+        //let institutionNavigationController = UINavigationController(rootViewController: institutionViewController)
+        
+        // Push遷移
+        self.navigationController?.show(institutionViewController, sender: nil)
+        //self.navigationController?.show(institutionNavigationController, sender: nil)
+        //self.present(institutionViewController, animated: true, completion: nil)
+    }
+}
+
+extension FavoriteViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
+        -> UIViewControllerInteractiveTransitioning? {
+            return heroTransition.navigationController(navigationController, interactionControllerFor: animationController)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationController.Operation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        //navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        //navigationController.navigationBar.shadowImage = UIImage()
+        //toVC.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        //toVC.navigationController?.navigationBar.shadowImage = UIImage()
+
+        return heroTransition.navigationController(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
 }

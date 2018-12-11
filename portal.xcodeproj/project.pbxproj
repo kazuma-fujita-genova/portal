@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3BAEB7FD299C256453887375 /* Pods_portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708E6240566961555B6CF5EF /* Pods_portal.framework */; };
 		A400D2AE21AFE9D20000E1B0 /* CoverFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400D2AD21AFE9D20000E1B0 /* CoverFlow.swift */; };
+		A41D608821BF92170024C7D5 /* NotifyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D608621BF92170024C7D5 /* NotifyListTableViewCell.swift */; };
+		A41D608921BF92170024C7D5 /* NotifyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41D608721BF92170024C7D5 /* NotifyListTableViewCell.xib */; };
 		A41DF96C217EAD7E006EABE9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF96B217EAD7E006EABE9 /* TabBarViewController.swift */; };
 		A41DF97F21804EB5006EABE9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */; };
 		A41DF98021804EB5006EABE9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */; };
@@ -72,6 +74,8 @@
 		5969DC3E98EB22053EDF5255 /* Pods-portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-portal/Pods-portal.debug.xcconfig"; sourceTree = "<group>"; };
 		708E6240566961555B6CF5EF /* Pods_portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A400D2AD21AFE9D20000E1B0 /* CoverFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlow.swift; sourceTree = "<group>"; };
+		A41D608621BF92170024C7D5 /* NotifyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyListTableViewCell.swift; sourceTree = "<group>"; };
+		A41D608721BF92170024C7D5 /* NotifyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotifyListTableViewCell.xib; sourceTree = "<group>"; };
 		A41DF96B217EAD7E006EABE9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A41DF97D21804EB4006EABE9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -180,10 +184,11 @@
 				A46A87EF2178AE8D0050369C /* InstitutionViewController.xib */,
 				A4D1956E21ACF4E6006359BE /* InstitutionDetailWidgetView.xib */,
 				A46A87FB2178AEF30050369C /* ProfileViewController.xib */,
+				A46A87F32178AEB50050369C /* NotifyListViewController.xib */,
+				A41D608721BF92170024C7D5 /* NotifyListTableViewCell.xib */,
+				A46A87F72178AED20050369C /* NotifyDetailViewController.xib */,
 				A450A0562189BB87008D6384 /* ProfileLoginBeforeView.xib */,
 				A41DF97E21804EB4006EABE9 /* ProfileTableViewCell.xib */,
-				A46A87F32178AEB50050369C /* NotifyListViewController.xib */,
-				A46A87F72178AED20050369C /* NotifyDetailViewController.xib */,
 				A49AD4DE2195829A00404540 /* SettingViewController.xib */,
 			);
 			path = Views;
@@ -214,6 +219,7 @@
 				A46A87EE2178AE8D0050369C /* InstitutionViewController.swift */,
 				A4D1956C21ACF4C3006359BE /* InstitutionDetailWidgetView.swift */,
 				A46A87F22178AEB50050369C /* NotifyListViewController.swift */,
+				A41D608621BF92170024C7D5 /* NotifyListTableViewCell.swift */,
 				A46A87F62178AED20050369C /* NotifyDetailViewController.swift */,
 				A46A87FA2178AEF30050369C /* ProfileViewController.swift */,
 				A450A0542189AF50008D6384 /* ProfileLoginBeforeView.swift */,
@@ -371,6 +377,7 @@
 				A49AD4E02195829A00404540 /* SettingViewController.xib in Resources */,
 				A49AD4E42195A65100404540 /* RegistCardAccountSelectViewController.xib in Resources */,
 				A49AD4E82195ABFD00404540 /* RegistCardNavigationViewController.xib in Resources */,
+				A41D608921BF92170024C7D5 /* NotifyListTableViewCell.xib in Resources */,
 				A499898421A2965200E224E2 /* FavoriteTableViewCell.xib in Resources */,
 				A46A87F12178AE8D0050369C /* InstitutionViewController.xib in Resources */,
 				A46A87F92178AED20050369C /* NotifyDetailViewController.xib in Resources */,
@@ -429,6 +436,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
@@ -446,6 +454,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
@@ -471,6 +480,7 @@
 			files = (
 				A424A3BD219428BB00ED0C24 /* ReadQRCodeViewController.swift in Sources */,
 				A491D32E21757180005610DC /* AppDelegate.swift in Sources */,
+				A41D608821BF92170024C7D5 /* NotifyListTableViewCell.swift in Sources */,
 				A49AD4E32195A65100404540 /* RegistCardAccountSelectViewController.swift in Sources */,
 				A49AD4DF2195829A00404540 /* SettingViewController.swift in Sources */,
 				A499898321A2965200E224E2 /* FavoriteTableViewCell.swift in Sources */,

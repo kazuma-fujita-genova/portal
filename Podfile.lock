@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - AMScrollingNavbar (5.1.1)
+  - FaveButton (3.0.0)
   - FDFullscreenPopGesture (1.1)
   - FSPagerView (0.8.1)
   - GoogleMaps (2.7.0):
@@ -508,6 +509,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
   - AMScrollingNavbar (= 5.1.1)
+  - FaveButton
   - FDFullscreenPopGesture (= 1.1)
   - FSPagerView
   - GoogleMaps (= 2.7.0)
@@ -521,6 +523,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AMScrollingNavbar
+    - FaveButton
     - FDFullscreenPopGesture
     - FSPagerView
     - GoogleMaps
@@ -538,6 +541,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AMScrollingNavbar: 128e9e17af3b93f80d6705befe7cc2ae5e8a8435
+  FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
@@ -552,6 +556,6 @@ SPEC CHECKSUMS:
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
 
-PODFILE CHECKSUM: 5a1a2a8ffc57e500a0c75be94084ade609cf56ba
+PODFILE CHECKSUM: 4f84ad6cee3a42bf4b8257b43263c788080ba1a6
 
 COCOAPODS: 1.5.3
