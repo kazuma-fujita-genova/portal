@@ -10,7 +10,8 @@ import UIKit
 import Hero
 import FSPagerView
 import MXParallaxHeader
-import FaveButton
+import CHIPageControl
+//import FaveButton
 // import MaterialComponents.MaterialAppBar
 // import MaterialComponents.MaterialAppBar_ColorThemer
 // UX向上
@@ -24,10 +25,18 @@ class InstitutionViewController: UIViewController {
     
     @IBOutlet weak var institutionNameLabel: UILabel!
 
+/*
     @IBOutlet weak var pageControl: FSPageControl! {
         didSet {
             self.pageControl.contentHorizontalAlignment = .left
             self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        }
+    }
+*/
+    
+    @IBOutlet weak var pageControl: CHIPageControlAleppo! {
+        didSet {
+            self.pageControl.frame = CGRect(x: 0, y:0, width: 100, height: 20)
         }
     }
     
@@ -179,15 +188,15 @@ class InstitutionViewController: UIViewController {
     }
 
     private func setupNavigationBar() {
-        self.title = ""
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "戻る", style: .done, target: self, action: #selector(handleReturnButton(_:forEvent:)))
-        let button = FaveButton(frame: CGRect(x:0, y:0, width: 35, height: 35),faveIconNormal: UIImage(named: "heart"))
-        //let barButtonItem = UIBarButtonItem(image: UIImage(named: "heart.png"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(handleReturnButton(_:forEvent:)))
-        button.addTarget(self, action: #selector(handleReturnButton(_:forEvent:)), for:UIControl.Event.touchUpInside)
+        // self.title = ""
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .done, target: self, action: #selector(handleReturnButton(_:forEvent:)))
+        // let button = FaveButton(frame: CGRect(x:0, y:0, width: 35, height: 35),faveIconNormal: UIImage(named: "heart"))
+        // let barButtonItem = UIBarButtonItem(image: UIImage(named: "heart.png"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(handleReturnButton(_:forEvent:)))
+        //  button.addTarget(self, action: #selector(handleReturnButton(_:forEvent:)), for:UIControl.Event.touchUpInside)
         // TODO: NavigationBarにFaveButtonを組み込むと上手く動作しない。以下コメントインすると落ちる
         //button.setSelected(selected: true, animated: true)
-        let barButtonItem = UIBarButtonItem(customView: button)
-        self.navigationItem.rightBarButtonItem = barButtonItem
+        //let barButtonItem = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "favorite.png"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(handleReturnButton(_:forEvent:)))
         // ナビゲーションを透明にする処理
         //self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         //self.navigationController!.navigationBar.shadowImage = UIImage()
@@ -252,10 +261,20 @@ class InstitutionViewController: UIViewController {
         
         // pageControl設定
         pageControl.numberOfPages = coverflowContents.count
-        
-        pageControl.itemSpacing = 7
-        pageControl.interitemSpacing = 10
-        
+        // pageControl.itemSpacing = 7
+        // pageControl.interitemSpacing = 10
+        // pageControl.numberOfPages = 5
+        // ドットの大きさ
+        pageControl.radius = 4
+        // ドットの幅
+        pageControl.padding = 8
+        // ドット色
+        pageControl.tintColor = .white
+        // アクティブなドット色
+        pageControl.currentPageTintColor = .white
+        // 非アクティブなドットの透明度
+        pageControl.inactiveTransparency = 0.7
+
         pagerView.addSubview(pageControl)
     }
 
@@ -325,11 +344,13 @@ extension InstitutionViewController: FSPagerViewDataSource, FSPagerViewDelegate 
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        self.pageControl.currentPage = targetIndex
+        //self.pageControl.currentPage = targetIndex
+        pageControl.set(progress: targetIndex, animated: true)
     }
     
     func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
-        self.pageControl.currentPage = pagerView.currentIndex
+        //self.pageControl.currentPage = pagerView.currentIndex
+        pageControl.set(progress: pagerView.currentIndex, animated: true)
     }
 }
 

@@ -31,7 +31,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RM-Oz-C10" customClass="FSPagerView" customModule="FSPagerView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chi-kZ-d3u" customClass="FSPageControl" customModule="FSPagerView">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chi-kZ-d3u" customClass="CHIPageControlAleppo" customModule="CHIPageControl">
                                     <rect key="frame" x="0.0" y="251.5" width="375" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

@@ -18,7 +18,8 @@ def install_pods
   pod 'FSPagerView'
   # pod 'ParallaxHeader', '~> 2.0.0'
   pod "MXParallaxHeader"
-  pod 'FaveButton'
+  # pod 'FaveButton'
+  pod 'CHIPageControl', '~> 0.1.3'
 end
 
 target 'portal' do

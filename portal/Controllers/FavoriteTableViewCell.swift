@@ -9,6 +9,7 @@
 import UIKit
 import FSPagerView
 import MaterialComponents.MaterialButtons_ButtonThemer
+import CHIPageControl
 
 class FavoriteTableViewCell: UITableViewCell {
 
@@ -21,11 +22,18 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet weak var nextReserveButton: UIButton!
     
     var datePicker: UIDatePicker = UIDatePicker()
-    
+    /*
     @IBOutlet weak var pageControl: FSPageControl! {
         didSet {
             self.pageControl.contentHorizontalAlignment = .center
             self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        }
+    }
+    */
+    //@IBOutlet weak var pageControl = CHIPageControlAleppo(frame: CGRect(x: 0, y:0, width: 100, height: 20))
+    @IBOutlet weak var pageControl: CHIPageControlAleppo! {
+        didSet {
+            self.pageControl.frame = CGRect(x: 0, y:0, width: 100, height: 20)
         }
     }
     
@@ -76,14 +84,14 @@ class FavoriteTableViewCell: UITableViewCell {
         pagerView.dataSource = self
         pagerView.isInfinite = true
         // エフェクト coverFlow .linear, .overlap などは以下を有効にする
-        pagerView.itemSize = CGSize(width: 300, height: 205)
+        // pagerView.itemSize = CGSize(width: 300, height: 200)
         // pagerView.itemSize = FSPagerView.automaticSize
-        pagerView.interitemSpacing = 16
-        pagerView.transformer = FSPagerViewTransformer(type: .linear)
+        // pagerView.interitemSpacing = 16
+        //  pagerView.transformer = FSPagerViewTransformer(type: .linear)
         // エフェクト .crossFading, .zoomOut, .depth のときは以下を有効
-        // pagerView.transformer = FSPagerViewTransformer(type: .depth)
-        // pagerView.itemSize = FSPagerView.automaticSize
-        // pagerView.decelerationDistance = 1
+        // pagerView.transformer = FSPagerViewTransformer(type: .zoomOut)
+        pagerView.itemSize = FSPagerView.automaticSize
+        pagerView.decelerationDistance = 1
         
         // Automatic Slider
         // pagerView.automaticSlidingInterval = 4
@@ -93,8 +101,19 @@ class FavoriteTableViewCell: UITableViewCell {
         
         // pageControl設定
         pageControl.numberOfPages = coverflowContents.count
-        pageControl.itemSpacing = 5
-        pageControl.interitemSpacing = 10
+        //pageControl.itemSpacing = 5
+        //pageControl.interitemSpacing = 10
+        // pageControl?.numberOfPages = 5
+        // ドットの大きさ
+        pageControl.radius = 4
+        // ドットの幅
+        pageControl.padding = 8
+        // ドット色
+        pageControl.tintColor = .white
+        // アクティブなドット色
+        pageControl.currentPageTintColor = .white
+        // 非アクティブなドットの透明度
+        pageControl.inactiveTransparency = 0.7
         
         pagerView.addSubview(pageControl)
     }
@@ -129,12 +148,15 @@ extension FavoriteTableViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        self.pageControl.currentPage = targetIndex
+        //self.pageControl.currentPage = targetIndex
+        pageControl.set(progress: targetIndex, animated: true)
     }
     
     func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
-        self.pageControl.currentPage = pagerView.currentIndex
+        //self.pageControl.currentPage = pagerView.currentIndex
+        pageControl.set(progress: pagerView.currentIndex, animated: true)
     }
+    
 }
 
 //MARK: -
