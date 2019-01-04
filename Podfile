@@ -11,15 +11,15 @@ def install_pods
   pod 'Alamofire','4.7.3'
   # pod 'FoldingCell','4.0.1'
   pod 'Hero','1.4.0'
-  pod "FDFullscreenPopGesture",'1.1'
+  pod 'FDFullscreenPopGesture','1.1'
   pod 'SkeletonView','1.4.1'
   pod 'AMScrollingNavbar','5.1.1'
-  pod 'PagingMenuController'
-  pod 'FSPagerView'
+  pod 'PagingMenuController','2.2.0'
+  pod 'FSPagerView','0.8.1'
   # pod 'ParallaxHeader', '~> 2.0.0'
-  pod "MXParallaxHeader"
+  pod 'MXParallaxHeader'
   # pod 'FaveButton'
-  pod 'CHIPageControl', '~> 0.1.3'
+  pod 'CHIPageControl','0.1.7'
 end
 
 target 'portal' do
@@ -34,7 +34,7 @@ post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
             if swift3_names.include? target.name
-                config.build_settings['SWIFT_VERSION'] = "3"
+                config.build_settings['SWIFT_VERSION'] = "3.0"
             else
                 config.build_settings['SWIFT_VERSION'] = "4.2"
             end

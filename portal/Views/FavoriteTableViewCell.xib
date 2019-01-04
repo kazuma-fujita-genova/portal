@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtx-9w-BTh" customClass="FSPagerView" customModule="FSPagerView">
-                        <rect key="frame" x="20" y="0.0" width="1832" height="1030.6666666666667"/>
+                        <rect key="frame" x="20" y="0.0" width="1852" height="1041.6666666666667"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUH-Cj-TDf" customClass="CHIPageControlAleppo" customModule="CHIPageControl">
-                                <rect key="frame" x="0.0" y="1000.6666666666666" width="1872" height="29.999999999999886"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUH-Cj-TDf" customClass="CHIPageControlAleppo" customModule="CHIPageControl">
+                                <rect key="frame" x="0.0" y="1011.6666666666665" width="1852" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Axj-6z-x6x"/>
@@ -34,10 +34,11 @@
                             <constraint firstAttribute="bottom" secondItem="nUH-Cj-TDf" secondAttribute="bottom" id="5Xz-UZ-OrG"/>
                             <constraint firstAttribute="width" secondItem="Gtx-9w-BTh" secondAttribute="height" multiplier="16:9" id="8sA-39-5ZU"/>
                             <constraint firstItem="nUH-Cj-TDf" firstAttribute="centerX" secondItem="Gtx-9w-BTh" secondAttribute="centerX" id="B48-6j-79z"/>
+                            <constraint firstItem="nUH-Cj-TDf" firstAttribute="leading" secondItem="Gtx-9w-BTh" secondAttribute="leading" id="yql-fh-8fj"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3J-xZ-vPl">
-                        <rect key="frame" x="40" y="1030.6666666666667" width="76" height="2610.333333333333"/>
+                        <rect key="frame" x="40" y="1041.6666666666667" width="76" height="2599.333333333333"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -127,16 +128,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="nyV-Qf-sXU" secondAttribute="bottom" id="2mT-14-8HP"/>
-                    <constraint firstItem="Gtx-9w-BTh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3np-Tt-Ocf"/>
+                    <constraint firstItem="Gtx-9w-BTh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="3np-Tt-Ocf"/>
                     <constraint firstAttribute="trailing" secondItem="nyV-Qf-sXU" secondAttribute="trailing" constant="1592" id="5gI-7p-dgA"/>
                     <constraint firstItem="nyV-Qf-sXU" firstAttribute="trailing" secondItem="pyG-0U-pxK" secondAttribute="trailing" id="DID-6C-mbc"/>
                     <constraint firstItem="S3J-xZ-vPl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="Jd6-Cg-fIC"/>
                     <constraint firstItem="nyV-Qf-sXU" firstAttribute="top" secondItem="pyG-0U-pxK" secondAttribute="bottom" constant="20" id="JkH-5B-oFo"/>
                     <constraint firstAttribute="trailing" secondItem="Gtx-9w-BTh" secondAttribute="trailing" id="NRX-Yp-EcY"/>
-                    <constraint firstAttribute="trailing" secondItem="Gtx-9w-BTh" secondAttribute="trailing" constant="20" id="OYY-Fg-y84"/>
                     <constraint firstItem="S3J-xZ-vPl" firstAttribute="top" secondItem="Gtx-9w-BTh" secondAttribute="bottom" id="VNd-gH-GKH"/>
                     <constraint firstItem="pyG-0U-pxK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="XYG-Oa-zeu"/>
-                    <constraint firstItem="Gtx-9w-BTh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="e0d-18-b9d"/>
                     <constraint firstItem="nyV-Qf-sXU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="k1Z-u0-xyy"/>
                     <constraint firstItem="oX8-cJ-MWP" firstAttribute="top" secondItem="S3J-xZ-vPl" secondAttribute="bottom" constant="20" id="l5x-Tp-Ttr"/>
                     <constraint firstItem="pyG-0U-pxK" firstAttribute="top" secondItem="oX8-cJ-MWP" secondAttribute="bottom" constant="20" id="oUC-1e-pJz"/>
